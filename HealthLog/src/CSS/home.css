@@ -10,19 +10,21 @@ body {
 }
 
 .home-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     padding: 20px;
 }
 
-.header {
+.cabeçalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #345995;
     padding: 60px;
-    border-bottom: 2px solid #e2e3e5;
+    border-bottom: 4px solid #F2B33D;
 }
+
+
 
 .logo h1 {
     font-size: 24px;
@@ -47,6 +49,13 @@ body {
     font-weight: bold;
 }
 
+.boas-Vindas h2{
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+
 .conteudo-principal {
     text-align: center;
     margin-top: 30px;
@@ -55,6 +64,12 @@ body {
 .conteudo-principal h2 {
     font-size: 28px;
     margin-bottom: 20px;
+}
+
+.review-section h3{
+    color: #345995;
+    font-size: 45px;
+  
 }
 
 .review-section {
@@ -69,7 +84,12 @@ body {
     margin-bottom: 20px;
 }
 
-.procedures {
+.procedimentos h3{
+    color: #345995;
+    font-size: 30px;
+}
+
+.procedimentos {
     margin-bottom: 40px;
 }
 
@@ -97,9 +117,24 @@ body {
     margin-top: 15px;
 }
 
+.services h3{
+    color: #345995;
+    font-size: 30px;
+}
+
 .services {
+    text-align: center; /* Centraliza o título "Serviços disponíveis" */
+}
+
+.service-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centraliza as caixas de serviço no contêiner */
+    margin-top: 20px; /* Espaço entre o título e os itens */
+}
+
+a {
+    text-decoration: none;
+    color: black; /* Define o texto dos links em preto */
 }
 
 .service-item {
@@ -107,19 +142,32 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 30%;
-    text-align: center;
+    text-align: center; /* Centraliza o texto dentro da div do serviço */
+    margin: 0 10px; /* Espaçamento horizontal entre as caixas */
+    transition: background-color 0.3s ease;
+    color: black; /* Garante que o texto nas divs também seja preto */
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .service-item {
+        width: 80%; /* Aumenta a largura para telas menores */
+        margin: 10px 0; /* Ajusta o espaço entre as caixas */
+    }
+}
+
 
 .footer {
     background-color: #f8f9fa;
     padding: 20px;
-    border-top: 2px solid #e2e3e5;
+    border-top: 5px solid #345995;
     margin-top: 40px;
     text-align: center;
 }
 
 .footer h3 {
-    font-size: 24px;
+    color: #345995;
+    font-size: 50px;
     margin-bottom: 15px;
 }
 
