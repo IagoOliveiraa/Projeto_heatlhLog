@@ -3,6 +3,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = 3001;
@@ -48,6 +49,36 @@ app.post('/Registro', (req, res) => {
         }
     });
 });
+
+//parte do LOGIN==========================================================================================
+app.post('/Login', (req, res) => {
+    const { email, senha } = req.body;
+
+    // Verifica se os campos email e senha foram preenchidos
+    if (!email || !senha) {
+        return res.status(400).send({ message: 'Email e senha são obrigatórios.' });
+    }
+
+    // Busca o usuário pelo email e verifica se a senha está correta
+    const query = 'SELECT * FROM usuarios WHERE email = ? AND senha = ?';
+    db.query(query, [email, senha], (err, results) => {
+        if (err) {
+            console.error('Erro ao buscar o usuário:', err);
+            return res.status(500).send({ message: 'Erro no servidor.' });
+        }
+
+        if (results.length > 0) {
+            // Se o usuário for encontrado, retorna sucesso
+            res.status(200).send({ message: 'Login bem-sucedido!', user: results[0] });
+        } else {
+            // Se não houver correspondência, retorna erro
+            res.status(401).send({ message: 'Credenciais inválidas.' });
+        }
+    });
+});
+
+
+
 
 // Inicia o servidor
 app.listen(port, () => {
