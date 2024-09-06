@@ -5,7 +5,7 @@ function Home() {
         <div className="home-container">
             <header className="header">
                 <div className="logo">
-                    <img src="logo.png" alt="Health Log Logo" />
+                    <img src="" alt="Health Log Logo" />
                     <h1>Health Log</h1>
                 </div>
                 <div className="pesquisa-login">
