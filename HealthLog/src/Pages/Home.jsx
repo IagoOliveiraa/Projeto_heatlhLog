@@ -13,10 +13,13 @@ function Home() {
                     <a href="/Login">Login</a>
                     <a href="/registro"> registro</a>
                 </div>
+
+                <h2>Escolha um serviço & reserve sua consulta</h2>
+
             </header>
             
-            <section className="main-content">
-                <h2>Escolha um serviço & reserve sua consulta</h2>
+            <section className="conteudo-principal">
+                
                 
                 <div className="review-section">
                     <h3>Avaliações</h3>

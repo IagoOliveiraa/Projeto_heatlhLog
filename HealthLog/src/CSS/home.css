@@ -19,8 +19,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
-    padding: 10px;
+    background-color: #345995;
+    padding: 60px;
     border-bottom: 2px solid #e2e3e5;
 }
 
@@ -47,12 +47,12 @@ body {
     font-weight: bold;
 }
 
-.main-content {
+.conteudo-principal {
     text-align: center;
     margin-top: 30px;
 }
 
-.main-content h2 {
+.conteudo-principal h2 {
     font-size: 28px;
     margin-bottom: 20px;
 }
