@@ -1,14 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registro from "./Pages/Registro";
 import Home from "./Pages/Home";
+import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
+import Login from "./Pages/Login";
 
 const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/Login" element={<login/>}/>
+                <Route path="/Login" element={<Login/>}/>
                 <Route path="/Registro" element={<Registro/>}/>
+                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
+
             </Routes>
         </BrowserRouter>
         
