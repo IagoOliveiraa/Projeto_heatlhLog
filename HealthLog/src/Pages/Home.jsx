@@ -4,7 +4,7 @@ import '../CSS/Home.css';
 function Home() {
   const [slideIndex, setSlideIndex] = useState(1);
 
-  // Função para exibir o slide atual
+  // Função para exibir o slide avaliações
   const showSlides = (n) => {
     let slides = document.getElementsByClassName('mySlides');
     let dots = document.getElementsByClassName('dot');
@@ -32,7 +32,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       showSlides(slideIndex + 1);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [slideIndex]);
 
