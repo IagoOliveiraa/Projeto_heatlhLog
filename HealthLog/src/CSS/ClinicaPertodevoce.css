@@ -1,0 +1,19 @@
+/* Define a cor da barra, o tamanho e outros estilos */
+.barra {
+    background-color: #4C78BE; /* Cor da barra */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100px; /* Altura da barra */
+    position: fixed; /* Fixa a barra no topo da tela */
+    top: 0; /* Alinha a barra ao topo */
+    left: 0; /* Alinha a barra ao lado esquerdo */
+    display: flex; /* Usa Flexbox para posicionar o conteúdo */
+    align-items: center; /* Alinha verticalmente o conteúdo no centro */
+    padding-left: 20px; /* Espaço à esquerda para o logo não ficar colado na borda */
+    z-index: 1000; /* Garante que a barra fique acima de outros conteúdos */
+}
+
+/* Estilos para o logo */
+.logo {
+    height: 140px; /* Altura do logo */
+    width: auto; /* Mantém a proporção do logo */
+}
