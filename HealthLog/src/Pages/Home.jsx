@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../CSS/Home.css';
+import logosite from '../assets/Logo Health_log.png';
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -40,7 +41,7 @@ function Home() {
     <div className="home-container">
       <header className="cabeçalho">
         <div className="logo">
-          <img src="" alt="Health Log Logo" />
+          <img src={logosite} alt="Health Log Logo" />
           <h1>Health Log</h1>
         </div>
 
