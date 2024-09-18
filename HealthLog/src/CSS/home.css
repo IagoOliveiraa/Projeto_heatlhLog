@@ -1,35 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.home-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
-}
-
-.cabeçalho {
+/* Cabeçalho */
+.cabeçalhoHome {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #345995;
-    padding: 60px;
+    padding: 20px;
     border-bottom: 4px solid #F2B33D;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
 }
 
 
-
-.logo h1 {
-    font-size: 24px;
-    color: #333;
-}
 
 .pesquisa-login {
     display: flex;
@@ -37,184 +27,167 @@ body {
 }
 
 .pesquisa-login input {
-    padding: 5px;
-    margin-right: 10px;
+    padding: 8px;
+    border-radius: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-right: 10px;
 }
 
 .pesquisa-login a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+
+    padding: 10px 15px;
+ 
 }
 
-.boas-Vindas h2{
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-
-}
-
-.conteudo-principal {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.conteudo-principal h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.review-section h3{
+.pesquisa-login a:hover {
+    background-color: #fff;
     color: #345995;
-    font-size: 45px;
-  
+}
+
+.boas-Vindas h2 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .review-section {
-    margin-bottom: 40px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-.review {
-    background-color: #fff3cd;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.procedimentos h3{
+.review-section h3 {
     color: #345995;
-    font-size: 30px;
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mySlides img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
 .procedimentos {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.procedimentos h3 {
+    font-size: 36px;
+    color: #345995;
     margin-bottom: 40px;
 }
 
 .procedure-card {
-    background-color: #f0f0f0;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
 }
 
 .procedure-card h4 {
+    color: #345995;
+    font-size: 24px;
     margin-bottom: 10px;
-    font-size: 22px;
-    color: #007bff;
 }
 
 .procedure-card button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #345995;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
     cursor: pointer;
-    margin-top: 15px;
+    transition: background-color 0.3s;
 }
 
-.services h3{
-    color: #345995;
-    font-size: 30px;
+.procedure-card button:hover {
+    background-color: #F2B33D;
 }
-
 .services {
-    text-align: center; /* Centraliza o título "Serviços disponíveis" */
+    margin-top: 50px;
+    text-align: center;
+}
+
+.services h3 {
+    color: #345995;
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
 .service-items {
     display: flex;
-    justify-content: center; /* Centraliza as caixas de serviço no contêiner */
-    margin-top: 20px; /* Espaço entre o título e os itens */
-}
-
-a {
-    text-decoration: none;
-    color: black; /* Define o texto dos links em preto */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .service-item {
-    background-color: #e2e3e5;
+    background-color: #e3e7f1;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
-    text-align: center; /* Centraliza o texto dentro da div do serviço */
-    margin: 0 10px; /* Espaçamento horizontal entre as caixas */
-    transition: background-color 0.3s ease;
-    color: black; /* Garante que o texto nas divs também seja preto */
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-/* Responsividade */
+.service-item:hover {
+    transform: scale(1.05);
+}
 @media (max-width: 768px) {
+    .cabeçalho {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .boas-Vindas h2 {
+        font-size: 22px;
+    }
+
+    .service-items {
+        flex-direction: column;
+    }
+
     .service-item {
-        width: 80%; /* Aumenta a largura para telas menores */
-        margin: 10px 0; /* Ajusta o espaço entre as caixas */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .procedure-card {
+        width: 100%;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
     }
 }
-
-
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-top: 5px solid #345995;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.footer h3 {
-    color: #345995;
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-.footer p {
-    margin-bottom: 15px;
-}
-
-footer address {
-    font-style: normal;
-}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-  
-  /* Hide the slides by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from { opacity: .4; }
-    to { opacity: 1; }
-  }
-  
