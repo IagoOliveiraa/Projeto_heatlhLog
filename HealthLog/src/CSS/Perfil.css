@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.perfil-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.cabeçalhopf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #345995;
+    padding: 60px;
+    border-bottom: 4px solid #F2B33D;
+}
+
+
+
+.logopf h1 {
+    font-size: 24px;
+    color: #333;
+}

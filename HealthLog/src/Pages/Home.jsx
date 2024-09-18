@@ -58,8 +58,8 @@ function Home() {
 
         <div className="pesquisa-login">
           <input type="text" placeholder="Buscar" /> {/* Barra de busca */}
-          <a href="/Login"><img src={iconperfil} alt="Icon Perfil" /></a> {/* Link para a página de login */}
-          <a href="/registro">Cadastra-se</a> {/* Link para a página de cadastro */}
+          <a href="/Perfil"><img src={iconperfil} alt="Icon Perfil" /></a> {/* Link para a página de login */}
+          <a href="">Cadastra-se</a> {/* Link para a página de cadastro */}
         </div>
 
         <div className="boas-Vindas">
