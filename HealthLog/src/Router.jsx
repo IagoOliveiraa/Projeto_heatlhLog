@@ -16,11 +16,8 @@ const Router = () => {
                 <Route path="/Registro" element={<Registro/>}/>
                 <Route path="/ClinicasPertoDeVoce" element={<Clinica/>}/>
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
-
                 <Route path="/Perfil" element={<Perfil/>}/>
-
-
-                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
+                <Route path="/EspecialidadesMedicas" element={<EspecialidadesEsteticas/>}/>
 
 
             </Routes>

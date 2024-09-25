@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../CSS/Home.css'; // Importa o arquivo de CSS que define o estilo da página
-import logosite from '../assets/Logo Health_log.png'; // Importa a imagem do logo do site
+import logosite from '../assets/LogoHealthLog.png'; // Importa a imagem do logo do site
 import iconperfil from '../assets/iconPerfil.png'; // Importa a imagem do ícone para linkar para a página
 import bemvindo from '../assets/boasvindasFoto.png'; // Imagem de boas-vindas
 import especMedicas from '../assets/Medicinafoto.png'; // Imagem de especialidades médicas
