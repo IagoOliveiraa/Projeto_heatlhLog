@@ -50,23 +50,23 @@ function EspecialidadesMedicas(){
 
                 <div className="container">
                     <div className="box">
-                        <h3> Cirurgia <br /> Plástica <br /> </h3>
-                        <h4> Procedimentos cirúrgicos que modificam ou aprimoram a aparência física, como rinoplastia, lifting facial, e lipoaspiração</h4>
+                        <h3>Ortopedia</h3>
+                        <h4>Especialidade voltada para a saúde e cuidados com a região do pé e tornozelo.</h4>
 
                     </div>
                 </div>
 
                 <div className="container">
                     <div className="box">
-                        <h3>Dermatologia <br /> Estética <br /> </h3>
-                        <h4>Tratamentos de pele que visam melhorar a aparência, como preenchimentos faciais, botox, e peelings químicos</h4>
+                        <h3>Pediatria</h3>
+                        <h4>especialidade que volta a atenção para o bem-estar de pessoas de crianças e bebês.</h4>
 
                     </div>
                 </div>
                 <div className="container">
                     <div className="box">
-                        <h3>Odontologia<br /> Estética <br /> </h3>
-                        <h4>Foca na melhoria da aparência dos dentes e do sorriso através de procedimentos como clareamento dental, facetas e aparelhos ortodônticos</h4>
+                        <h3>Angiologia</h3>
+                        <h4>Especialidade que cuida do sistema vascular, como veias, artérias e vasos sanguíneos.</h4>
 
                     </div>
                 </div>
@@ -86,7 +86,7 @@ function EspecialidadesMedicas(){
                 </div>
                 <div className="container">
                     <div className="box">
-                        <h3>Estética <br /> Corporal<br /> </h3>
+                        <h3>Estética<br /> Corporal<br /> </h3>
                         <h4>Procedimentos não invasivos para modelagem do corpo, como massagem modeladora, drenagem linfática e tratamentos de celulite</h4>
 
                     </div>
