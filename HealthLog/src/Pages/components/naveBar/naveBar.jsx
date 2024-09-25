@@ -5,7 +5,7 @@ export default function NaveBar () {
         <>
             <section className='naveBarBlue'>
                 <div className='LogoHealthImg'>
-                    teste
+                
                 </div>
             </section>
         </>
