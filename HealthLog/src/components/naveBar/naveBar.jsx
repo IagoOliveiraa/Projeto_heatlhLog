@@ -1,11 +1,12 @@
-import '../naveBar/naveBar.css'
+import './naveBar.css'
+
 
 export default function NaveBar () {
-    return (
+    return(
         <>
             <section className='naveBarBlue'>
                 <div className='LogoHealthImg'>
-                
+
                 </div>
             </section>
         </>
