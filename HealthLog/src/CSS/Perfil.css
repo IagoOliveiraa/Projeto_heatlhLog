@@ -1,32 +1,37 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+/* Cabeçalho */
 
-.perfil-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
-}
+.cabeçalhoPf{
 
-.cabeçalhopf {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   
     background-color: #345995;
-    padding: 60px;
+    padding: 10px;
     border-bottom: 4px solid #F2B33D;
+    position: relative;
+
 }
 
-
-
-.logopf h1 {
-    font-size: 24px;
-    color: #333;
+.logo-perfil{
+    display: flex;
+    align-items: center;
 }
+
+.logo-perfil img{
+    height: 150px;
+    margin-right: 5px;
+}
+
+.quadrado {
+    width: 100px; /* Defina a largura desejada */
+    height: 100px; /* Defina a altura desejada */
+    background-color: #ff0000; /* Escolha a cor que deseja, nesse caso vermelho */
+  }
+

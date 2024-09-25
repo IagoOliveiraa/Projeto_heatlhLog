@@ -1,22 +1,17 @@
-import '../CSS/Perfil.css';
-import logosite from '../assets/Logo Health_log.png';
+import '../CSS/Perfil.css'
+import NaveBar from './components/naveBar/naveBar'
+import Search from './components/Search/Search'
+import Img from '../assets/iconPerfil.png'
+import Logo from '../assets/Logo1.png'
 
-function Perfil() {
+export default function Perfil() {
+  return (
+    <div>
+      <NaveBar/>
 
-    return (
-        <div className="perfil-container">
-          <header className="cabeçalhopf">
-            <div className="logopf">
-              <img src={logosite} alt="Health Log nome" />
-              <h1>Health Log</h1>
-            </div>
-          </header>  
-        </div>
-    )
-        
+      <Search/>
+    </div>
 
-
-    
+  )
 }
 
-export default Perfil;

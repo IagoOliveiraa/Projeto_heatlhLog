@@ -1,0 +1,13 @@
+.pesquisaBar{
+    width: 25.677vw;
+    height: 3.49vw;
+    background-color: green;
+    border-radius: 2.604vw;
+    background-color: rgba(217, 217, 217, 0.19);
+    border: 0.1vw solid rgba(17, 66, 145, 0.72);
+}
+
+.pesquisaBar img{
+
+}
+
