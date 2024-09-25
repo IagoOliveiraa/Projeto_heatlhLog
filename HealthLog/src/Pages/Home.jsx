@@ -8,6 +8,8 @@ import especOdont from '../assets/OdontoFoto.png'; // Imagem de especialidades o
 import especEstetica from '../assets/EsteticaFoto.png'; // Imagem de especialidades estéticas
 import locFoto from '../assets/localizacaoFoto.png'; // Imagem de localização
 import sobreFoto from '../assets/SobreFoto.png'; // Imagem sobre a empresa
+import avacUm from '../assets/avaliacao1.png';
+import iconBuscar from '../assets/IconBuscar.png';
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(1); // Controla qual slide está sendo exibido
@@ -55,9 +57,12 @@ function Home() {
           </div>
         </div>
         <div className="pesquisa-login">
+           <img src={iconBuscar} alt="" />
           <input type="text" placeholder="Buscar" />
           <a href="/Perfil"><img src={iconperfil} alt="Icon Perfil" /></a>
         </div>
+
+        
       </div>
 
       <section className="conteudo-principal">
@@ -69,6 +74,7 @@ function Home() {
           <h3>Avaliações</h3>
           <div className="slideshow-container">
             <div className="mySlides fade">
+            <img src={avacUm} alt="" />
               <p><strong>Emmy Bubble</strong></p>
               <p>Adorei usar o Health Log para agendar consultas. A interface é intuitiva e os lembretes são muito úteis. Recomendo!</p>
             </div>
@@ -95,19 +101,19 @@ function Home() {
               <h4>Oftalmologia</h4>
               <p>Profissionais: Dra. Julia, Dr. Sandro</p>
               <p>Consultório: Clínica A</p>
-              <button>Marcar agendamento</button>
+              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Dermatologia</h4>
               <p>Profissionais: Dra. Ana, Dr. Benicio</p>
               <p>Consultório: Clínica B</p>
-              <button>Marcar agendamento</button>
+              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Ortopedia</h4>
               <p>Profissionais: Dra. Pietra, Dr. Marcos</p>
               <p>Consultório: Clínica C</p>
-              <button>Marcar agendamento</button>
+              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
             </div>
           </div>
 
