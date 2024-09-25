@@ -137,8 +137,8 @@ function Home() {
       <footer className="footer">
         <h3>Sobre Nós</h3>
         <p>
-          Health Log é uma plataforma inovadora projetada para simplificar o agendamento de consultas em diversas áreas da saúde, incluindo médicos, clínicas de estética e dentistas.
-        </p>
+        Health Log é uma plataforma inovadora projetada para simplificar o agendamento de consultas em diversas áreas da saúde, incluindo médicos, clínicas de estética e dentistas. Através de uma interface intuitiva, os usuários podem facilmente encontrar profissionais disponíveis, 
+        verificar horários e marcar compromissos de forma rápida e eficiente, tudo em um só lugar.</p>
         <img src={sobreFoto} alt="" />
         <address>
           <img src={locFoto} alt="Localização" />
