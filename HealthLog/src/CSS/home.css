@@ -1,127 +1,151 @@
-/* Cabeçalho */
-.cabeçalhoHome {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cabeçalho */
+  .cabeçalho {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #345995;
-    padding: 20px;
+    padding: 5px;
     border-bottom: 4px solid #F2B33D;
     position: relative;
-}
-
-.logo {
+    z-index: 1;
+  
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-
-
-.pesquisa-login {
+  }
+  
+  .logo img {
+    margin-top: -110px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  
+  .pesquisa-login {
     display: flex;
     align-items: center;
-}
-
-.pesquisa-login input {
-    padding: 8px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.pesquisa-login a {
-
-    padding: 10px 15px;
- 
-}
-
-.pesquisa-login a:hover {
-    background-color: #fff;
+  }
+  
+  .pesquisa-login input {
+   
+    border-radius: 100px;
+    border: 1px solid #969696;
+    
+  }
+  
+  .pesquisa-login a {
     color: #345995;
-}
+    padding: 10px 15px;
+  }
+  
+  .boas-Vindas {
+    margin-left: -300px;
+    margin-top: 130px;
 
-.boas-Vindas h2 {
+  }
+  
+  .frase-boasvindas h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 38px;
     text-align: center;
-    margin-top: 20px;
+    margin-right: 50px;
     margin-bottom: 10px;
-}
-
-.review-section {
+  }
+  
+  /* Imagem de boas-vindas */
+  .img-boasvindas {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    margin-top: 10vw; /* Alterado para unidade de viewport */
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .img-boasvindas img {
+    width: 400px;
+    height: 500px;
+  }
+  
+  /* Seção de avaliações */
+  .review-section {
     margin-top: 50px;
     text-align: center;
-}
-
-.review-section h3 {
+  }
+  
+  .review-section h3 {
     color: #345995;
     font-size: 40px;
     margin-bottom: 30px;
-}
-
-.slideshow-container {
+  }
+  
+  .slideshow-container {
     position: relative;
     max-width: 600px;
     margin: auto;
-}
-
-.mySlides {
+  }
+  
+  .mySlides {
     display: none;
     text-align: center;
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mySlides img {
+  }
+  
+  .mySlides img {
     border-radius: 50%;
     margin-bottom: 10px;
-}
-
-.dot {
+  }
+  
+  .dot {
     height: 12px;
     width: 12px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-}
-
-.active, .dot:hover {
+  }
+  
+  .active, .dot:hover {
     background-color: #717171;
-}
-.procedimentos {
-    margin: 50px 0;
+  }
+  
+  /* Seção de Procedimentos */
+  .procedimentos {
+    margin: 50px 0 0;
     text-align: center;
-}
-
-.procedimentos h3 {
+  }
+  
+  .procedimentos h3 {
     font-size: 36px;
     color: #345995;
     margin-bottom: 40px;
-}
-
-.procedure-card {
+  }
+  
+  .especialidade-card {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 20px;
     text-align: center;
-}
-
-.procedure-card h4 {
+  }
+  
+  .especialidade-card h4 {
     color: #345995;
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-.procedure-card button {
+  }
+  
+  .especialidade-card button {
     background-color: #345995;
     color: white;
     border: none;
@@ -130,64 +154,116 @@
     margin-top: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.procedure-card button:hover {
+  }
+  
+  .especialidade-card button:hover {
     background-color: #F2B33D;
-}
-.services {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.services h3 {
-    color: #345995;
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-.service-items {
+  }
+  
+  /* Seção de serviços */
+  .service-items {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.service-item {
-    background-color: #e3e7f1;
     padding: 20px;
-    border-radius: 10px;
+  }
+  
+  .service-item {
+    position: relative;
+    background-color: #e3e7f1;
     width: 250px;
-    text-align: center;
+    height: 250px;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-}
-
-.service-item:hover {
+    text-align: center;
+  }
+  
+  .service-item:hover {
     transform: scale(1.05);
-}
-@media (max-width: 768px) {
-    .cabeçalho {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .boas-Vindas h2 {
-        font-size: 22px;
-    }
-
+  }
+  
+  .service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .service-item span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
     .service-items {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .service-item {
-        width: 100%;
-        margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 20px;
     }
-
+  
     .procedure-card {
-        width: 100%;
+      width: 100%;
     }
-
+  
     .slideshow-container {
-        max-width: 100%;
+      max-width: 100%;
     }
-}
+  }
+  
+  /* Rodapé */
+  footer h3 {
+    color: #345995;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+  }
+  
+  footer p {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  footer img {
+    width: 600px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  
+  address {
+    max-height: 500px;
+    background-color: #87CEEB;
+    margin-top: -30px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 90px;
+  }
+  
+  address img {
+    margin-top: 15px;
+    width: 25px;
+    height: 30px;
+    margin-left: 90px;
+  }
+  
