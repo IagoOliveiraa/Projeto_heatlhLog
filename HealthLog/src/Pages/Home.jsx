@@ -56,7 +56,7 @@ function Home() {
         </div>
         <div className="pesquisa-login">
           <input type="text" placeholder="Buscar" />
-          <a href="/Login"><img src={iconperfil} alt="Icon Perfil" /></a>
+          <a href="/Perfil"><img src={iconperfil} alt="Icon Perfil" /></a>
         </div>
       </div>
 
