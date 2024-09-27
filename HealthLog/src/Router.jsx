@@ -16,13 +16,11 @@ const Router = () => {
                 <Route path="/Registro" element={<Registro/>}/>
                 <Route path="/ClinicasPertoDeVoce" element={<Clinica/>}/>
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
-<<<<<<< HEAD
-                <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>
-=======
+
                 <Route path="/Perfil" element={<Perfil/>}/>
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesEsteticas/>}/>
 
->>>>>>> b9e2d34d30f57735621134021b9c73a8045084d8
+
 
             </Routes>
         </BrowserRouter>

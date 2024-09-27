@@ -1,52 +1,112 @@
-// Importa o arquivo CSS para estilização e a imagem do logo
 import "../CSS/ClinicaPertodevoce.css"; 
-import logoh from "../assets/Logo1.png"; // Verifica se o caminho e o nome da imagem estão corretos
-import { FaSearch } from 'react-icons/fa'; // Importa o ícone de lupa da biblioteca react-icons
-import { FaRegCircleUser } from "react-icons/fa6";
+import logoh from "../assets/Logo1.png";
+import { FaSearch } from 'react-icons/fa'; 
+import { FaRegCircleUser } from "react-icons/fa6"; 
+import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { useState } from "react"; 
+import { useNavigate } from "react-router-dom"; 
+import clinicaimg from "../assets/Clinicas.png";
 
-// Função do componente React que representa a clínica
 function Clinica() {
+  const [busca, setBusca] = useState(""); 
+  const navegar = useNavigate(); 
+
+  const irParaPerfil = () => {
+    navegar("/perfil");
+  };
+
+  const pesquisar = (evento) => {
+    if (evento.key === "Enter") {
+      navegar(`/pesquisa/${busca}`);
+    }
+  };
+
   return (
     <>
-      {/* Barra de navegação no topo do site */}
       <div className="barra">
-        {/* Exibe o logo da clínica */}
         <img src={logoh} alt="Logo" className="logo" />
-        
-        {/* Barra de pesquisa centralizada */}
         <div className="barra-pesquisa">
-          {/* Ícone de lupa antes do campo de entrada */}
-          <FaSearch className="icone-pesquisa" /> {/* Ícone de busca */}
-          {/* Campo de entrada para busca, com texto de placeholder */}
-          <input 
-            type="text" // Define o tipo do input como texto
-            placeholder="Buscar" // Texto que aparece quando o campo está vazio
-            className="input-pesquisa" // Classe CSS para estilização
+          <FaSearch className="icone-pesquisa" />
+          <input
+            type="text"
+            placeholder="Buscar"
+            className="input-pesquisa"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+            onKeyPress={pesquisar}
           />
         </div>    
         <div className="containerservicos">
-          <p className="divservicos">Serviços
-
+          <p className="divservicos">
+            Serviços
+            <SlArrowDown className="icone-seta" />
           </p>
-
           <div className="divmenu">
-
-            <a href="#">Medicina</a>
+            <a href="/EspecialidadesMedicas">Medicina</a>
             <a href="#">Odontologia</a>
             <a href="#">Estética</a>
-
           </div>
         </div>
-
-        {/* Ícone de perfil à direita */}
-        <FaRegCircleUser className="icone-perfil" /> {/* Ícone de perfil */}
-
-        
+        <FaRegCircleUser className="icone-perfil" onClick={irParaPerfil} />
       </div>
-      
+
+      <div className="texto-clinicas">
+        <h1>Clínicas perto de você</h1>
+      </div>
+
+      <div className="setas-laterais">
+        <SlArrowLeft className="icone-seta-lateral" />
+        <SlArrowRight className="icone-seta-lateral" />
+      </div>
+
+      <div className="retangulos-container">
+        <div className="retangulo">
+          <img src={clinicaimg} alt="Clínica A" className="imagem-retangulo" />
+          <h2>Clínica A</h2>
+          <p>Nossa clínica A é especializada</p>
+          <p>Endereço: Rua a, N°1 cidade A</p>
+          <p>Horário de funcionamento:</p>
+          <p>SEG a SEX: das 8:00 às 22:00</p>
+          <p>SAB e DOM: das 8:00 às 18:00</p>
+        </div>
+        <div className="retangulo">
+          <img src={clinicaimg} alt="Clínica B" className="imagem-retangulo" />
+          <h2>Clínica B</h2>
+          <p>Nossa clínica B é especializada</p>
+          <p>Endereço: Rua b, N°2 cidade B</p>
+          <p>Horário de funcionamento:</p>
+          <p>SEG a SEX: das 8:00 às 22:00</p>
+          <p>SAB e DOM: das 8:00 às 18:00</p>
+        </div>
+      </div>
+
+      <div className="retangulos-container">
+        <div className="retangulo">
+          <img src={clinicaimg} alt="Clínica C" className="imagem-retangulo" />
+          <h2>Clínica C</h2>
+          <p>Nossa clínica C é especializada</p>
+          <p>Endereço: Rua c, N°3 cidade C</p>
+          <p>Horário de funcionamento:</p>
+          <p>SEG a SEX: das 8:00 às 22:00</p>
+          <p>SAB e DOM: das 8:00 às 18:00</p>
+        </div>
+        <div className="retangulo">
+          <img src={clinicaimg} alt="Clínica D" className="imagem-retangulo" />
+          <h2>Clínica D</h2>
+          <p>Nossa clínica D é especializada</p>
+          <p>Endereço: Rua d, N°4 cidade D</p>
+          <p>Horário de funcionamento:</p>
+          <p>SEG a SEX: das 8:00 às 22:00</p>
+          <p>SAB e DOM: das 8:00 às 18:00</p>
+        </div>
+      </div>
+
+      {/* Texto adicional "Clínicas em geral" */}
+      <div className="texto-clinicas-geral">
+        <h2>Clínicas em geral</h2>
+      </div>
     </>
   );
 }
 
-// Exporta o componente para uso em outras partes da aplicação
-export default Clinica; 
+export default Clinica;
