@@ -1,19 +1,103 @@
-/* Define a cor da barra, o tamanho e outros estilos */
+/* Define a barra de navegação */
 .barra {
-    background-color: #4C78BE; /* Cor da barra */
-    width: 100%; /* Ocupa toda a largura da tela */
+    background-color: #4C78BE; /* Cor de fundo da barra */
+    width: 100%; /* A barra ocupa toda a largura da tela */
     height: 100px; /* Altura da barra */
-    position: fixed; /* Fixa a barra no topo da tela */
-    top: 0; /* Alinha a barra ao topo */
-    left: 0; /* Alinha a barra ao lado esquerdo */
-    display: flex; /* Usa Flexbox para posicionar o conteúdo */
-    align-items: center; /* Alinha verticalmente o conteúdo no centro */
-    padding-left: 20px; /* Espaço à esquerda para o logo não ficar colado na borda */
-    z-index: 1000; /* Garante que a barra fique acima de outros conteúdos */
+    position: fixed; /* Fixa a barra no topo */
+    top: 0; /* Alinha a barra no topo da tela */
+    left: 0; /* Alinha a barra no lado esquerdo */
+    display: flex; /* Usa Flexbox para organizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo no centro verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 0 20px; /* Espaçamento nas laterais */
+    z-index: 1000; /* Garante que a barra fique acima de outros itens */
 }
 
-/* Estilos para o logo */
+/* Estilos para o logo da clínica */
 .logo {
-    height: 140px; /* Altura do logo */
+    height: 150px; /* Altura do logo */
     width: auto; /* Mantém a proporção do logo */
+    /* Logo não afeta o layout da barra de pesquisa */
+    left: 20px; /* Alinha o logo à esquerda */
 }
+
+/* Estilos da barra de pesquisa */
+.barra-pesquisa {
+    display: flex; /* Usa Flexbox para alinhar a lupa e o texto */
+    align-items: center; /* Alinha tudo no centro verticalmente */
+    background-color: rgba(217, 217, 217, 0.1); /* Cor semelhante à da barra  */
+    border: 2px solid rgba(56, 97, 162, 1); /* Borda mais clara para diferenciar */
+    border-radius: 50px; /* Bordas arredondadas */
+    padding: 2px 20px; /* Espaçamento interno */
+    width: 400px; /* Largura da barra de pesquisa */
+    margin-left: 25px;
+}
+
+/* Campo de entrada da pesquisa */
+.input-pesquisa {
+    border: none; /* Sem borda no campo de texto */
+    outline: none; /* Remove o contorno ao focar */
+    padding: 10px; /* Espaçamento interno */
+    font-family: 'Raleway', sans-serif; /* Fonte Raleway */
+    font-size: 18px; /* Tamanho da fonte do texto "Buscar" */
+    margin-left: 6px; /* Espaço entre a lupa e o texto */
+    width: 100%; /* O campo ocupa toda a barra */
+    color: white; /* Texto em branco */
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Ícone de busca (lupa) */
+.icone-pesquisa {
+    color: white; /* Cor branca da lupa */
+    font-size: 20px; /* Tamanho da lupa */
+    
+}
+
+/* Texto "Buscar" no campo de pesquisa */
+.input-pesquisa::placeholder {
+    color: white; /* Texto do placeholder em branco */
+    font-size: 20px; /* Tamanho da fonte*/
+}
+
+
+/* Ícone de perfil */
+.icone-perfil {
+    color: white; /* Cor branca do ícone de perfil */
+    font-size: 35px; /* Tamanho do ícone de perfil */
+    margin-left: auto; /* Espaçamento à esquerda */
+    margin-right: 50px;
+
+}
+
+.divmenu{
+
+    
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+
+
+}
+
+
+
+.containerservicos:hover   .divmenu{
+
+    display: flex;
+    flex-direction: column;
+    color: red;
+
+
+
+}
+
+.containerservicos{
+
+    margin-left: 130px;
+
+}
+
+
+
