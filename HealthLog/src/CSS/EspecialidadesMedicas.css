@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.esteticas-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #345995;
+    padding: 60px;
+    border-bottom: 4px solid #F2B33D;
+}
+
+
+
+.logo h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.pesquisa-login {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa-login input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pesquisa-login a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box {
+    border: 2px solid #4a90e2; /* Cor da borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 25px; /* Espaçamento interno */
+    width: 250px;
+    height: 200px;
+    text-align: left;
+    text-align: start;
+    
+    
+}
+  
+.box h3 h4aw {
+    margin: 0; /* Remove a margem padrão do h2 */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-top: -90px;
+    text-align: initial;
+    
+}
+
+.box h3{
+    font-size: 26px;
+}

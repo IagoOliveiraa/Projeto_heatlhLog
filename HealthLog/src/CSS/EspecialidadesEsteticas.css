@@ -53,3 +53,28 @@ body {
     font-weight: bold;
 }
 
+.box {
+    border: 2px solid #4a90e2; /* Cor da borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 25px; /* Espaçamento interno */
+    width: 250px;
+    height: 200px;
+    text-align: left;
+    text-align: start;
+    
+    
+}
+  
+.box h3 h4aw {
+    margin: 0; /* Remove a margem padrão do h2 */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-top: -90px;
+    text-align: initial;
+    
+}
+
+.box h3{
+    font-size: 26px;
+}
+
+

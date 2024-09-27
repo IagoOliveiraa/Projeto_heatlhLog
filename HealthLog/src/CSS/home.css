@@ -2,219 +2,268 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.home-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
-}
-
-.cabeçalho {
+  }
+  
+  /* Cabeçalho */
+  .cabeçalho {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #345995;
-    padding: 60px;
+    padding: 5px;
     border-bottom: 4px solid #F2B33D;
-}
-
-
-
-.logo h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-.pesquisa-login {
+    position: relative;
+    z-index: 1;
+  
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.pesquisa-login input {
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.pesquisa-login a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.boas-Vindas h2{
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-
-}
-
-.conteudo-principal {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.conteudo-principal h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.review-section h3{
-    color: #345995;
-    font-size: 45px;
+  }
   
-}
-
-.review-section {
-    margin-bottom: 40px;
-}
-
-.review {
-    background-color: #fff3cd;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.procedimentos h3{
-    color: #345995;
-    font-size: 30px;
-}
-
-.procedimentos {
-    margin-bottom: 40px;
-}
-
-.procedure-card {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.procedure-card h4 {
-    margin-bottom: 10px;
-    font-size: 22px;
-    color: #007bff;
-}
-
-.procedure-card button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.services h3{
-    color: #345995;
-    font-size: 30px;
-}
-
-.services {
-    text-align: center; /* Centraliza o título "Serviços disponíveis" */
-}
-
-.service-items {
+  .logo img {
+    margin-top: -110px;
+    height: 100px;
+    margin-right: 5px;
+  }
+  
+  .pesquisa-login {
     display: flex;
-    justify-content: center; /* Centraliza as caixas de serviço no contêiner */
-    margin-top: 20px; /* Espaço entre o título e os itens */
-}
-
-a {
-    text-decoration: none;
-    color: black; /* Define o texto dos links em preto */
-}
-
-.service-item {
-    background-color: #e2e3e5;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center; /* Centraliza o texto dentro da div do serviço */
-    margin: 0 10px; /* Espaçamento horizontal entre as caixas */
-    transition: background-color 0.3s ease;
-    color: black; /* Garante que o texto nas divs também seja preto */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .service-item {
-        width: 80%; /* Aumenta a largura para telas menores */
-        margin: 10px 0; /* Ajusta o espaço entre as caixas */
-    }
-}
-
-
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-top: 5px solid #345995;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.footer h3 {
+    align-items: center;
+  }
+  
+  .pesquisa-login input {
+   
+    border-radius: 100px;
+    border: 1px solid #969696;
+    
+  }
+  
+  .pesquisa-login a {
     color: #345995;
-    font-size: 50px;
-    margin-bottom: 15px;
-}
+    padding: 10px 15px;
+  }
+  
+  .boas-Vindas {
+    margin-left: -300px;
+    margin-top: 130px;
 
-.footer p {
-    margin-bottom: 15px;
-}
-
-footer address {
-    font-style: normal;
-}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
+  }
+  
+  .frase-boasvindas h2 {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  
+  /* Imagem de boas-vindas */
+  .img-boasvindas {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    margin-top: 10vw; /* Alterado para unidade de viewport */
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .img-boasvindas img {
+    width: 400px;
+    height: 500px;
+  }
+  
+  /* Seção de avaliações */
+  .review-section {
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  
+  .review-section h3 {
+    color: #345995;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .slideshow-container {
     position: relative;
+    max-width: 600px;
     margin: auto;
   }
+
   
-  /* Hide the slides by default */
+  
   .mySlides {
     display: none;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #F2B33D;
   }
   
-  /* Dots/bullets/indicators */
+ 
+  
   .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
   }
   
   .active, .dot:hover {
     background-color: #717171;
   }
   
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  /* Seção de Procedimentos */
+  .procedimentos {
+    margin: 50px 0 0;
+    text-align: center;
   }
   
-  @keyframes fade {
-    from { opacity: .4; }
-    to { opacity: 1; }
+  .procedimentos h3 {
+    font-size: 36px;
+    color: #345995;
+    margin-bottom: 40px;
+  }
+  
+  .especialidade-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .especialidade-card h4 {
+    color: #345995;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .especialidade-card button {
+    background-color: #345995;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .especialidade-card button:hover {
+    background-color: #F2B33D;
+  }
+  
+  /* Seção de serviços */
+  .service-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .service-item {
+    position: relative;
+    background-color: #e3e7f1;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .service-item span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .service-items {
+      flex-direction: column;
+    }
+  
+    .service-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .procedure-card {
+      width: 100%;
+    }
+  
+    .slideshow-container {
+      max-width: 100%;
+    }
+  }
+  
+  /* Rodapé */
+  footer h3 {
+    color: #345995;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+  }
+  
+  footer p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  footer img {
+    width: 600px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  
+  address {
+    max-height: 500px;
+    background-color: #87CEEB;
+    margin-top: -10px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 90px;
+  }
+  
+  address img {
+    margin-top: 15px;
+    width: 25px;
+    height: 30px;
+    margin-left: 90px;
   }
   

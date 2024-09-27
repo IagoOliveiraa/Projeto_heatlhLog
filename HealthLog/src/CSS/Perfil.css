@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Cabeçalho */
+
+.cabeçalhoPf{
+
+    display: flex;
+    justify-content: space-between;
+   
+    background-color: #345995;
+    padding: 10px;
+    border-bottom: 4px solid #F2B33D;
+    position: relative;
+
+}
+
+.logo-perfil{
+    display: flex;
+    align-items: center;
+}
+
+.logo-perfil img{
+    height: 150px;
+    margin-right: 5px;
+}
+
+.quadrado {
+    width: 100px; /* Defina a largura desejada */
+    height: 100px; /* Defina a altura desejada */
+    background-color: #ff0000; /* Escolha a cor que deseja, nesse caso vermelho */
+  }
+
