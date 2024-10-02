@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-function Login(){
-    return(
-        <>
-        <h1>Oiii</h1>
-    
-        </>
-    )
-=======
+
+
 import React, { useState } from "react";
 import "../assets/CSS/login.css"; // importação do css
 import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
@@ -78,6 +71,6 @@ function Login() {
       </div>
     </div>
   );
->>>>>>> f0d4d8fd7a5428112385a1358c84869259f31fab
+
 }
 export default Login; /* exportação do login para o router */
