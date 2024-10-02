@@ -1,6 +1,7 @@
 // src/Register.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../assets/CSS/registro.css'
 
 const Registro = () => {
     const [formData, setFormData] = useState({
@@ -53,6 +54,8 @@ const Registro = () => {
     };
 
     return (
+        <div className='informaçoes'>
+            <h1>Se cadastre!</h1>
         <form onSubmit={handleSubmit}>
             <input name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} required />
             <input name="sobrenome" placeholder="Sobrenome" value={formData.sobrenome} onChange={handleChange} required />
@@ -69,7 +72,10 @@ const Registro = () => {
             <input name="confirmarSenha" type="password" placeholder="Confirmar Senha" value={formData.confirmarSenha} onChange={handleChange} required />
             <button type="submit">Registrar</button>
         </form>
+        </div> 
+        
     );
+    
 };
 
 export default Registro;
