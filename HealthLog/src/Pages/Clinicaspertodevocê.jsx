@@ -1,14 +1,22 @@
-import "../CSS/ClinicaPertodevoce.css"; 
+import "../CSS/ClinicaPertodevoce.css";
 import logoh from "../assets/Logo1.png";
 import { FaSearch } from 'react-icons/fa'; 
 import { FaRegCircleUser } from "react-icons/fa6"; 
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState } from "react"; 
 import { useNavigate } from "react-router-dom"; 
-import clinicaimg from "../assets/Clinicas.png";
+import amorsaude from "../assets/amorsaude.jpg";
+import Centerfisio from "../assets/Centerfisio.jpg";
+import clinicapsicologia from "../assets/clinicapsicologia.webp";
+import Clinicas from "../assets/Clinicas.png";
+import Drconsulta from "../assets/Dr.consulta.webp";
+import estetica from "../assets/estetica.webp";
+import odontocompany from "../assets/odonto company.jpg";
+import prope from "../assets/propé.webp";
 
 function Clinica() {
   const [busca, setBusca] = useState(""); 
+  const [indiceAtual, setIndiceAtual] = useState(0); // Controla os retângulos visíveis
   const navegar = useNavigate(); 
 
   const irParaPerfil = () => {
@@ -20,6 +28,91 @@ function Clinica() {
       navegar(`/pesquisa/${busca}`);
     }
   };
+
+  // Funções para controlar a mudança de retângulos
+  const avancar = () => {
+    setIndiceAtual((prevIndice) => (prevIndice + 4) % 9); // Avança 4 índices por vez
+  };
+
+  const voltar = () => {
+    setIndiceAtual((prevIndice) => (prevIndice - 4 + 9) % 9); // Retrocede 4 índices
+  };
+
+  // Lista de retângulos a serem exibidos
+  const retangulos = [
+    {
+      imagem: amorsaude,
+      nome: "Amor Saúde",
+      descricao: "Clínica especializada em cuidados gerais.",
+      endereco: "Rua da Saúde, 123, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: Centerfisio,
+      nome: "Center Fisio",
+      descricao: "Centro especializado em fisioterapia.",
+      endereco: "Avenida das Nações, 456, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: clinicapsicologia,
+      nome: "Clínica Psicologia",
+      descricao: "Atendimento psicológico especializado.",
+      endereco: "Rua das Flores, 789, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: Clinicas,
+      nome: "Clínicas Médicas",
+      descricao: "Diversos serviços médicos à disposição.",
+      endereco: "Avenida dos Médicos, 101, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: Drconsulta,
+      nome: "Dr. Consulta",
+      descricao: "Atendimento médico de qualidade.",
+      endereco: "Rua da Esperança, 202, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: estetica,
+      nome: "Estética Completa",
+      descricao: "Serviços estéticos e tratamentos de beleza.",
+      endereco: "Rua da Beleza, 303, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: odontocompany,
+      nome: "Odonto Company",
+      descricao: "Serviços odontológicos completos.",
+      endereco: "Avenida do Sorriso, 404, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: prope,
+      nome: "Propé Podologia",
+      descricao: "Tratamentos especializados para os pés.",
+      endereco: "Rua do Conforto, 505, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+    {
+      imagem: Clinicas,
+      nome: "Clínica Geral",
+      descricao: "Consultas e exames gerais.",
+      endereco: "Rua da Saúde, 606, Centro",
+      horario: "SEG a SEX: das 8:00 às 22:00",
+      fimSemana: "SAB e DOM: das 8:00 às 18:00",
+    },
+  ];
 
   return (
     <>
@@ -39,7 +132,7 @@ function Clinica() {
         <div className="containerservicos">
           <p className="divservicos">
             Serviços
-            <SlArrowDown className="icone-seta" />
+            <SlArrowDown className="icone-seta" onClick={() => console.log("Seta clicada")} />
           </p>
           <div className="divmenu">
             <a href="/EspecialidadesMedicas">Medicina</a>
@@ -55,55 +148,48 @@ function Clinica() {
       </div>
 
       <div className="setas-laterais">
-        <SlArrowLeft className="icone-seta-lateral" />
-        <SlArrowRight className="icone-seta-lateral" />
+        <SlArrowLeft className="icone-seta-lateral" onClick={voltar} />
+        <SlArrowRight className="icone-seta-lateral" onClick={avancar} />
       </div>
 
       <div className="retangulos-container">
-        <div className="retangulo">
-          <img src={clinicaimg} alt="Clínica A" className="imagem-retangulo" />
-          <h2>Clínica A</h2>
-          <p>Nossa clínica A é especializada</p>
-          <p>Endereço: Rua a, N°1 cidade A</p>
-          <p>Horário de funcionamento:</p>
-          <p>SEG a SEX: das 8:00 às 22:00</p>
-          <p>SAB e DOM: das 8:00 às 18:00</p>
+        <div className="linha-retangulos">
+          <div className="retangulo">
+            <img src={retangulos[indiceAtual].imagem} alt={retangulos[indiceAtual].nome} className="imagem-retangulo" />
+            <h2 style={{ textAlign: 'left' }}>{retangulos[indiceAtual].nome}</h2>
+            <p style={{ textAlign: 'left' }}>{retangulos[indiceAtual].descricao}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[indiceAtual].endereco}</p>
+            <p style={{ textAlign: 'left' }}><strong>Horário de funcionamento:</strong> {retangulos[indiceAtual].horario}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[indiceAtual].fimSemana}</p>
+          </div>
+          <div className="retangulo">
+            <img src={retangulos[(indiceAtual + 1) % 9].imagem} alt={retangulos[(indiceAtual + 1) % 9].nome} className="imagem-retangulo" />
+            <h2 style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 1) % 9].nome}</h2>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 1) % 9].descricao}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 1) % 9].endereco}</p>
+            <p style={{ textAlign: 'left' }}><strong>Horário de funcionamento:</strong> {retangulos[(indiceAtual + 1) % 9].horario}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 1) % 9].fimSemana}</p>
+          </div>
         </div>
-        <div className="retangulo">
-          <img src={clinicaimg} alt="Clínica B" className="imagem-retangulo" />
-          <h2>Clínica B</h2>
-          <p>Nossa clínica B é especializada</p>
-          <p>Endereço: Rua b, N°2 cidade B</p>
-          <p>Horário de funcionamento:</p>
-          <p>SEG a SEX: das 8:00 às 22:00</p>
-          <p>SAB e DOM: das 8:00 às 18:00</p>
-        </div>
-      </div>
 
-      <div className="retangulos-container">
-        <div className="retangulo">
-          <img src={clinicaimg} alt="Clínica C" className="imagem-retangulo" />
-          <h2>Clínica C</h2>
-          <p>Nossa clínica C é especializada</p>
-          <p>Endereço: Rua c, N°3 cidade C</p>
-          <p>Horário de funcionamento:</p>
-          <p>SEG a SEX: das 8:00 às 22:00</p>
-          <p>SAB e DOM: das 8:00 às 18:00</p>
+        <div className="linha-retangulos">
+          <div className="retangulo">
+            <img src={retangulos[(indiceAtual + 2) % 9].imagem} alt={retangulos[(indiceAtual + 2) % 9].nome} className="imagem-retangulo" />
+            <h2 style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 2) % 9].nome}</h2>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 2) % 9].descricao}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 2) % 9].endereco}</p>
+            <p style={{ textAlign: 'left' }}><strong>Horário de funcionamento:</strong> {retangulos[(indiceAtual + 2) % 9].horario}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 2) % 9].fimSemana}</p>
+          </div>
+          <div className="retangulo">
+            <img src={retangulos[(indiceAtual + 3) % 9].imagem} alt={retangulos[(indiceAtual + 3) % 9].nome} className="imagem-retangulo" />
+            <h2 style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 3) % 9].nome}</h2>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 3) % 9].descricao}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 3) % 9].endereco}</p>
+            <p style={{ textAlign: 'left' }}><strong>Horário de funcionamento:</strong> {retangulos[(indiceAtual + 3) % 9].horario}</p>
+            <p style={{ textAlign: 'left' }}>{retangulos[(indiceAtual + 3) % 9].fimSemana}</p>
+          </div>
         </div>
-        <div className="retangulo">
-          <img src={clinicaimg} alt="Clínica D" className="imagem-retangulo" />
-          <h2>Clínica D</h2>
-          <p>Nossa clínica D é especializada</p>
-          <p>Endereço: Rua d, N°4 cidade D</p>
-          <p>Horário de funcionamento:</p>
-          <p>SEG a SEX: das 8:00 às 22:00</p>
-          <p>SAB e DOM: das 8:00 às 18:00</p>
-        </div>
-      </div>
-
-      {/* Texto adicional "Clínicas em geral" */}
-      <div className="texto-clinicas-geral">
-        <h2>Clínicas em geral</h2>
       </div>
     </>
   );

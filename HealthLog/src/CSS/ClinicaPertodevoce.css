@@ -39,7 +39,6 @@
     border: none;
     outline: none;
     padding: 10px;
-    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     margin-left: 6px;
     width: 100%;
@@ -80,7 +79,7 @@
 
 /* Texto "Serviços" */
 .divservicos {
-    font-family: 'Raleway', sans-serif;
+    font-family: Arial, sans-serif; /* Retornado para a fonte anterior */
     color: white;
     display: flex;
     align-items: center;
@@ -100,6 +99,7 @@
     text-decoration: none;
     display: none;
     position: absolute;
+    border-radius: 10px; /* Bordas arredondadas para o menu */
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
@@ -127,15 +127,15 @@
     flex-wrap: wrap; /* Permite que os retângulos se ajustem em várias linhas */
     justify-content: center;
     margin-top: 5px; /* Aumenta a margem superior para dar mais espaço acima */
-    gap: 120px; /* Espaço entre os retângulos */
+    gap: 40px; /* Espaço entre os retângulos */
 }
 
 .retangulo {
     background-color: #FFF;
     border: 3px solid #F2B33D;
     border-radius: 10px;
-    width: 300px; /* Aumentando o tamanho dos retângulos */
-    margin-top: 100px; /* Ajuste o valor conforme necessário */
+    width: 300px; /* Tamanho dos retângulos */
+    margin-top: 50px; /* Ajuste o valor conforme necessário */
     text-align: center;
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites do retângulo */
 }
@@ -151,14 +151,14 @@
     font-family: 'Rajdhani', sans-serif;
     font-size: 37px;
     color: #000000;
-    margin-right: 140px;
+    margin: 0; /* Remove a margem à direita para alinhar melhor */
 }
 
 .retangulo p {
     font-family: 'Rajdhani', sans-serif;
     font-size: 16px;
     color: #333;
-    margin: 5px 0;
+    margin: 5px 0; /* Margens para o texto */
 }
 
 /* Ícones laterais */
@@ -179,4 +179,51 @@
     font-size: 50px; /* Tamanho das setas */
     color: #4C78BE; /* Cor das setas */
     cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+}
+
+/* Texto "Clínicas em geral" e imagem */
+.texto-clinicas-geral {
+    margin-top: 140px; /* Ajuste de margem para ficar abaixo da barra de navegação */
+    text-align: left; /* Alinhamento à esquerda */
+    margin-left: 55px; /* Margem à esquerda para dar espaço */
+}
+
+.texto-clinicas-geral h2 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #005BD6;
+    font-size: 46px; /* Mesma fonte do texto "Clínicas perto de você" */
+}
+
+.linha-pontilhada-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto e a imagem */
+    margin-top: 20px; /* Adiciona um espaço acima */
+}
+
+/* Linha pontilhada */
+.linha-pontilhada {
+    border-top: 1px dashed #F2B33D; /* Linha pontilhada */
+    width: 80%; /* Largura da linha pontilhada */
+    margin: 20px 0; /* Margens em cima e embaixo da linha */
+}
+
+/* Estilo das imagens da linha pontilhada */
+.imagem-linha-pontilhada {
+    width: 100%; /* Largura da imagem para 100% do contêiner */
+    height: auto; /* Altura automática para manter a proporção */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção */
+}
+
+/* Adicionando efeito de hover para links do menu de serviços */
+.divmenu a {
+    padding: 10px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    color: #000; /* Cor do texto */
+}
+
+/* Efeito de hover para os links do menu de serviços */
+.divmenu a:hover {
+    color: white; /* Cor do texto ao passar o mouse */
+    background-color: #005BD6; /* Fundo azul ao passar o mouse */
 }
