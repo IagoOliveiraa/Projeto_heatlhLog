@@ -5,6 +5,8 @@ import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 import Login from "./Pages/Login";
 import Perfil from "./Pages/Perfil";
+import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
+import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 
 
 const Router = () => {
@@ -16,9 +18,9 @@ const Router = () => {
                 <Route path="/Registro" element={<Registro/>}/>
                 <Route path="/ClinicasPertoDeVoce" element={<Clinica/>}/>
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
-
                 <Route path="/Perfil" element={<Perfil/>}/>
-                <Route path="/EspecialidadesMedicas" element={<EspecialidadesEsteticas/>}/>
+                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
+                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
 
 
 

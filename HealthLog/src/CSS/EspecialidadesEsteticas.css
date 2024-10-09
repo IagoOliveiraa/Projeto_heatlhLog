@@ -9,15 +9,11 @@ body {
     line-height: 1.6;
 }
 
-
-
-.esteticas-container {
+.esteticas-caixas {
     max-width: 1400px;
     margin: auto;
     padding: 20px;
 }
-
-
 
 .cabeçalho {
     display: flex;
@@ -27,8 +23,6 @@ body {
     padding: 60px;
     border-bottom: 4px solid #F2B33D;
 }
-
-
 
 .logo h1 {
     font-size: 24px;
@@ -53,19 +47,18 @@ body {
     font-weight: bold;
 }
 
-.box {
-    border: 2px solid #4a90e2; /* Cor da borda */
+.box1 {
+    border: 2px solid #F2B33D; /* Cor da borda */
     border-radius: 8px; /* Bordas arredondadas */
     padding: 25px; /* Espaçamento interno */
     width: 250px;
     height: 200px;
-    text-align: left;
-    text-align: start;
-    
+    text-align: start; 
+    align-items: center;
     
 }
   
-.box h3 h4aw {
+.box1 h3 h4{
     margin: 0; /* Remove a margem padrão do h2 */
     font-size: 24px; /* Tamanho da fonte */
     margin-top: -90px;
@@ -73,7 +66,7 @@ body {
     
 }
 
-.box h3{
+.box1 h3{
     font-size: 26px;
 }
 
