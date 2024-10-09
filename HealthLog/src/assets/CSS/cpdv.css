@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
+.containerCpdvB{
+    margin: -1%;
+    width: 100%;
+}
+/* Barra de navegação */
+.barra {
+    background-color: #4C78BE;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Logo da clínica */
+.logo {
+    height: 120px;
+    width: auto;
+    left: 20px;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.1);
+    border: 2px solid rgba(56, 97, 162, 1);
+    border-radius: 50px;
+    padding: 2px 20px;
+    width: 400px;
+    margin-left: 25px;
+}
+
+/* Campo de texto da pesquisa */
+.input-pesquisa {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin-left: 6px;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisa {
+    color: white;
+    font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisa::placeholder {
+    color: rgb(203, 203, 203);
+    font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfil {
+    color: white;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: 50px;
+    cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+}
+
+/* Seção de serviços */
+.containerservicos {
+    margin-left: 130px;
+    border: 2px solid rgba(56, 97, 162, 1);
+    background-color: rgba(217, 217, 217, 0.1);
+    border-radius: 50px;
+    width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicos {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+/* Ícone de seta para baixo */
+.icone-seta {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Menu de serviços */
+.divmenu {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+}
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicos:hover .divmenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.posHeader{
+    width: 100%;
+}
