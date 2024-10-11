@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
+/* Barra de navegação */
+.barra {
+    background-color: #4C78BE;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+/* Logo da clínica */
+.logo {
+    height: 120px;
+    width: auto;
+    left: 20px;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.1);
+    border: 2px solid rgba(56, 97, 162, 1);
+    border-radius: 50px;
+    padding: 2px 20px;
+    width: 400px;
+    margin-left: 25px;
+}
+
+/* Campo de texto da pesquisa */
+.input-pesquisa {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin-left: 6px;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisa {
+    color: white;
+    font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisa::placeholder {
+    color: white;
+    font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfil {
+    color: white;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: 50px;
+    cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+}
+
+/* Seção de serviços */
+.containerservicos {
+    margin-left: 130px;
+    border: 2px solid rgba(56, 97, 162, 1);
+    background-color: rgba(217, 217, 217, 0.1);
+    border-radius: 50px;
+    padding: 10px;
+    width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicos {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de seta para baixo */
+.icone-seta {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Menu de serviços */
+.divmenu {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    display: none;
+    position: absolute;
+}
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicos:hover .divmenu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Texto "Clínicas perto de você" */
+.texto-clinicas {
+    margin-top: 140px; /* Ajuste de margem para ficar abaixo da barra de navegação */
+    text-align: left; /* Alinhamento à esquerda */
+    margin-left: 55px; /* Margem à esquerda para dar espaço */
+}
+
+.texto-clinicas h1 {
+    font-family: 'Rajdhani', sans-serif;
+    color: #005BD6;
+    font-size: 46px;
+}
+
+/* Estilo dos retângulos */
+.retangulos-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os retângulos se ajustem em várias linhas */
+    justify-content: center;
+    margin-top: 5px; /* Aumenta a margem superior para dar mais espaço acima */
+    gap: 120px; /* Espaço entre os retângulos */
+}
+
+.retangulo {
+    background-color: #FFF;
+    border: 3px solid #F2B33D;
+    border-radius: 10px;
+    width: 300px; /* Aumentando o tamanho dos retângulos */
+    margin-top: 100px; /* Ajuste o valor conforme necessário */
+    text-align: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do retângulo */
+}
+
+.imagem-retangulo {
+    width: 100%; /* Faz a imagem ocupar toda a largura do retângulo */
+    height: 200px; /* Aumentando a altura da imagem dentro do retângulo */
+    object-fit: cover; /* Manter a proporção da imagem */
+}
+
+/* Estilo do texto dentro dos retângulos */
+.retangulo h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 37px;
+    color: #000000;
+    margin-right: 140px;
+}
+
+.retangulo p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Ícones laterais */
+.setas-laterais {
+    position: fixed;
+    top: 50%; /* Ajusta a posição vertical das setas */
+    left: 0;
+    margin-top: 200px; /* Ajuste o valor conforme necessário */
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Ícones das setas */
+.icone-seta-lateral {
+    font-size: 50px; /* Tamanho das setas */
+    color: #4C78BE; /* Cor das setas */
+    cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+}

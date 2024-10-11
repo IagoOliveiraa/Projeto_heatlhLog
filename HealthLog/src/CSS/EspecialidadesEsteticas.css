@@ -1,0 +1,185 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+   
+  .containerCpdvB{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+  }
+  /* Barra de navegação */
+  .barraAA {
+      background-color: #4C78BE;
+      width: 100%;
+      height: 100px;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+  }
+   
+  /* Logo da clínica */
+  .logoAA {
+      height: 120px;
+      width: auto;
+      left: 20px;
+  }
+   
+  /* Barra de pesquisa */
+  .barra-pesquisaAA {
+      display: flex;
+      align-items: center;
+      background-color: rgba(217, 217, 217, 0.1);
+      border: 2px solid rgba(56, 97, 162, 1);
+      border-radius: 50px;
+      padding: 2px 20px;
+      width: 400px;
+      margin-left: 25px;
+  }
+   
+  /* Campo de texto da pesquisa */
+  .input-pesquisaAA {
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      margin-left: 6px;
+      width: 100%;
+      color: white;
+      background-color: transparent;
+  }
+   
+  /* Ícone de pesquisa */
+  .icone-pesquisaAA {
+      color: white;
+      font-size: 20px;
+  }
+   
+  /* Placeholder da pesquisa */
+  .input-pesquisaAA::placeholder {
+      color: rgb(203, 203, 203);
+      font-size: 20px;
+  }
+   
+  /* Ícone de perfil */
+  .icone-perfilAA {
+      color: white;
+      font-size: 40px;
+      margin-left: auto;
+      margin-right: 50px;
+      cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+  }
+   
+  /* Seção de serviços */
+  .containerservicosAA {
+      margin-left: 130px;
+      border: 2px solid rgba(56, 97, 162, 1);
+      background-color: rgba(217, 217, 217, 0.1);
+      border-radius: 50px;
+      width: 120px;
+  }
+   
+  /* Texto "Serviços" */
+  .divservicosAA {
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin-left: 13%;
+      margin-right: 13%;
+  }
+   
+  /* Ícone de seta para baixo */
+  .icone-setaAA {
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
+  }
+   
+  /* Menu de serviços */
+  .divmenuAA {
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      display: none;
+      position: absolute;
+  }
+   
+  /* Mostrar menu de serviços ao passar o mouse */
+  .containerservicosAA:hover .divmenu {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  
+  
+  .graficoAA img {
+    margin: 3%;
+    height: 200px;
+    margin-top: 11%;
+    margin-left: 6%;
+    align-items: center;
+  }
+  
+  .titulo2AA h1 {
+    font-family: 'Arial', sans-serif;
+    color: #3366ff;
+    margin-bottom: 20px;
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  .todas-caixas2AA {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .todas-caixas2AA a{
+    text-decoration: none;
+  }
+  
+  .caixa2AA {
+    border: 1px solid #ffa500;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+    margin-top: 10%;
+    transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
+  }
+  
+  .caixa2AA:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+  }
+  
+  .caixa2AA h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .caixa2AA p {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .caixa2AA a:hover {
+    color: #3366ff; /* Exemplo de efeito hover nos links */
+  }
+  
+  
+  
+    
+      
+  
