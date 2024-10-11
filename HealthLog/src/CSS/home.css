@@ -1,269 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
+/* Reset de margem e padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Cabeçalho */
-  .cabeçalho {
-    display: flex;
-    justify-content: space-between;
-    background-color: #345995;
-    padding: 5px;
-    border-bottom: 4px solid #F2B33D;
-    position: relative;
-    z-index: 1;
-  
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    margin-top: -110px;
-    height: 100px;
-    margin-right: 5px;
-  }
-  
-  .pesquisa-login {
-    display: flex;
-    align-items: center;
-  }
-  
-  .pesquisa-login input {
-   
-    border-radius: 100px;
-    border: 1px solid #969696;
-    
-  }
-  
-  .pesquisa-login a {
-    color: #345995;
-    padding: 10px 15px;
-  }
-  
-  .boas-Vindas {
-    margin-left: -300px;
-    margin-top: 130px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.review-section {
+  position: relative;
+  padding: 20px;
+}
+
+/* Logo da clínica */
+.logo {
+  height: 120px;
+  width: auto;
+  left: 20px;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 2px solid rgba(56, 97, 162, 1);
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 400px;
+  margin-left: 25px;
+}
+
+/* Campo de texto da pesquisa */
+.input-pesquisa {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisa {
+  color: white;
+  font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisa::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfil {
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+}
+
+/* Menu de serviços */
+
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicos:hover .divmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.divservicos a{
+
+  margin-left: -3px;
+  margin-top: 10px;
+
+}
+
+.Perfil a{
+
+margin-left: 90%;
+
+}
+
+
+/* Imagem de boas-vindas */
+.img-boasvindas {
+  position: absolute; /* Permite que a imagem seja posicionada em relação ao header */
+  top: 0; /* Ajuste para a posição no topo */
+  left: 79%; /* Alinhamento à esquerda com ajuste */
+  margin-top: 5vw; /* Ajusta a posição vertical */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 10 !important; /* Z-index superior ao do header */
+}
+
+.img-boasvindas img {
+  width: 400px; /* Ajusta a largura da imagem */
+  height: 500px; /* Ajusta a altura da imagem */
+}
+
+
+/* Seção de avaliações */
+.review-section {
+  margin-top: 50px; /* Margem superior */
+  text-align: center; /* Centraliza o texto */
+  border-radius: 2px; /* Bordas levemente arredondadas */
+}
+
+.review-section h3 {
+  color: #345995; /* Cor do título */
+  font-size: 40px; /* Tamanho da fonte do título */
+  margin-bottom: 30px; /* Espaçamento inferior */
+  margin-top: 5%;
+}
+
+.slideshow-container {
+  position: relative; /* Permite o posicionamento dos slides */
+  max-width: 600px; /* Largura máxima do container */
+  margin: auto; /* Centraliza horizontalmente */
+  margin-top: 5vw;
+}
+
+
+.mySlides {
+  display: none; /* Esconde os slides por padrão */
+  text-align: left; /* deixa o texto na esquerda*/
+  background-color: #f8f9fa; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 0 25px #F2B33D; /* Sombra ao redor do slide */
+  margin-top: 10%;
+}
+
+.dot {
+  height: 16px; /* Altura dos "dots" */
+  width: 16px; /* Largura dos "dots" */
+  margin: 0 5px; /* Espaçamento entre os "dots" */
+  background-color: #bbb; /* Cor de fundo dos "dots" */
+  border-radius: 50%; /* Formato circular */
+  display: inline-block; /* Exibe em linha */
+}
+
+/* "Dot" ativo e hover */
+.active, .dot:hover {
+  background-color: #4C78BE; /* Cor ao passar o mouse ou estar ativo */
+  margin-top: 20px;
+}
+
+/* Seção de Procedimentos */
+.procedimentos {
+  margin: 50px 0 0; /* Margens superior e inferior */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.procedimentos h3 {
+  font-size: 36px; /* Tamanho do título */
+  color: #345995; /* Cor do título */
+  margin-bottom: 40px; /* Espaçamento inferior */
+}
+
+.especialidade-card {
+  background-color: #fff; /* Fundo branco */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra ao redor do card */
+  margin: 20px; /* Margens ao redor do card */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.especialidade-card h4 {
+  color: #345995; /* Cor do título */
+  font-size: 24px; /* Tamanho do título */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.especialidade-card button {
+  background-color: #345995; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove bordas */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 20px; /* Bordas arredondadas */
+  margin-top: 10px; /* Margem superior */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave ao mudar de cor */
+}
+
+.especialidade-card button:hover {
+  background-color: #F2B33D; /* Cor ao passar o mouse */
+}
+
+
+
+/* Seção de serviços */
+
+.Servicos h3{
+  margin-top: 20px;
+}
+
+.service-items {
+  display: flex; /* Alinha os itens lado a lado */
+  justify-content: space-around; /* Distribui os itens com espaçamento entre eles */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.service-item {
+  position: relative; /* Permite posicionar elementos filhos */
+  background-color: #e3e7f1; /* Cor de fundo */
+  width: 250px; /* Largura do item */
+  height: 250px; /* Altura do item */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin: 20px; /* Margens ao redor do item */
+  overflow: hidden; /* Esconde o que ultrapassar os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s; /* Transição suave no hover */
+  text-align: center; /* Centraliza o texto */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Aumenta o item ao passar o mouse */
+}
+
+.service-item img {
+  width: 100%; /* Largura completa da imagem */
+  height: 100%; /* Altura completa da imagem */
+  object-fit: cover; /* Ajusta a imagem ao container */
+  position: absolute; /* Posiciona a imagem */
+  top: 0; /* Alinhada ao topo */
+  left: 0; /* Alinhada à esquerda */
+  z-index: 1; /* Ordem de sobreposição */
+}
+
+.service-item span {
+  position: absolute; /* Posiciona o texto */
+  bottom: 10px; /* Posição a 10px do fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para o centro */
+  z-index: 2; /* Sobrepõe à imagem */
+  color: #fff; /* Cor branca */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .service-items {
+    flex-direction: column; /* Coloca os itens em coluna em telas menores */
   }
-  
-  .frase-boasvindas h2 {
-    color: #fff;
-    font-size: 38px;
-    text-align: center;
-    margin-right: 50px;
-    margin-bottom: 10px;
+
+  .service-item {
+    width: 100%; /* Aumenta a largura para preencher a tela */
+    margin-bottom: 20px; /* Margem inferior */
   }
-  
-  /* Imagem de boas-vindas */
-  .img-boasvindas {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    margin-top: 10vw; /* Alterado para unidade de viewport */
-    transform: translateX(-50%);
-    z-index: 10;
+
+  .procedure-card {
+    width: 100%; /* Aumenta a largura dos cards */
   }
-  
-  .img-boasvindas img {
-    width: 400px;
-    height: 500px;
-  }
-  
-  /* Seção de avaliações */
-  .review-section {
-    margin-top: 50px;
-    text-align: center;
-    border-radius: 2px;
-  }
-  
-  .review-section h3 {
-    color: #345995;
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-  
+
   .slideshow-container {
-    position: relative;
-    max-width: 600px;
-    margin: auto;
+    max-width: 100%; /* Ajusta a largura do slideshow */
   }
+}
 
-  
-  
-  .mySlides {
-    display: none;
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 25px #F2B33D;
-  }
-  
+/* Rodapé */
+footer h3 {
+  color: #345995; /* Cor do título */
+  text-align: center; /* Centraliza o título */
+  font-size: 36px; /* Tamanho do título */
+  padding: 10px; /* Espaçamento interno */
+}
+
+footer p {
+  text-align: center; /* Centraliza o texto */
+  font-size: 22px; /* Tamanho da fonte */
+  margin-top: 20px; /* Margem superior */
+}
+
+footer img {
+  width: 500px; /* Largura da imagem */
+  height: 550px; /* Altura da imagem */
+  display: block; /* Exibe como bloco */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+  margin-top: 5px; /* Margem superior */
+}
+
+.finalHome {
+
+  background-color: #7CAFF4; /* Cor de fundo */
  
   
-  .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Seção de Procedimentos */
-  .procedimentos {
-    margin: 50px 0 0;
-    text-align: center;
-  }
-  
-  .procedimentos h3 {
-    font-size: 36px;
-    color: #345995;
-    margin-bottom: 40px;
-  }
-  
-  .especialidade-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .especialidade-card h4 {
-    color: #345995;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .especialidade-card button {
-    background-color: #345995;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .especialidade-card button:hover {
-    background-color: #F2B33D;
-  }
-  
-  /* Seção de serviços */
-  .service-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .service-item {
-    position: relative;
-    background-color: #e3e7f1;
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    margin: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    text-align: center;
-  }
-  
-  .service-item:hover {
-    transform: scale(1.05);
-  }
-  
-  .service-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  .service-item span {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .service-items {
-      flex-direction: column;
-    }
-  
-    .service-item {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .procedure-card {
-      width: 100%;
-    }
-  
-    .slideshow-container {
-      max-width: 100%;
-    }
-  }
-  
-  /* Rodapé */
-  footer h3 {
-    color: #345995;
-    text-align: center;
-    font-size: 36px;
-    padding: 10px;
-  }
-  
-  footer p {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-  footer img {
-    width: 600px;
-    height: 500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-  
-  address {
-    max-height: 500px;
-    background-color: #87CEEB;
-    margin-top: -10px;
-    font-size: 20px;
-    color: #fff;
-    padding-left: 90px;
-  }
-  
-  address img {
-    margin-top: 15px;
-    width: 25px;
-    height: 30px;
-    margin-left: 90px;
-  }
-  
+}
+
+.finalHome p{
+  font-size: 20px; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto branca */
+ 
+}
+
+.localizacao img {
+  margin-top: 100px;
+  width: 25px; /* Largura da imagem */
+  height: 30px; /* Altura da imagem */
+  margin-left: -80px; /* Espaçamento à esquerda */
+} 
