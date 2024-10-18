@@ -7,20 +7,56 @@
   box-sizing: border-box;
 }
 
+.barra-home {
+
+  background-color: #4C78BE;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 45px;
+  z-index: 5;
+
+}
+
+
+.bemVindo {
+  z-index: 3;
+
+}
+
 .review-section {
   position: relative;
   padding: 20px;
 }
 
 /* Logo da clínica */
-.logo {
+.logoHome {
   height: 120px;
   width: auto;
   left: 20px;
 }
 
+.feijoes {
+  background-color: #4C78BE;
+  height: 30vh;
+  margin-top: 19vh;
+  border-bottom: 0.5vw solid #F2B33D;
+}
+
+.feijoes h1 {
+  color: #fff;
+  margin-left: 5vw;
+  font-size: 4vw;
+  max-width: 60%;
+}
+
 /* Barra de pesquisa */
-.barra-pesquisa {
+.barra-pesquisaHome {
+  margin-top: 1.9vw;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: rgba(217, 217, 217, 0.1);
@@ -28,11 +64,11 @@
   border-radius: 50px;
   padding: 2px 20px;
   width: 400px;
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 /* Campo de texto da pesquisa */
-.input-pesquisa {
+.input-pesquisaHome {
   border: none;
   outline: none;
   padding: 10px;
@@ -45,270 +81,426 @@
 }
 
 /* Ícone de pesquisa */
-.icone-pesquisa {
+.icone-pesquisaHome {
   color: white;
   font-size: 20px;
 }
 
 /* Placeholder da pesquisa */
-.input-pesquisa::placeholder {
+.input-pesquisaHome::placeholder {
   color: white;
   font-size: 20px;
 }
 
 /* Ícone de perfil */
-.icone-perfil {
+.icone-perfilHome {
   color: white;
   font-size: 40px;
   margin-left: auto;
   margin-right: 50px;
-  cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+  cursor: pointer;
+  /* Cursor de "mão" ao passar o mouse */
+}
+
+
+/* Seção de serviços */
+
+
+
+.containerservicosHome {
+  margin-top: 1.5vw;
+  margin-left: 130px;
+  height: 65px;
+  border: 2px solid rgba(56, 97, 162, 1);
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  padding: 10px;
+  width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicosHome {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* Ícone de seta para baixo */
+.icone-setaHome {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 /* Menu de serviços */
-
+.divmenuHome {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+}
 
 /* Mostrar menu de serviços ao passar o mouse */
-.containerservicos:hover .divmenu {
+.containerservicosHome:hover .divmenu {
   display: flex;
   flex-direction: column;
 }
 
 
-
-.divservicos a{
+.divservicosHome a {
 
   margin-left: -3px;
   margin-top: 10px;
 
 }
 
-.Perfil a{
+.PerfilHome {
 
-margin-left: 90%;
+  margin-top: 2.5vw;
+  margin-left: 5.5vw;
 
 }
 
 
 /* Imagem de boas-vindas */
 .img-boasvindas {
-  position: absolute; /* Permite que a imagem seja posicionada em relação ao header */
-  top: 0; /* Ajuste para a posição no topo */
-  left: 79%; /* Alinhamento à esquerda com ajuste */
-  margin-top: 5vw; /* Ajusta a posição vertical */
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-  z-index: 10 !important; /* Z-index superior ao do header */
+  position: absolute;
+  /* Permite que a imagem seja posicionada em relação ao header */
+  top: 0;
+  /* Ajuste para a posição no topo */
+  left: 73%;
+  /* Alinhamento à esquerda com ajuste */
+  margin-top: 5.99vw;
+  /* Ajusta a posição vertical */
+  transform: translateX(-50%);
+  /* Centraliza horizontalmente */
+
 }
 
 .img-boasvindas img {
-  width: 400px; /* Ajusta a largura da imagem */
-  height: 500px; /* Ajusta a altura da imagem */
+  width: 400px;
+  /* Ajusta a largura da imagem */
+  height: 500px;
+  /* Ajusta a altura da imagem */
 }
 
 
 /* Seção de avaliações */
 .review-section {
-  margin-top: 50px; /* Margem superior */
-  text-align: center; /* Centraliza o texto */
-  border-radius: 2px; /* Bordas levemente arredondadas */
+  margin-top: 50px;
+  /* Margem superior */
+  text-align: center;
+  /* Centraliza o texto */
+  border-radius: 2px;
+  /* Bordas levemente arredondadas */
 }
 
 .review-section h3 {
-  color: #345995; /* Cor do título */
-  font-size: 40px; /* Tamanho da fonte do título */
-  margin-bottom: 30px; /* Espaçamento inferior */
-  margin-top: 5%;
+  color: #345995;
+  /* Cor do título */
+  font-size: 40px;
+  /* Tamanho da fonte do título */
+  margin-bottom: 30px;
+  /* Espaçamento inferior */
+  margin-top: -2%;
 }
 
 .slideshow-container {
-  position: relative; /* Permite o posicionamento dos slides */
-  max-width: 600px; /* Largura máxima do container */
-  margin: auto; /* Centraliza horizontalmente */
-  margin-top: 5vw;
+  position: relative;
+  /* Permite o posicionamento dos slides */
+  max-width: 600px;
+  /* Largura máxima do container */
+  margin: auto;
+  /* Centraliza horizontalmente */
 }
 
 
 .mySlides {
-  display: none; /* Esconde os slides por padrão */
-  text-align: left; /* deixa o texto na esquerda*/
-  background-color: #f8f9fa; /* Cor de fundo */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 0 25px #F2B33D; /* Sombra ao redor do slide */
+  display: none;
+  /* Esconde os slides por padrão */
+  text-align: left;
+  /* deixa o texto na esquerda*/
+  background-color: #f8f9fa;
+  /* Cor de fundo */
+  padding: 20px;
+  /* Espaçamento interno */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  box-shadow: 0 0 25px #F2B33D;
+  /* Sombra ao redor do slide */
   margin-top: 10%;
 }
 
 .dot {
-  height: 16px; /* Altura dos "dots" */
-  width: 16px; /* Largura dos "dots" */
-  margin: 0 5px; /* Espaçamento entre os "dots" */
-  background-color: #bbb; /* Cor de fundo dos "dots" */
-  border-radius: 50%; /* Formato circular */
-  display: inline-block; /* Exibe em linha */
+  height: 16px;
+  /* Altura dos "dots" */
+  width: 16px;
+  /* Largura dos "dots" */
+  margin: 0 5px;
+  /* Espaçamento entre os "dots" */
+  background-color: #bbb;
+  /* Cor de fundo dos "dots" */
+  border-radius: 50%;
+  /* Formato circular */
+  display: inline-block;
+  /* Exibe em linha */
 }
 
 /* "Dot" ativo e hover */
-.active, .dot:hover {
-  background-color: #4C78BE; /* Cor ao passar o mouse ou estar ativo */
+.active,
+.dot:hover {
+  background-color: #4C78BE;
+  /* Cor ao passar o mouse ou estar ativo */
   margin-top: 20px;
 }
 
 /* Seção de Procedimentos */
 .procedimentos {
-  margin: 50px 0 0; /* Margens superior e inferior */
-  text-align: center; /* Centraliza o conteúdo */
+  margin: 50px 0 0;
+  /* Margens superior e inferior */
+  text-align: center;
+  /* Centraliza o conteúdo */
 }
 
 .procedimentos h3 {
-  font-size: 36px; /* Tamanho do título */
-  color: #345995; /* Cor do título */
-  margin-bottom: 40px; /* Espaçamento inferior */
+  font-size: 36px;
+  /* Tamanho do título */
+  color: #345995;
+  /* Cor do título */
+  margin-bottom: 40px;
+  /* Espaçamento inferior */
+}
+
+.texto {
+  margin-top: 10vw;
+  margin-left: -25vw;
+}
+
+.texto h2 {
+  font-size: 30px;
+  color: #fff;
 }
 
 .especialidade-card {
-  background-color: #fff; /* Fundo branco */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra ao redor do card */
-  margin: 20px; /* Margens ao redor do card */
-  text-align: center; /* Centraliza o conteúdo */
+  background-color: #fff;
+  /* Fundo branco */
+  padding: 20px;
+  /* Espaçamento interno */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* Sombra ao redor do card */
+  margin: 20px;
+  /* Margens ao redor do card */
+  text-align: center;
+  /* Centraliza o conteúdo */
 }
 
 .especialidade-card h4 {
-  color: #345995; /* Cor do título */
-  font-size: 24px; /* Tamanho do título */
-  margin-bottom: 10px; /* Espaçamento inferior */
+  color: #345995;
+  /* Cor do título */
+  font-size: 24px;
+  /* Tamanho do título */
+  margin-bottom: 10px;
+  /* Espaçamento inferior */
 }
 
 .especialidade-card button {
-  background-color: #345995; /* Cor de fundo do botão */
-  color: white; /* Cor do texto */
-  border: none; /* Remove bordas */
-  padding: 10px 20px; /* Espaçamento interno */
-  border-radius: 20px; /* Bordas arredondadas */
-  margin-top: 10px; /* Margem superior */
-  cursor: pointer; /* Muda o cursor ao passar o mouse */
-  transition: background-color 0.3s; /* Transição suave ao mudar de cor */
+  background-color: #345995;
+  /* Cor de fundo do botão */
+  color: white;
+  /* Cor do texto */
+  border: none;
+  /* Remove bordas */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+  border-radius: 20px;
+  /* Bordas arredondadas */
+  margin-top: 10px;
+  /* Margem superior */
+  cursor: pointer;
+  /* Muda o cursor ao passar o mouse */
+  transition: background-color 0.3s;
+  /* Transição suave ao mudar de cor */
 }
 
 .especialidade-card button:hover {
-  background-color: #F2B33D; /* Cor ao passar o mouse */
+  background-color: #F2B33D;
+  /* Cor ao passar o mouse */
 }
 
 
 
 /* Seção de serviços */
 
-.Servicos h3{
+.Servicos h3 {
   margin-top: 20px;
 }
 
 .service-items {
-  display: flex; /* Alinha os itens lado a lado */
-  justify-content: space-around; /* Distribui os itens com espaçamento entre eles */
-  flex-wrap: wrap; /* Permite quebra de linha se necessário */
-  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  /* Alinha os itens lado a lado */
+  justify-content: space-around;
+  /* Distribui os itens com espaçamento entre eles */
+  flex-wrap: wrap;
+  /* Permite quebra de linha se necessário */
+  padding: 20px;
+  /* Espaçamento interno */
 }
 
 .service-item {
-  position: relative; /* Permite posicionar elementos filhos */
-  background-color: #e3e7f1; /* Cor de fundo */
-  width: 250px; /* Largura do item */
-  height: 250px; /* Altura do item */
-  border-radius: 10px; /* Bordas arredondadas */
-  margin: 20px; /* Margens ao redor do item */
-  overflow: hidden; /* Esconde o que ultrapassar os limites do container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.3s; /* Transição suave no hover */
-  text-align: center; /* Centraliza o texto */
+  position: relative;
+  /* Permite posicionar elementos filhos */
+  background-color: #e3e7f1;
+  /* Cor de fundo */
+  width: 250px;
+  /* Largura do item */
+  height: 250px;
+  /* Altura do item */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  margin: 20px;
+  /* Margens ao redor do item */
+  overflow: hidden;
+  /* Esconde o que ultrapassar os limites do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  transition: transform 0.3s;
+  /* Transição suave no hover */
+  text-align: center;
+  /* Centraliza o texto */
 }
 
 .service-item:hover {
-  transform: scale(1.05); /* Aumenta o item ao passar o mouse */
+  transform: scale(1.05);
+  /* Aumenta o item ao passar o mouse */
 }
 
 .service-item img {
-  width: 100%; /* Largura completa da imagem */
-  height: 100%; /* Altura completa da imagem */
-  object-fit: cover; /* Ajusta a imagem ao container */
-  position: absolute; /* Posiciona a imagem */
-  top: 0; /* Alinhada ao topo */
-  left: 0; /* Alinhada à esquerda */
-  z-index: 1; /* Ordem de sobreposição */
+  width: 100%;
+  /* Largura completa da imagem */
+  height: 100%;
+  /* Altura completa da imagem */
+  object-fit: cover;
+  /* Ajusta a imagem ao container */
+  position: absolute;
+  /* Posiciona a imagem */
+  top: 0;
+  /* Alinhada ao topo */
+  left: 0;
+  /* Alinhada à esquerda */
+  z-index: 1;
+  /* Ordem de sobreposição */
 }
 
 .service-item span {
-  position: absolute; /* Posiciona o texto */
-  bottom: 10px; /* Posição a 10px do fundo */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a posição para o centro */
-  z-index: 2; /* Sobrepõe à imagem */
-  color: #fff; /* Cor branca */
-  font-size: 18px; /* Tamanho da fonte */
-  font-weight: bold; /* Texto em negrito */
-  padding: 5px 10px; /* Espaçamento interno */
-  border-radius: 5px; /* Bordas arredondadas */
+  position: absolute;
+  /* Posiciona o texto */
+  bottom: 10px;
+  /* Posição a 10px do fundo */
+  left: 50%;
+  /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  /* Ajusta a posição para o centro */
+  z-index: 2;
+  /* Sobrepõe à imagem */
+  color: #fff;
+  /* Cor branca */
+  font-size: 18px;
+  /* Tamanho da fonte */
+  font-weight: bold;
+  /* Texto em negrito */
+  padding: 5px 10px;
+  /* Espaçamento interno */
+  border-radius: 5px;
+  /* Bordas arredondadas */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .service-items {
-    flex-direction: column; /* Coloca os itens em coluna em telas menores */
+    flex-direction: column;
+    /* Coloca os itens em coluna em telas menores */
   }
 
   .service-item {
-    width: 100%; /* Aumenta a largura para preencher a tela */
-    margin-bottom: 20px; /* Margem inferior */
+    width: 100%;
+    /* Aumenta a largura para preencher a tela */
+    margin-bottom: 20px;
+    /* Margem inferior */
   }
 
   .procedure-card {
-    width: 100%; /* Aumenta a largura dos cards */
+    width: 100%;
+    /* Aumenta a largura dos cards */
   }
 
   .slideshow-container {
-    max-width: 100%; /* Ajusta a largura do slideshow */
+    max-width: 100%;
+    /* Ajusta a largura do slideshow */
   }
 }
 
 /* Rodapé */
 footer h3 {
-  color: #345995; /* Cor do título */
-  text-align: center; /* Centraliza o título */
-  font-size: 36px; /* Tamanho do título */
-  padding: 10px; /* Espaçamento interno */
+  color: #345995;
+  /* Cor do título */
+  text-align: center;
+  /* Centraliza o título */
+  font-size: 36px;
+  /* Tamanho do título */
+  padding: 10px;
+  /* Espaçamento interno */
 }
 
 footer p {
-  text-align: center; /* Centraliza o texto */
-  font-size: 22px; /* Tamanho da fonte */
-  margin-top: 20px; /* Margem superior */
+  text-align: center;
+  /* Centraliza o texto */
+  font-size: 22px;
+  /* Tamanho da fonte */
+  margin-top: 20px;
+  /* Margem superior */
 }
 
 footer img {
-  width: 500px; /* Largura da imagem */
-  height: 550px; /* Altura da imagem */
-  display: block; /* Exibe como bloco */
-  margin-left: auto; /* Centraliza horizontalmente */
-  margin-right: auto; /* Centraliza horizontalmente */
-  margin-top: 5px; /* Margem superior */
+  width: 500px;
+  /* Largura da imagem */
+  height: 550px;
+  /* Altura da imagem */
+  display: block;
+  /* Exibe como bloco */
+  margin-left: auto;
+  /* Centraliza horizontalmente */
+  margin-right: auto;
+  /* Centraliza horizontalmente */
+  margin-top: 5px;
+  /* Margem superior */
 }
 
-.finalHome {
+.rodape {
 
-  background-color: #7CAFF4; /* Cor de fundo */
- 
-  
+  background-color: #7CAFF4;
+  /* Cor de fundo */
+
+
 }
 
-.finalHome p{
-  font-size: 20px; /* Tamanho da fonte */
-  color: #fff; /* Cor do texto branca */
- 
+.rodape p {
+  font-size: 20px;
+  /* Tamanho da fonte */
+  color: #fff;
+  /* Cor do texto branca */
+
 }
 
 .localizacao img {
   margin-top: 100px;
-  width: 25px; /* Largura da imagem */
-  height: 30px; /* Altura da imagem */
-  margin-left: -80px; /* Espaçamento à esquerda */
-} 
+  width: 25px;
+  /* Largura da imagem */
+  height: 30px;
+  /* Altura da imagem */
+  margin-left: -80px;
+  /* Espaçamento à esquerda */
+}

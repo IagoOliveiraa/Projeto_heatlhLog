@@ -11,17 +11,14 @@ import locFoto from '../assets/localizacaoFoto.png'; // Imagem de localização
 import FotoSobre from '../assets/FotoSobre.png'; // Imagem da seção "Sobre Nós"
 
 function Home() {
-  // Estado para gerenciar o texto da barra de busca
-  const [busca, setBusca] = useState('');
-  // Estado para controlar o slide atual
-  const [slideIndex, setSlideIndex] = useState(1);
+  const [busca, setBusca] = useState(''); // Estado para gerenciar o texto da barra de busca
+  const [slideIndex, setSlideIndex] = useState(1); // Estado para controlar o slide atual
 
   // Função para exibir os slides de avaliação
   const showSlides = (n) => {
     let slides = document.getElementsByClassName('mySlides'); // Coleta os slides
     let dots = document.getElementsByClassName('dot'); // Coleta os indicadores
 
-    // Lógica para rodar os slides em loop
     if (n > slides.length) {
       setSlideIndex(1);
     } else if (n < 1) {
@@ -66,56 +63,55 @@ function Home() {
   };
 
   return (
-    <header className="home-container">
-      {/* Cabeçalho com logo, barra de pesquisa, menu de serviços e ícone de perfil */}
-
-      <div className="barra">
-
-        <img src={logosite} alt="Logo" className="logo" /> {/* Substituir logoh por logosite */}
-
-        <div className="barra-pesquisa">
-          <FaSearch className="icone-pesquisa" />
-          <input
-            type="text"
-            placeholder="Buscar"
-            className="input-pesquisa"
-            value={busca}
-            onChange={(e) => setBusca(e.target.value)}
-            onKeyPress={pesquisar}
-          />
-        </div>    
-
-        <div className="containerservicos">
-          <p className="divservicos">
-            Serviços
-            <a href="#"><SlArrowDown className="icone-seta" /></a>
-          </p>
-          <div className="divmenu">
-            <a href="/EspecialidadesMedicas">Medicina</a>
-            <a href="/EspecialidadesOdontologicas">Odontologia</a>
-            <a href="/EspecialidadesEsteticas">Estética</a>
+    <>
+    
+      <header className="home-container">
+        {/* Cabeçalho com logo, barra de pesquisa, menu de serviços e ícone de perfil */}
+        <div className="barra-home">
+          <img src={logosite} alt="LogoHome" className="logoHome" /> {/* Substituir logoh por logosite */}
+          <div className="barra-pesquisaHome">
+            <FaSearch className="icone-pesquisaHome" />
+            <input
+              type="text"
+              placeholder="Buscar"
+              className="input-pesquisaHome"
+              value={busca}
+              onChange={(e) => setBusca(e.target.value)}
+              onKeyPress={pesquisar}
+            />
+          </div>    
+          <div className="containerservicosHome">
+            <p className="divservicosHome">
+              
+              Serviços
+              <a href="#"><SlArrowDown className="icone-setaHome" /></a>
+            </p>
+            <div className="divmenuHome">
+              <a href="/EspecialidadesMedicas">Medicina</a>
+              <a href="/EspecialidadesOdontologicas">Odontologia</a>
+              <a href="/EspecialidadesEsteticas">Estética</a>
+            </div>
+          </div>
+          <div className='PerfilHome'>
+            <a href="/Perfil"><FaRegUserCircle className="icone-perfilHome" onClick={irParaPerfil} /></a>
           </div>
         </div>
+      </header>
 
-        <div className='Perfil'>
+      <div className='feijoes'>
+          <h1>Escolha um serviço  & <br />
+          reserve sua consulta</h1>
 
-            <a href="/Perfil"><FaRegUserCircle className="icone-perfil" onClick={irParaPerfil} /></a> {/* Corrigi o nome do ícone */}
-
-            </div>
-
-            
-       
       </div>
+
+      {/* Seção de boas-vindas */}
       
       <div className="img-boasvindas">
-          <img src={bemvindo} alt="Boas-vindas" /> {/* Imagem de boas-vindas */}
-        </div>
+        <img className='bemVindo' src={bemvindo} alt="Boas-vindas" /> 
+      </div>
 
-
-      {/* Seção principal com boas-vindas, avaliações e procedimentos */}
+      {/* Seção principal com avaliações e procedimentos */}
       <section className="conteudo-principal">
-        
-
         <div className="review-section">
           <h3>Avaliações</h3>
           <div className="slideshow-container">
@@ -147,22 +143,23 @@ function Home() {
               <h4>Oftalmologia</h4>
               <p>Profissionais: Dra. Julia, Dr. Sandro</p>
               <p>Consultório: Clínica A</p>
-              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
+              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Dermatologia</h4>
               <p>Profissionais: Dra. Ana, Dr. Benicio</p>
               <p>Consultório: Clínica B</p>
-              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
+              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Ortopedia</h4>
               <p>Profissionais: Dra. Pietra, Dr. Marcos</p>
               <p>Consultório: Clínica C</p>
-              <a href="/Clinicaspertodevocê"><button>Marcar agendamento</button></a>
+              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
             </div>
           </div>
 
+          {/* Seção de serviços */}
           <div className="Servicos">
             <h3>Serviços disponíveis</h3>
             <div className="service-items">
@@ -189,6 +186,7 @@ function Home() {
         </div>
       </section>
 
+      {/* Rodapé */}
       <footer className="footer">
         <h3>Sobre Nós</h3>
         <p>
@@ -198,15 +196,18 @@ function Home() {
           profissionais <br /> disponíveis, verificar horários e marcar compromissos de forma <br /> rápida e eficiente,
           tudo em um só lugar.
         </p>
+
         <img src={FotoSobre} alt="Sobre nós" />
-        <div className="finalHome">
-          <div className="localizacao">
-            <img src={locFoto} alt="Localização" />
-          </div>
-          <p>R. Direita, 955 - Vila Santo Antônio, Cotia - SP, 06708-289</p>
+
+        <div className='rodape'>
+
+        <p>2024 © Health Log - Todos os Direitos Reservados.</p>
+
         </div>
+       
+      
       </footer>
-    </header>
+    </>
   );
 }
 
