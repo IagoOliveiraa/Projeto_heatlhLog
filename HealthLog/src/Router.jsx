@@ -2,9 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registro from "./Pages/Registro";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
-import Agendamento from "./Pages/Agendamento";
-import HorariosPage from "./Pages/Horarios";
-import AdicionarDia from "./Pages/gerenciamentoDia";
+
 
 const Router = () => {
     return(
