@@ -1,13 +1,4 @@
 
-import ' ../CSS/especialidademd.css';
-
-function EspecialidadesMedicas() {
-    return (
-        <></>
-        
-    )
-}
-
 import "../CSS/EspecialidadesMedicas.css";
 import imagem200 from "../assets/grafico200.png";//importando imagem do gráfico
 import imagem89 from "../assets/grafico89.png";//importando imagem do gráfico
@@ -15,92 +6,52 @@ import imagemhealthlog from "../assets/helthloggrafico.png";//importando imagem 
 import imagemmuitomais from "../assets/graficomuitomais.png";//importando imagem do gráfico
 
 function EspecialidadesMedicas(){
-    return (
-        <div className="Estetica-container">
-            <header className="cabeçalho">
-
-                <div className="logo">
-                    <img src="" alt="Health Log Logo" />
-                    <h1>Health Log</h1>
-                </div>
-
-                <div className="pesquisa-login">
-                    <input type="text" placeholder="Buscar" />
-                    <a href="/Login">Login</a>
-                    <a href="/registro"> Cadastra-se</a>
-
-                </div>
-
-
-            </header>
-
-            <section className="conteudo-principal">
-
-                <div className="grafico">
-                    <img src={imagem200} alt="grafico200" />
-                    <img src={imagem89} alt="grafico89" />
-                    <img src={imagemhealthlog} alt="graficohealthlog" />
-                    <img src={imagemmuitomais} alt="graficomuitomais" />
-
-                </div>
-
-                <div className="titulo">
-                    <h1>Especialidades Estéticas</h1>
-                </div>
-
-                <div className="container">
-                    <div className="box">
-                        <h3>Ortopedia</h3>
-                        <h4>Especialidade voltada para a saúde e cuidados com a região do pé e tornozelo.</h4>
-
-                    </div>
-                </div>
-
-                <div className="container">
-                    <div className="box">
-                        <h3>Pediatria</h3>
-                        <h4>especialidade que volta a atenção para o bem-estar de pessoas de crianças e bebês.</h4>
-
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="box">
-                        <h3>Angiologia</h3>
-                        <h4>Especialidade que cuida do sistema vascular, como veias, artérias e vasos sanguíneos.</h4>
-
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="box">
-                        <h3>Tricologia <br /> Estética <br /> </h3>
-                        <h4>Tratamentos para cabelos e couro cabeludo, incluindo transplante capilar, tratamentos contra queda de cabelo e cuidados estéticos capilares</h4>
-
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="box">
-                        <h3>Nutrição <br /> Estética<br /> </h3>
-                        <h4>Planejamento alimentar voltado para a melhoria da aparência da pele, cabelo e unhas, além de manutenção de um peso saudável</h4>
-
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="box">
-                        <h3>Estética<br /> Corporal<br /> </h3>
-                        <h4>Procedimentos não invasivos para modelagem do corpo, como massagem modeladora, drenagem linfática e tratamentos de celulite</h4>
-
-                    </div>
-                </div>
-
-
-
-            </section>
-
-
-
+    const specialties = [
+        {
+          title: 'Ortopedia',
+          description:
+            'Especialidade voltada para a saúde e cuidados com a região do pé e tornozelo',
+        },
+        {
+          title: 'Pediatria',
+          description:
+            'especialidade que volta a atenção para o bem-estar de crianças e adolescentes.',
+        },
+        {
+          title: 'Cardiologia',
+          description:
+            'Especialidade voltada aos cuidados com o coração e complicações cardiacas.',
+        },
+        {
+          title: 'Cirurgia Bucomaxilofacial',
+          description:
+            'Envolve procedimentos cirúrgicos complexos para tratar condições da boca, mandíbula e face',
+        },
+        {
+          title: 'Dermatologia',
+          description:
+            'especialidade médica que diagnostica e trata doenças da pele, cabelo, unhas e mucosas',
+        },
+        {
+          title: 'Odontologia Restauradora',
+          description:
+            'Foca em restaurar dentes danificados por cáries ou trauma, incluindo o uso de restaurações e coroas',
+        },
+      ];
+    
+      return (
+        <div className="container">
+          <h1>Especialidades Médicas</h1>
+          <div className="specialty-grid">
+            {specialties.map((specialty, index) => (
+              <div key={index} className="specialty-card">
+                <h2>{specialty.title}</h2>
+                <p>{specialty.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    )
-
+      );
 
 }
 
