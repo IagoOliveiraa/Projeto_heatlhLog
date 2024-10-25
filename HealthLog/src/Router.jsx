@@ -7,7 +7,7 @@ import Login from "./Pages/Login";
 import Perfil from "./Pages/Perfil";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
-
+import Cadastro from "./Pages/Cadastro";
 
 const Router = () => {
     return(
@@ -21,7 +21,7 @@ const Router = () => {
                 <Route path="/Perfil" element={<Perfil/>}/>
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
-
+                <Route path="/Cadastro" element={<Cadastro/>}/>
 
 
             </Routes>

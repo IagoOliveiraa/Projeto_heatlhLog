@@ -1,108 +1,124 @@
 import React, { useState } from "react";
-import "../assets/CSS/cadastro.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
-import maletaCla from "../assets/img/maletaAzulCla.png"; // Primeira imagem a ser usada
-import pers from "../assets/img/persAzulEsc.png"; // segunda imagem a ser usada
-import logo from "../assets/img/logo.png";
+import axios from "axios";
+import "../CSS/Cadastro.css";
 
-function Cadastro() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Cadastro = () => {
+  const [formData, setFormData] = useState({
+    nome: "",
+    cnpj: "",
+    email: "",
+    senha: "",
+    confirmarSenha: "",
+    cep: "",
+  });
 
-  const handleSubmit = (e) => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email === "" || password === "") {
-      alert("Por favor, preencha todos os campos.");
+
+    if (formData.senha !== formData.confirmarSenha) {
+      setError("As senhas não correspondem.");
       return;
     }
 
-    if (email === "exemplo@teste.com" && password === "123456") {
-      alert("Login realizado com sucesso!");
-    } else {
-      alert("E-mail ou senha incorretos.");
+    try {
+      const response = await axios.post("http://localhost:5000/api/clinics/register", formData);
+      if (response.status === 201) {
+        setSuccess("Clínica cadastrada com sucesso!");
+        setError("");
+        setFormData({
+          nome: "",
+          cnpj: "",
+          email: "",
+          senha: "",
+          confirmarSenha: "",
+          cep: "",
+        });
+      }
+    } catch (err) {
+      setError("Erro ao cadastrar clínica: " + err.message);
     }
   };
 
   return (
-    <div className="login-containerB">
-      <img src={imgFundo} alt="" className="background-imageB" />{" "}
-      {/* Imagem de fundo diretamente aqui */}
-      <div className="login-boxB">
-        {/* Aqui está o logo HL com as imagens lado a lado */}
-        <div className="logo-with-imagesB">
-          <img src={logo} alt="Imagem 1" className="logoB" />
-          <div className="images-containerB">
-            <img src={maletaCla} alt="Imagem 1" className="side-imageB" />
-            <img src={pers} alt="Imagem 2" className="side-image2B" />
-          </div>
+    <div className="cadastro-container">
+      <form onSubmit={handleSubmit} className="cadastro-form">
+        <h2>Cadastre sua clínica</h2>
+
+        <div className="input-group">
+          <input
+            type="text"
+            name="nome"
+            placeholder="Nome da Clínica"
+            value={formData.nome}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="cnpj"
+            placeholder="CNPJ"
+            value={formData.cnpj}
+            onChange={handleChange}
+            required
+          />
         </div>
 
-        <h2>Cadastre-se!</h2>
-
-        <form className="colunasSuculentas" onSubmit={handleSubmit}>
-
+        <div className="input-group">
           <input
-            className="input1B"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Nome.."
+            name="email"
+            placeholder="E-mail da Empresa"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
           <input
-            className="input2B"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Sobrenome.."
+            type="text"
+            name="cep"
+            placeholder="CEP"
+            value={formData.cep}
+            onChange={handleChange}
             required
           />
-          <input
-            className="input3B"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="E-mail.."
-            required
-          />
-          <input
-            className="input4B"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Senha.."
-            required
-          />
-          <input
-            className="input5B"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Data de nascimento.."
-            required
-          />
-          <input
-            className="input6B"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Confirmar senha.."
-            required
-          />
+        </div>
 
-          <button className="buttonB" type="submit">
-            Concluir
-          </button>
-        </form>
+        <div className="input-group">
+          <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+            value={formData.senha}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="confirmarSenha"
+            placeholder="Confirme a Senha"
+            value={formData.confirmarSenha}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-        <p>
-          Já tem login?{" "}
-          <a className="aB" href="#">
-            Entrar teste
-          </a>
-        </p>
-      </div>
+        {error && <p className="error-message">{error}</p>}
+        {success && <p className="success-message">{success}</p>}
+
+        <button type="submit" className="cadastro-button">Próximo</button>
+      </form>
     </div>
   );
-}
+};
+
 export default Cadastro;
