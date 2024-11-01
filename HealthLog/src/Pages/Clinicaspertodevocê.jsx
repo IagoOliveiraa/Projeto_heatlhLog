@@ -137,8 +137,8 @@ function Clinica() {
           </p>
           <div className="divmenu">
             <a href="/EspecialidadesMedicas">Medicina</a>
-            <a href="#">Odontologia</a>
-            <a href="#">Estética</a>
+            <a href="/EspecialidadesOdontologicas">Odontologia</a>
+            <a href="/EspecialidadesEsteticas">Estética</a>
           </div>
         </div>
         <FaRegCircleUser className="icone-perfil" onClick={irParaPerfil} />
