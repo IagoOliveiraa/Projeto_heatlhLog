@@ -82,7 +82,6 @@ function Home() {
           </div>    
           <div className="containerservicosHome">
             <p className="divservicosHome">
-              
               Serviços
               <a href="#"><SlArrowDown className="icone-setaHome" /></a>
             </p>
