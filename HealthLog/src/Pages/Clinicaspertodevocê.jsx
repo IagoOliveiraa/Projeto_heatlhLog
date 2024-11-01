@@ -1,4 +1,4 @@
-import "../CSS/ClinicaPertodevoce.css";
+import "../assets/CSS/ClinicasPertoDeVoce.css"
 import logoh from "../assets/Logo1.png";
 import barraazulfinal from "../assets/barraazulfinal.png";
 import { FaSearch } from 'react-icons/fa';
@@ -33,19 +33,19 @@ function Clinica() {
   };
 
   const avancarSuperior = () => {
-    setIndiceAtualSuperior((prevIndice) => (prevIndice + 2) % retangulos.length);
+    setIndiceAtualSuperior((prevIndice) => (prevIndice + 2) % 4); // limitando a 4 clinics para a linha superior
   };
 
   const voltarSuperior = () => {
-    setIndiceAtualSuperior((prevIndice) => (prevIndice - 2 + retangulos.length) % retangulos.length);
+    setIndiceAtualSuperior((prevIndice) => (prevIndice - 2 + 4) % 4);
   };
 
   const avancarInferior = () => {
-    setIndiceAtualInferior((prevIndice) => (prevIndice + 2) % retangulos.length);
+    setIndiceAtualInferior((prevIndice) => (prevIndice + 2) % 4); // limitando a 4 clinics para a linha inferior
   };
 
   const voltarInferior = () => {
-    setIndiceAtualInferior((prevIndice) => (prevIndice - 2 + retangulos.length) % retangulos.length);
+    setIndiceAtualInferior((prevIndice) => (prevIndice - 2 + 4) % 4);
   };
 
   const retangulos = [
@@ -154,25 +154,17 @@ function Clinica() {
       <div className="retangulos-container">
         {/* Primeira linha de retângulos */}
         <div className="linha-retangulos">
-          <div className="retangulo" onClick={irParaPerfil}>
-            <img src={retangulos[indiceAtualSuperior].imagem} alt={retangulos[indiceAtualSuperior].nome} className="imagem-retangulo" />
-            <h2>{retangulos[indiceAtualSuperior].nome}</h2>
-            <p>{retangulos[indiceAtualSuperior].descricao}</p>
-            <p>{retangulos[indiceAtualSuperior].endereco}</p>
-            <p><strong>Horário de funcionamento:</strong></p>
-            <p>{retangulos[indiceAtualSuperior].horario}</p>
-            <p>{retangulos[indiceAtualSuperior].fimSemana}</p>
-          </div>
-
-          <div className="retangulo" onClick={irParaPerfil}>
-            <img src={retangulos[(indiceAtualSuperior + 1) % retangulos.length].imagem} alt={retangulos[(indiceAtualSuperior + 1) % retangulos.length].nome} className="imagem-retangulo" />
-            <h2>{retangulos[(indiceAtualSuperior + 1) % retangulos.length].nome}</h2>
-            <p>{retangulos[(indiceAtualSuperior + 1) % retangulos.length].descricao}</p>
-            <p>{retangulos[(indiceAtualSuperior + 1) % retangulos.length].endereco}</p>
-            <p><strong>Horário de funcionamento:</strong></p>
-            <p>{retangulos[(indiceAtualSuperior + 1) % retangulos.length].horario}</p>
-            <p>{retangulos[(indiceAtualSuperior + 1) % retangulos.length].fimSemana}</p>
-          </div>
+          {retangulos.slice(indiceAtualSuperior, indiceAtualSuperior + 2).map((clinica, index) => (
+            <div className="retangulo" key={index} onClick={irParaPerfil}>
+              <img src={clinica.imagem} alt={clinica.nome} className="imagem-retangulo" />
+              <h2>{clinica.nome}</h2>
+              <p>{clinica.descricao}</p>
+              <p>{clinica.endereco}</p>
+              <p><strong>Horário de funcionamento:</strong></p>
+              <p>{clinica.horario}</p>
+              <p>{clinica.fimSemana}</p>
+            </div>
+          ))}
         </div>
 
         {/* Setas de navegação acima da linha pontilhada */}
@@ -189,31 +181,23 @@ function Clinica() {
         </div>
 
         {/* Linha pontilhada entre as duas linhas de retângulos */}
-        <div className="linha-pontilhada"  style={{ marginTop: "-150px" }}>
-          <img src={linhapontilhada} alt="Linha Pontilhada" className="imagem-linha" />
+        <div className="linha-pontilhada" style={{ marginTop: "-150px" }}>
+          <img src={linhapontilhada} alt="Linha Pontilhada" className="imagem-linha-pontilhada" />
         </div>
 
         {/* Segunda linha de retângulos */}
         <div className="linha-retangulos">
-          <div className="retangulo" onClick={irParaPerfil}>
-            <img src={retangulos[indiceAtualInferior + 4].imagem} alt={retangulos[indiceAtualInferior + 4].nome} className="imagem-retangulo" />
-            <h2>{retangulos[indiceAtualInferior + 4].nome}</h2>
-            <p>{retangulos[indiceAtualInferior + 4].descricao}</p>
-            <p>{retangulos[indiceAtualInferior + 4].endereco}</p>
-            <p><strong>Horário de funcionamento:</strong></p>
-            <p>{retangulos[indiceAtualInferior + 4].horario}</p>
-            <p>{retangulos[indiceAtualInferior + 4].fimSemana}</p>
-          </div>
-
-          <div className="retangulo" onClick={irParaPerfil}>
-            <img src={retangulos[indiceAtualInferior + 5].imagem} alt={retangulos[indiceAtualInferior + 5].nome} className="imagem-retangulo" />
-            <h2>{retangulos[indiceAtualInferior + 5].nome}</h2>
-            <p>{retangulos[indiceAtualInferior + 5].descricao}</p>
-            <p>{retangulos[indiceAtualInferior + 5].endereco}</p>
-            <p><strong>Horário de funcionamento:</strong></p>
-            <p>{retangulos[indiceAtualInferior + 5].horario}</p>
-            <p>{retangulos[indiceAtualInferior + 5].fimSemana}</p>
-          </div>
+          {retangulos.slice(indiceAtualInferior + 4, indiceAtualInferior + 6).map((clinica, index) => (
+            <div className="retangulo" key={index} onClick={irParaPerfil}>
+              <img src={clinica.imagem} alt={clinica.nome} className="imagem-retangulo" />
+              <h2>{clinica.nome}</h2>
+              <p>{clinica.descricao}</p>
+              <p>{clinica.endereco}</p>
+              <p><strong>Horário de funcionamento:</strong></p>
+              <p>{clinica.horario}</p>
+              <p>{clinica.fimSemana}</p>
+            </div>
+          ))}
         </div>
 
         {/* Setas de navegação abaixo da linha pontilhada */}
@@ -221,11 +205,6 @@ function Clinica() {
           <SlArrowLeft className="icone-seta-lateral" onClick={voltarInferior} />
           <SlArrowRight className="icone-seta-lateral" onClick={avancarInferior} />
         </div>
-      </div>
-
-      {/* Barra azul na parte inferior do site */}
-      <div className="barra-inferior">
-        <img src={barraazulfinal} alt="Barra Azul" className="imagem-barra" />
       </div>
     </>
   );

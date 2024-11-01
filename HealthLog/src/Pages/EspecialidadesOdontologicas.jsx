@@ -1,4 +1,4 @@
-import "../CSS/EspecialidadesOdontologicas.css";
+import "../assets/CSS/EspecialidadesOdontologicas.css";
 import { Link } from "react-router-dom"; // Importa o Link do React Router
 import imagem200 from "../assets/grafico200.png";
 import imagem89 from "../assets/grafico89.png";

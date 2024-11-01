@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'; // Hooks para gerenciar estado e efeitos colaterais
 import { FaRegUserCircle, FaSearch } from 'react-icons/fa'; // Ícones de usuário e pesquisa
 import { SlArrowDown } from 'react-icons/sl'; // Ícone de seta para dropdown
@@ -7,8 +8,9 @@ import bemvindo from '../assets/boasvindasFoto.png'; // Imagem da seção de boa
 import especMedicas from '../assets/Medicinafoto.png'; // Imagem de especialidade médica
 import especOdont from '../assets/OdontoFoto.png'; // Imagem de odontologia
 import especEstetica from '../assets/EsteticaFoto.png'; // Imagem de estética
-import locFoto from '../assets/localizacaoFoto.png'; // Imagem de localização
 import FotoSobre from '../assets/FotoSobre.png'; // Imagem da seção "Sobre Nós"
+
+
 
 function Home() {
   const [busca, setBusca] = useState(''); // Estado para gerenciar o texto da barra de busca
