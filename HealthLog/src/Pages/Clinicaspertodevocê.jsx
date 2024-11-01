@@ -1,4 +1,4 @@
-import "../assets/CSS/ClinicasPertoDeVoce.css"
+import "../assets/CSS/ClinicaPertoDeVoce.css"
 import logoh from "../assets/Logo1.png";
 import barraazulfinal from "../assets/barraazulfinal.png";
 import { FaSearch } from 'react-icons/fa';

@@ -1,4 +1,4 @@
-import '../CSS/Perfil.css'
+import '../assets/CSS/perfil.css'
 import NaveBar from '../components/naveBar/naveBar'
 
 

@@ -8,36 +8,31 @@ import Perfil from "./Pages/Perfil";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 import Cadastro from "./Pages/Cadastro";
-
-
+import BemVindo from "./Pages/BemVindo";
+import LoginClinic from "./Pages/LoginClinic";
+import CadastroClinic from "./Pages/CadastroClinic";
+import ClinicaCalendario from "./Pages/ClinicaCalendario";
 
 const Router = () => {
-    return(
+    return (
         <BrowserRouter>
             <Routes>
-
-                <Route path="/" element={<Home/>}/>
-                <Route path="/Login" element={<Login/>}/>
-                <Route path="/Registro" element={<Registro/>}/>
-                <Route path="/ClinicasPertoDeVoce" element={<Clinica/>}/>
-                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
-                <Route path="/Perfil" element={<Perfil/>}/>
-                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
-                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
-                <Route path="/Cadastro" element={<Cadastro/>}/>
-                <Route path="/boas-vindas" element={<BemVindo/>}/>
-                <Route path="/loginClinic" element={<LoginClinic/>}/> 
-                <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
-                <Route path="/agendamento" element={<ClinicaCalendario/>}/>
-
-
+                <Route path="/" element={<Home />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Registro" element={<Registro />} />
+                <Route path="/ClinicasPertoDeVoce" element={<Clinica />} />
+                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas />} />
+                <Route path="/Perfil" element={<Perfil />} />
+                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas />} />
+                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>} />
+                <Route path="/Cadastro" element={<Cadastro />} />
+                <Route path="/boas-vindas" element={<BemVindo />} />
+                <Route path="/loginClinic" element={<LoginClinic />} />
+                <Route path="/cadastroClinic" element={<CadastroClinic />} />
+                <Route path="/agendamento" element={<ClinicaCalendario />} />
             </Routes>
         </BrowserRouter>
+    );
+};
 
-
-        
-    )
-}
 export default Router;
-
-

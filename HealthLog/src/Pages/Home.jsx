@@ -2,12 +2,13 @@
 import { useState, useEffect } from 'react'; // Hooks para gerenciar estado e efeitos colaterais
 import { FaRegUserCircle, FaSearch } from 'react-icons/fa'; // Ícones de usuário e pesquisa
 import { SlArrowDown } from 'react-icons/sl'; // Ícone de seta para dropdown
-import '../CSS/Home.css'; // Estilos CSS importados
+import '../assets/CSS/home.css'; // Estilos CSS importados
 import logosite from '../assets/Logo1.png'; // Logo do site
 import bemvindo from '../assets/boasvindasFoto.png'; // Imagem da seção de boas-vindas
 import especMedicas from '../assets/Medicinafoto.png'; // Imagem de especialidade médica
 import especOdont from '../assets/OdontoFoto.png'; // Imagem de odontologia
 import especEstetica from '../assets/EsteticaFoto.png'; // Imagem de estética
+import locFoto from '../assets/localizacaoFoto.png'; // Imagem de localização
 import FotoSobre from '../assets/FotoSobre.png'; // Imagem da seção "Sobre Nós"
 
 

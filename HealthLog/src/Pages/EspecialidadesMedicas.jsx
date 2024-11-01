@@ -1,5 +1,5 @@
 
-import "../CSS/EspecialidadesMedicas.css";
+import '../assets/CSS/EspecialidadesMedicas.css'
 import imagem200 from "../assets/grafico200.png";//importando imagem do gráfico
 import imagem89 from "../assets/grafico89.png";//importando imagem do gráfico
 import imagemhealthlog from "../assets/helthloggrafico.png";//importando imagem do gráfico
