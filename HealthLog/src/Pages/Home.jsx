@@ -7,7 +7,6 @@ import bemvindo from '../assets/boasvindasFoto.png'; // Imagem da seção de boa
 import especMedicas from '../assets/Medicinafoto.png'; // Imagem de especialidade médica
 import especOdont from '../assets/OdontoFoto.png'; // Imagem de odontologia
 import especEstetica from '../assets/EsteticaFoto.png'; // Imagem de estética
-import locFoto from '../assets/localizacaoFoto.png'; // Imagem de localização
 import FotoSobre from '../assets/FotoSobre.png'; // Imagem da seção "Sobre Nós"
 
 function Home() {
@@ -67,6 +66,8 @@ function Home() {
     
       <header className="home-container">
         {/* Cabeçalho com logo, barra de pesquisa, menu de serviços e ícone de perfil */}
+
+
         <div className="barra-home">
           <img src={logosite} alt="LogoHome" className="logoHome" /> {/* Substituir logoh por logosite */}
           <div className="barra-pesquisaHome">
