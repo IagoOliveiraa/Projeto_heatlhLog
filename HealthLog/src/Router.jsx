@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registro from "./Pages/Registro";
-import Home from "./Pages/Home";
 import BoasVindas from "./Pages/BoasVindas"
 import Login from "./Pages/Login";
 import LoginClinic from "./Pages/LoginClinic"; 
@@ -14,7 +13,6 @@ const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/boasVindas" element={<BoasVindas/>}/>
-                <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
@@ -22,6 +20,8 @@ const Router = () => {
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
                 <Route path="/cpdv" element={<Cpdv/>}/>
                 <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
+                <Route path="/Login" element={<Login/>}/>
+                <Route path="/Registro" element={<Registro/>}/>
             </Routes>
         </BrowserRouter>
 
