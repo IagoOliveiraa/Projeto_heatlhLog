@@ -8,10 +8,8 @@ import Perfil from "./Pages/Perfil";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 import Cadastro from "./Pages/Cadastro";
-import BemVindo from "./Pages/BemVindo";
 import LoginClinic from "./Pages/LoginClinic";
 import CadastroClinic from "./Pages/CadastroClinic";
-import ClinicaCalendario from "./Pages/ClinicaCalendario";
 
 const Router = () => {
     return (
@@ -26,10 +24,8 @@ const Router = () => {
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas />} />
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>} />
                 <Route path="/Cadastro" element={<Cadastro />} />
-                <Route path="/boas-vindas" element={<BemVindo />} />
-                <Route path="/loginClinic" element={<LoginClinic />} />
-                <Route path="/cadastroClinic" element={<CadastroClinic />} />
-                <Route path="/agendamento" element={<ClinicaCalendario />} />
+                <Route path="/LoginClinic" element={<LoginClinic />} />
+                <Route path="/CadastroClinic" element={<CadastroClinic />} />
             </Routes>
         </BrowserRouter>
     );
