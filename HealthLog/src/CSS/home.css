@@ -136,15 +136,15 @@
 
 /* Menu de serviços */
 .divmenuHome {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
+  background-color:#fff;
+  border-radius: 10px;
+  text-align: center;
   display: none;
-  position: absolute;
+ 
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
-.containerservicosHome:hover .divmenu {
+.containerservicosHome:hover .divmenuHome {
   display: flex;
   flex-direction: column;
 }
@@ -494,7 +494,7 @@ footer img {
 
 
 
-/* Mobile */
+              /* Aqui começa o Mobile */
 
 
 
@@ -550,21 +550,23 @@ footer img {
 
   .barra-home{
 
-    max-height: 8%;
+    max-height: 12%;
 
   }
 
   /* Logo */
   .logoHome {
-    height: 15vw;
-   
+    height: 29vw;
+    width: 59vw;
+   margin-left: -50px;
+   margin-top: -20px;
   }
 
   /* Barra de pesquisa */
   .barra-pesquisaHome {
     width: 100%;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
 
@@ -590,3 +592,6 @@ footer img {
     margin-top: 20px;
   }
 }
+
+
+             /* Aqui termina o Mobile */

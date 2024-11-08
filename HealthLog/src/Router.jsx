@@ -7,13 +7,14 @@ import Cadastro from "./Pages/Cadastro"
 import CadastroClinic from "./Pages/CadastroClinic"
 import Cpdv from "./Pages/Cpdv"
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
+import Home from "./Pages/home";
 
 const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
+            <Route path="/" element={<Home/>}/>
                 <Route path="/boasVindas" element={<BoasVindas/>}/>
-                <Route path="/login" element={<Login/>}/>
                 <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
