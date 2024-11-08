@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
 .container {
   text-align: center;
   padding: 20px;
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
 
-.containerCpdvB {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+
+ 
+.containerCpdvB{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
 }
 
 /* Barra de navegação */
