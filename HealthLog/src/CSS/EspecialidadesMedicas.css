@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
-
 .container {
     text-align: center;
     padding: 20px;
   }
-
- 
   
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
    
   .containerCpdvB{
       margin: 0;
@@ -14,7 +11,7 @@
       width: 100%;
   }
   /* Barra de navegação */
-  .barraAA {
+  .barraBB {
       background-color: #4C78BE;
       width: 100%;
       height: 100px;
@@ -28,14 +25,14 @@
   }
    
   /* Logo da clínica */
-  .logoAA {
+  .logoBB {
       height: 120px;
       width: auto;
       left: 20px;
   }
    
   /* Barra de pesquisa */
-  .barra-pesquisaAA {
+  .barra-pesquisaBB {
       display: flex;
       align-items: center;
       background-color: rgba(217, 217, 217, 0.1);
@@ -47,7 +44,7 @@
   }
    
   /* Campo de texto da pesquisa */
-  .input-pesquisaAA {
+  .input-pesquisaBB {
       border: none;
       outline: none;
       padding: 10px;
@@ -60,19 +57,19 @@
   }
    
   /* Ícone de pesquisa */
-  .icone-pesquisaAA {
+  .icone-pesquisaBB {
       color: white;
       font-size: 20px;
   }
    
   /* Placeholder da pesquisa */
-  .input-pesquisaAA::placeholder {
+  .input-pesquisaBB::placeholder {
       color: rgb(203, 203, 203);
       font-size: 20px;
   }
    
   /* Ícone de perfil */
-  .icone-perfilAA {
+  .icone-perfilBB {
       color: white;
       font-size: 40px;
       margin-left: auto;
@@ -81,7 +78,7 @@
   }
    
   /* Seção de serviços */
-  .containerservicosAA {
+  .containerservicosBB {
       margin-left: 130px;
       border: 2px solid rgba(56, 97, 162, 1);
       background-color: rgba(217, 217, 217, 0.1);
@@ -90,7 +87,7 @@
   }
    
   /* Texto "Serviços" */
-  .divservicosAA {
+  .divservicosBB {
       font-family: 'Raleway', sans-serif;
       color: white;
       display: flex;
@@ -100,14 +97,14 @@
   }
    
   /* Ícone de seta para baixo */
-  .icone-setaAA {
+  .icone-setaBB {
       color: white;
       font-size: 20px;
       margin-left: 10px;
   }
    
   /* Menu de serviços */
-  .divmenuAA {
+  .divmenuBB {
       background-color: #fff;
       color: #000;
       text-decoration: none;
@@ -116,14 +113,14 @@
   }
    
   /* Mostrar menu de serviços ao passar o mouse */
-  .containerservicosAA:hover .divmenu {
+  .containerservicosBB:hover .divmenu {
       display: flex;
       flex-direction: column;
   }
   
   
   
-  .graficoAA img {
+  .graficoBB img {
     margin: 1%;
     height: 200px;
     margin-top: 15%;
@@ -131,7 +128,7 @@
     align-items: center;
   }
   
-  .titulo2AA h1 {
+  .titulo2BB h1 {
     font-family: 'Arial', sans-serif;
     color: #3366ff;
     margin-bottom: 70px;
@@ -140,7 +137,7 @@
     margin-top: 5%;
   }
   
-  .todas-caixas2AA {
+  .todas-caixas2BB {
     display: flex;
     flex-direction: row;
     width: 93.5%;
@@ -150,11 +147,11 @@
   }
 
   
-  .todas-caixas2AA a{
+  .todas-caixas2BB a{
     text-decoration: none;
   }
   
-  .caixa2AA {
+  .caixa2BB {
     border: 1px solid #ffa500;
     width: 28vw;
     border-radius: 20px;
@@ -165,18 +162,18 @@
     transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
   }
   
-  .caixa2AA:hover {
+  .caixa2BB:hover {
     transform: scale(1.05); /* Efeito ao passar o mouse */
   }
   
-  .caixa2AA h2 {
+  .caixa2BB h2 {
     font-family: 'Arial', sans-serif;
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
   }
   
-  .caixa2AA p {
+  .caixa2BB p {
     font-family: 'Arial', sans-serif;
     color: #555;
     margin: 0;
@@ -184,7 +181,58 @@
     
   }
   
-  .caixa2AA a:hover {
+  .caixa2BB a:hover {
     color: #3366ff; /* Exemplo de efeito hover nos links */
   }
+
+  /* Estilos para dispositivos menores que 480px */
+@media (max-width: 600px) {
+  .barra {
+    padding: 5px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .icone-pesquisa {
+    font-size: 16px;
+  }
+
+  .input-pesquisa {
+    font-size: 14px;
+  }
+
+  .icone-perfil {
+    font-size: 24px;
+  }
+
+  .grafico img {
+    width: 45%;
+    max-width: 120px;
+  }
+
+  .titulo1 h1 {
+    font-size: 18px;
+  }
+
+  .todas-caixas1 {
+    grid-template-columns: 1fr; /* Muda para 1 coluna em telas menores */
+    gap: 15px;
+    width: 95%; /* Aumenta a largura total da grid */
+  }
+
+  .caixa1 {
+    padding: 15px;
+    width: 100%; /* Aumenta a largura das caixas */
+  }
+
+  .caixa1 h2 {
+    font-size: 14px;
+  }
+
+  .caixa1 p {
+    font-size: 12px;
+  }
+}
 
