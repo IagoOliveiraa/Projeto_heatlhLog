@@ -1,11 +1,19 @@
-import "../CSS/EspecialidadesEsteticas.css";
 import { Link } from "react-router-dom"; // Importa o Link do React Router
+<<<<<<< HEAD
 import imagem200 from "../assets/img/grafico200.png";
 import imagem89 from '../assets/img/grafico89.png';
 import imagemhealthlog from '../assets/img/helthloggrafico.png';
 import imagemmuitomais from '../assets/img/graficomuitomais.png';
 import logoh from '../assets/img/Logo1.png';
 import { FaSearch } from 'react-icons/fa';
+=======
+import "../CSS/EspecialidadesEsteticas.css";
+import imagem200 from "../assets/img/grafico200.png";
+import imagem89 from "../assets/img/grafico89.png";
+import imagemhealthlog from "../assets/img/helthloggrafico.png";
+import imagemmuitomais from "../assets/img/graficomuitomais.png";
+import logoh from'../assets/img/Logo1.png';
+>>>>>>> c9211636d6feb6c0bc0de0ebc11ac70433d96a3a
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
