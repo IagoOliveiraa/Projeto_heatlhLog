@@ -8,6 +8,9 @@ import CadastroClinic from "./Pages/CadastroClinic"
 import Cpdv from "./Pages/Cpdv"
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
 import Home from "./Pages/home";
+import EspecialidadesEsticas from './Pages/EspecialidadesEsteticas'
+import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
+import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 
 const Router = () => {
     return(
@@ -23,6 +26,11 @@ const Router = () => {
                 <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
                 <Route path="/Login" element={<Login/>}/>
                 <Route path="/Registro" element={<Registro/>}/>
+                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsticas/>}/>
+                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
+                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
+
+
             </Routes>
         </BrowserRouter>
 
