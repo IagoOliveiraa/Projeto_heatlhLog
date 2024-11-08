@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../assets/CSS/cadastroClinic.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/cachFund.jpg";// Imagem de fundo
-import maletaEsc from "../assets/img/maletaEsc.png"
-import persCla from "../assets/img/persCla.png"
+import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
+import maletaEsc from "../assets/img/maletaEsc.png";
+import persCla from "../assets/img/persCla.png";
 
 import logo from "../assets/img/logo.png";
 
@@ -41,7 +41,6 @@ function CadastroClinic() {
         <h2>Cadastre sua clínica!</h2>
 
         <form className="colunasSuculentasC" onSubmit={handleSubmit}>
-
           <input
             className="input1C"
             type="email"
@@ -90,12 +89,14 @@ function CadastroClinic() {
             placeholder="CEP.."
             required
           />
+        </form>
 
+        <div className="divButtonC">
+          {" "}
           <button className="buttonC" type="submit">
             Próximo
           </button>
-        </form>
-
+        </div>
       </div>
     </div>
   );
