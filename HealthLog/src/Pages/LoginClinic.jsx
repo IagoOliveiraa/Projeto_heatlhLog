@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/loginCLinic.css"
-import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
+import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
 import logo from "../assets/img/logo.png";
 import maletaEsc from "../assets/img/maletaEsc.png"
 import persCla from "../assets/img/persCla.png"

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "../assets/CSS/login.css"; // importação do css
-import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
+import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
 import maletaCla from "../assets/img/maletaAzulCla.png"; // imagem maleta clara
 import pers from "../assets/img/persAzulEsc.png"; // imagem pessoa
 import logo from "../assets/img/logo.png"; // imagem logo

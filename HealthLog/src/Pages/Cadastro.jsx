@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "../assets/CSS/cadastro.css"; // Certifique-se de que o caminho está correto.
 import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
 import maletaCla from "../assets/img/maletaAzulCla.png"; // Primeira imagem a ser usada
@@ -21,7 +20,6 @@ function Cadastro() {
       alert("Login realizado com sucesso!");
     } else {
       alert("E-mail ou senha incorretos.");
-
     }
   };
 
@@ -108,5 +106,4 @@ function Cadastro() {
     </div>
   );
 }
-
 export default Cadastro;

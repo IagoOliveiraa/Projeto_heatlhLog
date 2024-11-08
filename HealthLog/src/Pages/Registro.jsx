@@ -16,10 +16,6 @@ const Registro = () => {
     });
     const navigate = useNavigate();
 
-
-function Registro(){
-
-
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -77,10 +73,9 @@ function Registro(){
             <button type="submit">Registrar</button>
         </form>
         </div> 
-
         
     );
     
 };
-            }
+
 export default Registro;

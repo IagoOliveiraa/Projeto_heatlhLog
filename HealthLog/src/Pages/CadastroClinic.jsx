@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/cadastroClinic.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
+import imgFundo from "../assets/img/cachFund.jpg";// Imagem de fundo
 import maletaEsc from "../assets/img/maletaEsc.png"
 import persCla from "../assets/img/persCla.png"
 
@@ -92,7 +92,10 @@ function CadastroClinic() {
           />
 
           <button className="buttonC" type="submit">
+
             Concluir
+
+            Próximo
           </button>
         </form>
 

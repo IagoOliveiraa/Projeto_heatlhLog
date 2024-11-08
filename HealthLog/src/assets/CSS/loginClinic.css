@@ -44,6 +44,7 @@
   .login-boxA {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
+<<<<<<< HEAD
     padding: 22px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     width: 500px;
@@ -51,6 +52,18 @@
     position: relative; /* Necessário para aplicar z-index */
     z-index: 10; /* A caixa de login deve estar na frente */
     margin-top: 4%;
+=======
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 47vw;
+    padding: 1vw;
+    text-align: center;
+    position: relative; /* Necessário para aplicar z-index */
+    z-index: 10; /* A caixa de login deve estar na frente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0%, 21%);
+>>>>>>> 69850f39a2f7caa71da03fc8dc61ce4224495e40
   }
   
   .logo-with-imagesA {
@@ -77,18 +90,34 @@
     color: #71a7ff;
     font-size: 14px;
     font-weight: 100;
+<<<<<<< HEAD
     margin-top: 12px;
+=======
+    padding-bottom: 2vh;
+>>>>>>> 69850f39a2f7caa71da03fc8dc61ce4224495e40
   }
   
   .input1A,
   .input2A {
     width: 70%;
+<<<<<<< HEAD
     padding: 10px;
     margin: 10px 0;
+=======
+    padding: 0.5vw;
+    margin: 1vw 0;
+>>>>>>> 69850f39a2f7caa71da03fc8dc61ce4224495e40
     border: 1.5px solid #ffd900;
     border-radius: 4px;
     background-color: #d3e4ff;
   }
+<<<<<<< HEAD
+=======
+
+  .input2A {
+    margin-bottom: 2vw;
+  }
+>>>>>>> 69850f39a2f7caa71da03fc8dc61ce4224495e40
   
   .buttonA {
     width: 40%;
@@ -108,7 +137,11 @@
     display: block;
     margin-bottom: 10%;
     margin-top: -10px;
+<<<<<<< HEAD
     margin-left: 250px;
+=======
+    margin-left: 28vw;
+>>>>>>> 69850f39a2f7caa71da03fc8dc61ce4224495e40
     color: #487eb0;
     font-size: 12px;
   }
