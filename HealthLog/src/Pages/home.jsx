@@ -7,7 +7,7 @@ import bemvindo from '../assets/img/boasvindasFoto.png'; // Imagem da seção de
 import especMedicas from '../assets/img/MedicinaFoto.png'; // Imagem de especialidade médica
 import especOdont from '../assets/img/OdontoFoto.png'; // Imagem de odontologia
 import especEstetica from '../assets/img/EsteticaFoto.png'; // Imagem de estética
-import FotoSobre from '../assets/img/FotoSobre.png'; // Imagem da seção "Sobre Nós"
+import FotoSobre from '../assets/img/FotoSobre.png'; // Imagem da seção "Sobre Nós
 
 
 function Home() {

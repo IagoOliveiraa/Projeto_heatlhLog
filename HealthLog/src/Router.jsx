@@ -23,6 +23,7 @@ const Router = () => {
                 <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
                 <Route path="/Login" element={<Login/>}/>
                 <Route path="/Registro" element={<Registro/>}/>
+                
             </Routes>
         </BrowserRouter>
 
