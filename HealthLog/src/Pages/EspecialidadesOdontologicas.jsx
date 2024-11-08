@@ -11,8 +11,6 @@ import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
 function EspecialidadesOdontologicas() {
 
   const [busca, setBusca] = useState("");
