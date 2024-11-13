@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registro from "./Pages/Registro";
 import Login from "./Pages/Login";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
@@ -18,22 +17,19 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
+            <Route path="/" element={<BemVindo/>}/>
                 <Route path="/inicio" element={<Home />} />
                 <Route path="/Login" element={<Login />} />
-                <Route path="/Registro" element={<Registro />} />
                 <Route path="/ClinicasPertoDeVoce" element={<Clinica />} />
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas />} />
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas />} />
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>} />
-                <Route path="/Cadastro" element={<Cadastro />} />
                 <Route path="/LoginClinic" element={<LoginClinic />} />
                 <Route path="/CadastroClinic" element={<CadastroClinic />} />
                 <Route path="/BemVindo" element={<BemVindo/>} />
                 <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
                 <Route path="/BemVindo" element={<BemVindo/>} />
                 <Route path="/cpdv" element={<Cpdv />} />
-                <Route path="/" element={<BemVindo/>}/>
-                <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
             </Routes>
