@@ -1,9 +1,8 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
 
 /* Reset de margem e padding */
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,8 +21,6 @@
   z-index: 5;
 
 }
-
-
 
 
 .bemVindo {
@@ -120,15 +117,27 @@
   border-radius: 50px;
   padding: 10px;
   width: 120px;
+  text-underline-offset: -200px; /* Move o sublinhado para fora da área visível */
   
 }
 
 /* Texto "Serviços" */
+
+.divmenuHome a{
+
+color: #000;
+
+
+}
+
+
+
 .divservicosHome {
   font-family: 'Raleway', sans-serif;
   color: white;
   display: flex;
   align-items: center;
+  
 }
 
 /* Ícone de seta para baixo */
@@ -140,15 +149,15 @@
 
 /* Menu de serviços */
 .divmenuHome {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
+  background-color:#fff;
+  border-radius: 10px;
+  text-align: center;
   display: none;
-  position: absolute;
+ 
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
-.containerservicosHome:hover .divmenu {
+.containerservicosHome:hover .divmenuHome {
   display: flex;
   flex-direction: column;
 }
@@ -498,7 +507,7 @@ footer img {
 
 
 
-/* Mobile */
+              /* Aqui começa o Mobile */
 
 
 
@@ -554,21 +563,23 @@ footer img {
 
   .barra-home{
 
-    max-height: 8%;
+    max-height: 12%;
 
   }
 
   /* Logo */
   .logoHome {
-    height: 15vw;
-   
+    height: 29vw;
+    width: 59vw;
+   margin-left: -50px;
+   margin-top: -20px;
   }
 
   /* Barra de pesquisa */
   .barra-pesquisaHome {
     width: 100%;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
 
@@ -596,124 +607,4 @@ footer img {
 }
 
 
-.home-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #345995;
-    padding: 60px;
-    border-bottom: 2px solid #e2e3e5;
-}
-
-.logo h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-.pesquisa-login {
-    display: flex;
-    align-items: center;
-}
-
-.pesquisa-login input {
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.pesquisa-login a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.conteudo-principal {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.conteudo-principal h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.review-section {
-    margin-bottom: 40px;
-}
-
-.review {
-    background-color: #fff3cd;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.procedures {
-    margin-bottom: 40px;
-}
-
-.procedure-card {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.procedure-card h4 {
-    margin-bottom: 10px;
-    font-size: 22px;
-    color: #007bff;
-}
-
-.procedure-card button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.services {
-    display: flex;
-    justify-content: space-around;
-}
-
-.service-item {
-    background-color: #e2e3e5;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center;
-}
-
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-top: 2px solid #e2e3e5;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.footer h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.footer p {
-    margin-bottom: 15px;
-}
-
-footer address {
-    font-style: normal;
-}
+             /* Aqui termina o Mobile */

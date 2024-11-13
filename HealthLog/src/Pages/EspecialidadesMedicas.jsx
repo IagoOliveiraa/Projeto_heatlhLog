@@ -1,58 +1,99 @@
 
-import '../assets/CSS/EspecialidadesMedicas.css'
-import imagem200 from "../assets/grafico200.png";//importando imagem do gráfico
-import imagem89 from "../assets/grafico89.png";//importando imagem do gráfico
-import imagemhealthlog from "../assets/helthloggrafico.png";//importando imagem do gráfico
-import imagemmuitomais from "../assets/graficomuitomais.png";//importando imagem do gráfico
+import "../assets/CSS/EspecialidadesMedicas.css";
+import { Link } from "react-router-dom"; // Importa o Link do React Router
+import imagem200 from "../assets/img/grafico200.png";
+import imagem89 from "../assets/img/grafico89.png";
+import imagemhealthlog from "../assets/img/helthloggrafico.png";
+import imagemmuitomais from "../assets/img/graficomuitomais.png";
+import logoh from "../assets/img/Logo1.png";
+import { FaSearch } from 'react-icons/fa';
+import { FaRegCircleUser } from "react-icons/fa6";
+import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function EspecialidadesMedicas(){
-    const specialties = [
-        {
-          title: 'Ortopedia',
-          description:
-            'Especialidade voltada para a saúde e cuidados com a região do pé e tornozelo',
-        },
-        {
-          title: 'Pediatria',
-          description:
-            'especialidade que volta a atenção para o bem-estar de crianças e adolescentes.',
-        },
-        {
-          title: 'Cardiologia',
-          description:
-            'Especialidade voltada aos cuidados com o coração e complicações cardiacas.',
-        },
-        {
-          title: 'Cirurgia Bucomaxilofacial',
-          description:
-            'Envolve procedimentos cirúrgicos complexos para tratar condições da boca, mandíbula e face',
-        },
-        {
-          title: 'Dermatologia',
-          description:
-            'especialidade médica que diagnostica e trata doenças da pele, cabelo, unhas e mucosas',
-        },
-        {
-          title: 'Odontologia Restauradora',
-          description:
-            'Foca em restaurar dentes danificados por cáries ou trauma, incluindo o uso de restaurações e coroas',
-        },
-      ];
-    
-      return (
-        <div className="container">
-          <h1>Especialidades Médicas</h1>
-          <div className="specialty-grid">
-            {specialties.map((specialty, index) => (
-              <div key={index} className="specialty-card">
-                <h2>{specialty.title}</h2>
-                <p>{specialty.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
 
+
+function EspecialidadesMedicas() {
+    const [busca, setBusca] = useState("");
+    const navegar = useNavigate();
+
+    const irParaPerfil = () => {
+        navegar("/perfil");
+    };
+
+    const pesquisar = (evento) => {
+        if (evento.key === "Enter") {
+            navegar(`/pesquisa/${busca}`);
+        }
+    };
+
+    return (
+        <div className="containerBB">
+            <div className="barraBB">
+                <img src={logoh} alt="Logo" className="logoBB" />
+                <div className="barra-pesquisaBB">
+                    <FaSearch className="icone-pesquisaBB" />
+                    <input
+                        type="text"
+                        placeholder="Buscar"
+                        className="input-pesquisaBB"
+                        value={busca}
+                        onChange={(e) => setBusca(e.target.value)}
+                        onKeyPress={pesquisar}
+                    />
+                </div>
+                <div className="containerservicosBB">
+                    <p className="divservicosBB">
+                        Serviços
+                        <SlArrowDown className="icone-setaBB" />
+                    </p>
+                </div>
+                <FaRegCircleUser className="icone-perfilBB" onClick={irParaPerfil} />
+            </div>
+            {/* Seção de imagens no topo */}
+            <div className="graficoBB">
+                <img src={imagem200} alt="grafico200" />
+                <img src={imagem89} alt="grafico89" />
+                <img src={imagemhealthlog} alt="graficohealthlog" />
+                <img src={imagemmuitomais} alt="graficomuitomais" />
+            </div>
+
+            {/* SEPARANDO CABEÇALHO*/}
+            <div className="titulo2BB">
+                <h1>Especialidades Médicas</h1>
+            </div>
+
+            {/* Grid das especialidades odontológicas */}
+            <div className="todas-caixas2BB">
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Cardiologia</h2>
+                    <p>Especialidade voltada aos cuidados com o coração e complicações cardiacas</p>
+                </Link>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Ortopedia</h2>
+                    <p>Especialidade voltada para a saúde e cuidados com a região do pé e tornozelo</p>
+                </Link>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Neurologia</h2>
+                    <p>Especialidade que diagnostica e trata distúrbios do sistema nervoso, incluindo o cérebro, medula espinhal e nervos</p>
+                </Link>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Pediatria</h2>
+                    <p>Especialidade que volta a atenção para o bem-estar de crianças e adolescentes</p>
+                </Link>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Dermatologia</h2>
+                    <p>Especialidade diagnostica e trata doenças da pele, cabelos, unhas e mucosas</p>
+                </Link>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
+                    <h2>Clínico Geral</h2>
+                    <p>Especialidade que faz diagnósticos iniciais, trata condições comuns e encaminha pacientes para especialistas quando necessário</p>
+                </Link>
+            </div>
+    </div>
+       
+    );
 }
 
 export default EspecialidadesMedicas;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/cadastro.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/imgFundoMulherRuiva.png"; // Imagem de fundo
+import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
 import maletaCla from "../assets/img/maletaAzulCla.png"; // Primeira imagem a ser usada
 import pers from "../assets/img/persAzulEsc.png"; // segunda imagem a ser usada
 import logo from "../assets/img/logo.png";
@@ -25,25 +25,25 @@ function Cadastro() {
 
   return (
 
-    <div className="login-containerB">
-      <img src={imgFundo} alt="" className="background-imageB" />{" "}
+    <div className="login-containerI">
+      <img src={imgFundo} alt="" className="background-imageI" />{" "}
+
       {/* Imagem de fundo diretamente aqui */}
-      <div className="login-boxB">
+      <div className="login-boxI">
         {/* Aqui está o logo HL com as imagens lado a lado */}
-        <div className="logo-with-imagesB">
-          <img src={logo} alt="Imagem 1" className="logoB" />
-          <div className="images-containerB">
-            <img src={maletaCla} alt="Imagem 1" className="side-imageB" />
-            <img src={pers} alt="Imagem 2" className="side-image2B" />
+        <div className="logo-with-imagesI">
+          <img src={logo} alt="Imagem 1" className="logoI" />
+          <div className="images-containerI">
+            <img src={maletaCla} alt="Imagem 1" className="side-imageI" />
+            <img src={pers} alt="Imagem 2" className="side-image2I" />
           </div>
         </div>
 
         <h2>Cadastre-se!</h2>
 
-        <form className="colunasSuculentas" onSubmit={handleSubmit}>
-
+        <form className="colunasSuculentasI" onSubmit={handleSubmit}>
           <input
-            className="input1B"
+            className="input1I"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -51,7 +51,7 @@ function Cadastro() {
             required
           />
           <input
-            className="input2B"
+            className="input2I"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -59,7 +59,7 @@ function Cadastro() {
             required
           />
           <input
-            className="input3B"
+            className="input3I"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -67,7 +67,7 @@ function Cadastro() {
             required
           />
           <input
-            className="input4B"
+            className="input4I"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -75,7 +75,7 @@ function Cadastro() {
             required
           />
           <input
-            className="input5B"
+            className="input5I"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -83,24 +83,26 @@ function Cadastro() {
             required
           />
           <input
-            className="input6B"
+            className="input6I"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Confirmar senha.."
             required
           />
-
-          <button className="buttonB" type="submit">
-            Concluir
-          </button>
         </form>
 
-        <p>
+        <div className="divButtonI">
+          <button className="buttonI" type="submit">
+            Concluir
+          </button>
+        </div>
+
+        <p className="jaLogI">
           Já tem login?{" "}
-          <a className="aB" href="#">
+         
             Entrar
-          </a>
+         
         </p>
       </div>
     </div>

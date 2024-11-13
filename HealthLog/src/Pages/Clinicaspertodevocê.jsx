@@ -1,6 +1,4 @@
-import "../assets/CSS/ClinicaPertoDeVoce.css"
-import logoh from "../assets/Logo1.png";
-import barraazulfinal from "../assets/barraazulfinal.png";
+
 import { FaSearch } from 'react-icons/fa';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
@@ -9,12 +7,15 @@ import { useNavigate } from "react-router-dom";
 import amorsaude from "../assets/amorsaude.jpg";
 import Centerfisio from "../assets/Centerfisio.jpg";
 import clinicapsicologia from "../assets/clinicapsicologia.webp";
-import ClinicasImg from "../assets/Clinicas.png";
+import ClinicasImg from '../assets/img/Clinicas.png';
 import Drconsulta from "../assets/Dr.consulta.webp";
 import estetica from "../assets/estetica.webp";
 import odontocompany from "../assets/odonto company.jpg";
-import prope from "../assets/propé.webp";
+import prope from '../assets/propé.webp';
 import linhapontilhada from "../assets/Linhapontilhada.png"; 
+import "../assets/CSS/ClinicaPertodevoce.css";
+ import logoh from '../assets/img/Logo1.png';
+import barraazulfinal from '../assets/img/barraazulfinal.png';
 
 function Clinica() {
   const [busca, setBusca] = useState("");

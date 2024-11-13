@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Registro from "./Pages/Registro";
 import Login from "./Pages/Login";
-import Perfil from "./Pages/Perfil";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 import LoginClinic from "./Pages/LoginClinic"; 
@@ -11,6 +10,7 @@ import Home from "./Pages/Home";
 import BemVindo from "./Pages/boasvindas";
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
 import Cpdv from "./Pages/Cpdv"
+import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 
 
@@ -18,13 +18,11 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-
-                <Route path="/" element={<Home />} />
+                <Route path="/inicio" element={<Home />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Registro" element={<Registro />} />
                 <Route path="/ClinicasPertoDeVoce" element={<Clinica />} />
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas />} />
-                <Route path="/Perfil" element={<Perfil />} />
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas />} />
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>} />
                 <Route path="/Cadastro" element={<Cadastro />} />
@@ -33,8 +31,11 @@ const Router = () => {
                 <Route path="/BemVindo" element={<BemVindo/>} />
                 <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
                 <Route path="/BemVindo" element={<BemVindo/>} />
-                <Route path="/" element={<Cpdv />} />
-
+                <Route path="/cpdv" element={<Cpdv />} />
+                <Route path="/" element={<BemVindo/>}/>
+                <Route path="/registro" element={<Registro/>}/>
+                <Route path="/loginClinic" element={<LoginClinic/>}/> 
+                <Route path="/cadastro" element={<Cadastro/>}/>
             </Routes>
         </BrowserRouter>
     );
