@@ -1,55 +1,125 @@
-// Importa os módulos necessários
-const express = require('express');
-const mysql = require('mysql2');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+// index.js
+import express from 'express';
+import bodyParser from 'body-parser';
+import bcrypt from 'bcrypt';
+import cors from 'cors';
+import mysql from 'mysql2';
 
+// Configuração do servidor Express
 const app = express();
-const port = 3001;
+const PORT = 5000;
 
-// Configurações do middleware
+// Configuração do CORS para permitir requisições do frontend
 app.use(cors());
+
+// Configuração do bodyParser para analisar dados JSON
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
-// Conexão com o banco de dados
+// Conexão com o banco de dados MySQL
 const db = mysql.createConnection({
-    host: 'localhost', // Corrige o host para 'localhost'
-    port: 3306, // Corrige a porta para 3306
-    user: 'root',
-    password: 'root',
-    database: 'BaseD'
+  host: 'localhost',
+  user: 'root',  // Altere conforme seu usuário do MySQL
+  password: 'root',  // Altere conforme sua senha do MySQL
+  database: 'BaseD',  // Substitua pelo nome do seu banco de dados
+  port:'3306' 
 });
 
-db.connect(err => {
+db.connect((err) => {
+  if (err) {
+    console.error('Erro ao conectar ao banco de dados:', err);
+    return;
+  }
+  console.log('Conectado ao banco de dados MySQL!');
+});
+
+// Rota para cadastro de usuário
+app.post('/register', async (req, res) => {
+  const { nome, sobrenome, email, senha, data_nascimento } = req.body;
+
+  if (!nome || !sobrenome || !email || !senha || !data_nascimento) {
+    return res.status(400).json({ message: 'Preencha todos os campos!' });
+  }
+
+  // Verifica se o email já está cadastrado no banco de dados
+  const checkEmailQuery = 'SELECT * FROM usuarios WHERE email = ?';
+  db.query(checkEmailQuery, [email], (err, result) => {
     if (err) {
-        console.error('Erro ao conectar com o banco de dados:', err);
-        process.exit(1);
-    }
-    console.log('Banco de dados conectado!');
-});
-
-// Rota para registrar o usuário
-app.post('/Registro', (req, res) => {
-    const { nome, sobrenome, genero, data_nascimento, cep, email, senha } = req.body;
-    
-    // Verifica se todos os campos obrigatórios estão presentes
-    if (!nome || !sobrenome || !genero || !data_nascimento || !cep || !email || !senha) {
-        return res.status(400).send({ message: 'Todos os campos são obrigatórios.' });
+      console.error('Erro ao verificar email:', err);
+      return res.status(500).json({ message: 'Erro ao verificar e-mail.' });
     }
 
-    const query = 'INSERT INTO usuarios (nome, sobrenome, genero, data_nascimento, cep, email, senha) VALUES (?, ?, ?, ?, ?, ?, ?)';
-    db.query(query, [nome, sobrenome, genero, data_nascimento, cep, email, senha], (err, result) => {
-        if (err) {
-            console.error('Erro ao registrar o usuário:', err);
-            res.status(500).send({ message: 'Erro ao registrar o usuário.' });
-        } else {
-            res.status(200).send({ message: 'Usuário registrado com sucesso!' });
+    if (result.length > 0) {
+      return res.status(400).json({ message: 'Este e-mail já está cadastrado.' });
+    }
+
+    // Criação do hash da senha
+    bcrypt.hash(senha, 10, (err, hashedPassword) => {
+      if (err) {
+        console.error('Erro ao criar hash da senha:', err);
+        return res.status(500).json({ message: 'Erro ao registrar usuário.' });
+      }
+
+      // Insere os dados do novo usuário no banco de dados
+      const insertQuery =
+        'INSERT INTO usuarios (nome, sobrenome, email, senha, data_nascimento) VALUES (?, ?, ?, ?, ?)';
+      db.query(
+        insertQuery,
+        [nome, sobrenome, email, hashedPassword, data_nascimento],
+        (err, result) => {
+          if (err) {
+            console.error('Erro ao inserir dados no banco:', err);
+            return res.status(500).json({ message: 'Erro ao registrar usuário.' });
+          }
+
+          res.status(200).json({ message: 'Usuário registrado com sucesso!' });
         }
+      );
     });
+  });
 });
 
-// Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+//parte do login ----------------------------------------------------------------------------------------
+// Rota para login de usuário
+app.post('/login', (req, res) => {
+    const { email, senha } = req.body;
+  
+    if (!email || !senha) {
+      return res.status(400).json({ message: 'Preencha todos os campos!' });
+    }
+  
+    // Verifica se o e-mail está registrado no banco de dados
+    const checkEmailQuery = 'SELECT * FROM usuarios WHERE email = ?';
+    db.query(checkEmailQuery, [email], (err, result) => {
+      if (err) {
+        console.error('Erro ao verificar email:', err);
+        return res.status(500).json({ message: 'Erro ao verificar e-mail.' });
+      }
+  
+      if (result.length === 0) {
+        return res.status(400).json({ message: 'E-mail não encontrado.' });
+      }
+  
+      const user = result[0];
+  
+      // Compara a senha fornecida com o hash armazenado
+      bcrypt.compare(senha, user.senha, (err, isMatch) => {
+        if (err) {
+          console.error('Erro ao comparar senha:', err);
+          return res.status(500).json({ message: 'Erro ao fazer login.' });
+        }
+  
+        if (!isMatch) {
+          return res.status(400).json({ message: 'Senha incorreta.' });
+        }
+  
+        // Senha correta, retorna sucesso
+        res.status(200).json({ message: 'Login realizado com sucesso!' });
+      });
+    });
+  });
+  
+
+// Inicia o servidor na porta configurada
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

@@ -66,7 +66,7 @@ function Login() {
         </form>
 
         <p>
-          Não tem login? <a className="a" href="#">Cadastre-se!</a>
+          Não tem login? <a className="a" href="/cadastro">Cadastre-se!</a>
         </p>
       </div>
     </div>
