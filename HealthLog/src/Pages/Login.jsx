@@ -1,36 +1,49 @@
-
-
 import React, { useState } from "react";
-import "../assets/CSS/login.css"; // importação do css
-import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
-import maletaCla from "../assets/img/maletaAzulCla.png"; // imagem maleta clara
-import pers from "../assets/img/persAzulEsc.png"; // imagem pessoa
-import logo from "../assets/img/logo.png"; // imagem logo
+import "../assets/CSS/login.css"; 
+import imgFundo from "../assets/img/cachFund.jpg";
+import maletaCla from "../assets/img/maletaAzulCla.png";
+import pers from "../assets/img/persAzulEsc.png";
+import logo from "../assets/img/logo.png";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => { // aviso caso todos os campos nao foram preenchidos
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (email === "" || password === "") {
       alert("Por favor, preencha todos os campos.");
       return;
     }
 
-    if (email === "exemplo@teste.com" && password === "123456") { // aviso login realizado com sucesso ou falha
-      alert("Login realizado com sucesso!");
-    } else {
-      alert("E-mail ou senha incorretos.");
+    try {
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, senha: password }),
+      });
+
+      const data = await response.json();
+
+      if (response.status === 200) {
+        alert(data.message); // Login realizado com sucesso
+        // Redirecionar para outra página, se necessário
+      } else {
+        alert(data.message); // Exibir mensagem de erro
+      }
+    } catch (error) {
+      console.error("Erro ao fazer login:", error);
+      alert("Erro ao conectar com o servidor. Tente novamente mais tarde.");
     }
   };
 
   return (
-    <div className="login-container">     {/* "body para essa pagina em especifico" */}
+    <div className="login-container">
       <img src={imgFundo} alt="" className="background-image" />
-      {/* Imagem de fundo diretamente aqui */}
       <div className="login-box">
-        {/* Aqui está o logo HL com as imagens lado a lado */}
         <div className="logo-with-images">
           <img src={logo} alt="Imagem 1" className="logo" />
           <div className="images-container">
@@ -42,15 +55,17 @@ function Login() {
         <h2>Bem-vindo(a)!</h2>
         <p>Preencha seus dados corretamente para acessar sua conta.</p>
 
-        <form onSubmit={handleSubmit}> {/* inputs para email e senha */}
-          <input className="input1"
+        <form onSubmit={handleSubmit}>
+          <input
+            className="input1"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="E-mail.."
             required
           />
-          <input className="input2"
+          <input
+            className="input2"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -71,6 +86,6 @@ function Login() {
       </div>
     </div>
   );
-
 }
-export default Login; /* exportação do login para o router */
+
+export default Login;
