@@ -1,12 +1,12 @@
-import '../assets/CSS/EspecialidadesEsteticas.css';
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+
+import { Link } from "react-router-dom"; // Importa o Link do React Router
 import imagem200 from '../assets/img/grafico200.png';
 import imagem89 from '../assets/img/grafico89.png';
 import imagemhealthlog from '../assets/img/helthloggrafico.png';
 import imagemmuitomais from '../assets/img/graficomuitomais.png';
 import logoh from '../assets/img/Logo1.png';
 import { FaSearch } from 'react-icons/fa';
+import "../CSS/assets/EspecialidadesEsteticas.css";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown } from "react-icons/sl";
 

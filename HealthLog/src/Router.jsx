@@ -6,11 +6,11 @@ import LoginClinic from "./Pages/LoginClinic";
 import Cadastro from "./Pages/Cadastro"
 import CadastroClinic from "./Pages/CadastroClinic"
 import Home from "./Pages/Home";
-import BemVindo from "./Pages/boasvindas";
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
 import Cpdv from "./Pages/Cpdv"
 import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
+import BemVindo from "./Pages/BoasVindas";
 
 
 const Router = () => {
