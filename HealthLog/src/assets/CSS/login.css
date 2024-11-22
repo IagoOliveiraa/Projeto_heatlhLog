@@ -32,6 +32,8 @@
 .logo {
   font-family: "Times New Roman", Times, serif;
   color: #355995;
+  margin-left: 1vw;
+  width: 30%;
 }
 
 .login-container {
@@ -57,24 +59,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translate(0%, 21%);
+  transform: translate(0%, 15%);
 }
 
 .logo-with-images {
   display: flex;
   align-items: center;
-
-  max-width: 350px;
+  max-width: 54%;
+  justify-content: space-between;
+  margin-bottom: 2%;
 }
 
 .images-container {
   display: flex;
   aspect-ratio: 140/69;
-  width: 70px;
-}
-
-.logo {
-  width: 23%;
+  width: 18%;
+  justify-content: center;
 }
 
 .login-box h2 {
@@ -95,7 +95,7 @@
 .input2 {
   width: 70%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 12px 0;
   border: 1.5px solid #ffd900;
   border-radius: 4px;
   background-color: #d3e4ff;
@@ -135,6 +135,12 @@
 
 .p {
   margin-top: 30px;
+}
+
+.side-image
+, .side-image2{
+  height: 130%;
+  width: 130%;
 }
 
 @media screen and (max-width: 480px) {

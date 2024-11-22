@@ -17,6 +17,8 @@
 .logoH {
   font-family: "Times New Roman", Times, serif;
   color: #355995;
+  margin-left: 1vw;
+  width: 30%;
 }
 
 .login-containerH {
@@ -47,7 +49,9 @@
 .logo-with-imagesH {
   display: flex;
   align-items: center;
-  max-width: 100%;
+  max-width: 54%;
+  justify-content: space-between;
+  margin-bottom: 2%;
 }
 
 .images-containerH {
@@ -56,10 +60,6 @@
   width: 18%;
   justify-content: center;
   
-}
-
-.logoH {
-  width: 23%;
 }
 
 .login-boxH h2 {
@@ -112,6 +112,7 @@
   display: flex;
   justify-content: center;
   margin-top: 5%;
+  margin-bottom: 1%;
 }
 
 .buttonH:hover {
@@ -231,4 +232,14 @@
   cursor: pointer;
   margin-bottom: 10px;
   color: #355995;
+}
+
+.h2H{
+  margin-bottom: 2%;
+}
+
+.side-imageH
+, .side-image2H{
+  height: 130%;
+  width: 130%;
 }
