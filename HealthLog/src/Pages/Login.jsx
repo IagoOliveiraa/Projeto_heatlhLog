@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import "../assets/CSS/login.css"; // importação do css
 import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
@@ -39,8 +37,8 @@ function Login() {
           </div>
         </div>
 
-        <h2>Bem-vindo(a)!</h2>
-        <p>Preencha seus dados corretamente para acessar sua conta.</p>
+        <h2 className="bemV">Bem-vindo(a)!</h2>
+        <p className="pree">Preencha seus dados corretamente para acessar sua conta.</p>
 
         <form onSubmit={handleSubmit}> {/* inputs para email e senha */}
           <input className="input1"
@@ -66,8 +64,9 @@ function Login() {
         </form>
 
         <p>
-          Não tem login? <a className="a" href="#">Cadastre-se!</a>
+          Não tem login? <a className="a" href="/cadastro">Cadastre-se!</a>
         </p>
+
       </div>
     </div>
   );
