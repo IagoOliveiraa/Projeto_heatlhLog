@@ -1,4 +1,4 @@
-<<<<<<< HEAD:HealthLog/src/assets/CSS/EspecialidadesMedicas.css
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
 
 
@@ -93,7 +93,7 @@ body {
       width: 100%;
   }
   /* Barra de navegação */
-=======
+
 /* CSS */
 
 .containerBB {
@@ -267,7 +267,6 @@ body {
 /* MOBILE 768px */
 
 @media (max-width: 768px) {
->>>>>>> c9dc1de120db7a255d8fcd77ff0df93d8dff9714:HealthLog/src/CSS/EspecialidadesMedicas.css
   .barraBB {
       flex-direction: column;
       height: auto;

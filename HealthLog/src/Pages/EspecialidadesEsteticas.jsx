@@ -6,7 +6,7 @@ import imagemhealthlog from '../assets/img/helthloggrafico.png';
 import imagemmuitomais from '../assets/img/graficomuitomais.png';
 import logoh from '../assets/img/Logo1.png';
 import { FaSearch } from 'react-icons/fa';
-import "../CSS/assets/EspecialidadesEsteticas.css";
+import '../assets/CSS/EspecialidadesEsteticas.css';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown } from "react-icons/sl";
 
