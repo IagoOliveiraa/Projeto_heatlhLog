@@ -85,14 +85,14 @@ function ConcluirCadastro() {
       <img src={imgFundo} alt="" className="background-imageH" />
       <div className="login-boxH">
         <div className="logo-with-imagesH">
-          <img src={logo} alt="Imagem 1" className="logoH" />
+          
           <div className="images-containerH">
             <img src={maletaEsc} alt="Imagem 1" className="side-imageH" />
             <img src={persCla} alt="Imagem 2" className="side-image2H" />
           </div>
         </div>
 
-        <h2 className="h2H">Está quase no fim!</h2>
+        <h2>Está quase no fim!</h2>
 
         <div>
           <button className="botaoEspH" onClick={toggleMenu}>

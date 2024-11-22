@@ -25,7 +25,7 @@ function Cpdv() {
     <>
       <div className="containerCpdvB">
         <div className="barraB">
-          <img src={logoh} alt="Logo" className="logo" />
+          <img src={logoh} alt="Logo" className="logoB" />
           <div className="barra-pesquisaB">
             <FaSearch className="icone-pesquisaB" />
             <input

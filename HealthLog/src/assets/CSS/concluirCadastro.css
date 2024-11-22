@@ -49,15 +49,15 @@
 .logo-with-imagesH {
   display: flex;
   align-items: center;
-  max-width: 54%;
-  justify-content: space-between;
+  max-width: 100%;
+  justify-content: center;
   margin-bottom: 2%;
 }
 
 .images-containerH {
   display: flex;
   aspect-ratio: 140/69;
-  width: 18%;
+  width: 20%;
   justify-content: center;
   
 }
@@ -234,12 +234,77 @@
   color: #355995;
 }
 
-.h2H{
-  margin-bottom: 2%;
-}
-
 .side-imageH
 , .side-image2H{
-  height: 130%;
-  width: 130%;
+  height: 80%;
+  width: 80%;
+}
+
+@media screen and (max-width: 480px) {
+
+  .background-imageH{
+    display: none;
+  }
+
+  .login-containerH{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .login-boxH{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 0;
+    padding: 0 0 0 0;
+    border-radius: 0;
+  }
+
+  .logo-with-imagesH {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 11%;
+    margin-top: 14%;
+  }
+
+  .side-imageH
+, .side-image2H{
+  height: 100%;
+  width: 100%;
+}
+
+.login-boxH h2 {
+  color: #345995;
+  justify-content: center;
+  display: flex;
+  font-weight: 200;
+  margin: 0 0 6vw 0;
+}
+
+.options-listH {
+  list-style-type: none;
+  padding: 0;
+  max-height: 40vw;
+  overflow-y: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.botaoEspH{
+  margin-bottom: 3%;
+}
+
+.toggle-buttonH{
+  margin-bottom: 3%;
+}
+
+.selected-option-itemH{
+  color: white;
+  background-color: #2f80ed;
+  padding: 0.5vw 0 0.5vw 0;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0 15vw 1.1vw 15vw;
+}
 }

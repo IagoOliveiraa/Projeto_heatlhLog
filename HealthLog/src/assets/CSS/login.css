@@ -143,12 +143,6 @@
   width: 130%;
 }
 
-@media (min-width: 480px) {
-  .baixoFund {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .background-image{
     display: none;
@@ -167,6 +161,8 @@
     left: 0;
     box-shadow: none;
   }
+
+
 
   .logo-with-images{
     text-align: center;

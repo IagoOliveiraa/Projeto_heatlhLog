@@ -96,12 +96,7 @@ function Cadastro() {
           </button>
         </div>
 
-        <p className="jaLogI">
-          Já tem login?{" "}
-         
-            Entrar
-         
-        </p>
+        <p className="jaLogI">Já tem login? Entrar</p>
       </div>
     </div>
   );
