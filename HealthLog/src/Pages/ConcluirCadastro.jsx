@@ -92,7 +92,7 @@ function ConcluirCadastro() {
           </div>
         </div>
 
-        <h2>Está quase no fim!</h2>
+        <h2 className="h2H">Está quase no fim!</h2>
 
         <div>
           <button className="botaoEspH" onClick={toggleMenu}>

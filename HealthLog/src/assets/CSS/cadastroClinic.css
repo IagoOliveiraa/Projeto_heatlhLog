@@ -17,6 +17,7 @@
   .logoC {
     font-family: "Times New Roman", Times, serif;
     color: #355995;
+    width: 30%;
   }
   
   .login-containerC {
@@ -33,21 +34,25 @@
   .login-boxC {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
-    padding: 3% 0 3% 4%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 47vw;
+    padding: 1vw;
     text-align: center;
     position: relative; /* Necessário para aplicar z-index */
     z-index: 10; /* A caixa de login deve estar na frente */
-    margin-top: 5.5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0%, 13%);
   }
   
   .logo-with-imagesC {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    max-width: 350px;
-    margin-left: -12%;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    margin-top: 2%;
   }
   
   .images-containerC {
@@ -56,16 +61,11 @@
     width: 70px;
   }
   
-  .logoC {
-    width: 23%;
-  }
-  
   .login-boxC h2 {
     color: #345995;
-    margin-bottom: 10px;
-    margin-top: -5px;
+   margin-bottom: 3%;
     font-weight: 200;
-    margin-right: 10%;
+    
   }
   
   .login-boxC p {
@@ -95,20 +95,23 @@
   }
   
   
-  
+  .divButtonC{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
   
   .buttonC {
-    width: 45%;
-    padding: 10px;
+    padding: 3% 6% 3% 6%;
     background-color: #acd0ff;
-    color: #003fa5;
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
+    color: #003fa5;
     cursor: pointer; 
     display: flex;
     justify-content: center;
-    margin-left: 68%;
-    margin-top: 13%;
+    margin-top: 6%;
+    margin-bottom: 2.5%;
   }
   
   .buttonC:hover {
@@ -130,5 +133,8 @@
   
   .colunasSuculentasC{
     display: grid;
+    margin-left: 10%;
     grid-template-columns: 1fr 1fr;
   }
+
+ 

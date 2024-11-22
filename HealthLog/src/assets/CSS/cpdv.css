@@ -5,6 +5,8 @@
   font-family: "Rajdhani", sans-serif !important;
   font-weight: 400;
   font-style: normal;
+  color: #3e87e9;
+  margin: 0 0 2% 0;
 }
 
 /* Barra de navegação */
@@ -122,22 +124,20 @@
 .abracoB {
   margin: 0 0 0 5%;
   max-width: 75%;
+  
 }
 
 .titDescriB {
   color: #005bd6;
-  margin: 3% 0 0 4%;
-  font-family: "Rajdhani", sans-serif
-}
-
-.descricaoB {
-  color: #3e87e9;
+  margin: 3% 0 2% 4%;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .marqB {
   margin-left: 6%;
   color: #005bd6;
-  font-family: "Rajdhani", sans-serif
+  font-family: "Rajdhani", sans-serif;
+  margin-bottom: 3%;
 }
 
 .containerLaDeBaixoB {
@@ -173,6 +173,11 @@
   color: #2f80ed;
   margin-bottom: 7%;
   font-family: "Rajdhani", sans-serif
+}
+
+.nanneshoB{
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 @media screen and (max-width: 480px) {
