@@ -1,4 +1,4 @@
-
+// JavaScript (React Component)
 import "../CSS/EspecialidadesMedicas.css";
 import { Link } from "react-router-dom"; // Importa o Link do React Router
 import imagem200 from "../assets/img/grafico200.png";
@@ -8,11 +8,9 @@ import imagemmuitomais from "../assets/img/graficomuitomais.png";
 import logoh from "../assets/img/Logo1.png";
 import { FaSearch } from 'react-icons/fa';
 import { FaRegCircleUser } from "react-icons/fa6";
-import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-
 
 function EspecialidadesMedicas() {
     const [busca, setBusca] = useState("");
@@ -51,7 +49,6 @@ function EspecialidadesMedicas() {
                 </div>
                 <FaRegCircleUser className="icone-perfilBB" onClick={irParaPerfil} />
             </div>
-            {/* Seção de imagens no topo */}
             <div className="graficoBB">
                 <img src={imagem200} alt="grafico200" />
                 <img src={imagem89} alt="grafico89" />
@@ -59,12 +56,10 @@ function EspecialidadesMedicas() {
                 <img src={imagemmuitomais} alt="graficomuitomais" />
             </div>
 
-            {/* SEPARANDO CABEÇALHO*/}
             <div className="titulo2BB">
                 <h1>Especialidades Médicas</h1>
             </div>
 
-            {/* Grid das especialidades odontológicas */}
             <div className="todas-caixas2BB">
                 <Link to="/ClinicasPertoDeVoce" className="caixa2BB">
                     <h2>Cardiologia</h2>
@@ -91,8 +86,7 @@ function EspecialidadesMedicas() {
                     <p>Especialidade que faz diagnósticos iniciais, trata condições comuns e encaminha pacientes para especialistas quando necessário</p>
                 </Link>
             </div>
-    </div>
-       
+        </div>
     );
 }
 

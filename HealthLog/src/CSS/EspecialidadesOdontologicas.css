@@ -288,53 +288,87 @@
   }
 }
 
-/* Estilos para dispositivos menores que 480px */
-@media (max-width: 600px) {
+/* MOBILE 768px */
+
+@media (max-width: 768px) {
   .barra {
-    padding: 5px;
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
   }
 
-  .logo {
-    height: 50px;
+  .logoBB {
+      height: 60px;
   }
 
-  .icone-pesquisa {
-    font-size: 16px;
-  }
-
-  .input-pesquisa {
-    font-size: 14px;
+  .barra-pesquisa {
+      width: 100%;
+      margin: 10px 0;
   }
 
   .icone-perfil {
-    font-size: 24px;
+      font-size: 30px;
+      margin: 0;
   }
 
-  .grafico img {
-    width: 45%;
-    max-width: 120px;
+  .titulo2BB h1 {
+      font-size: 40px;
   }
 
-  .titulo1 h1 {
-    font-size: 18px;
+  .graficoBB img {
+      height: 150px;
+      width: auto;
+      margin: 5%;
   }
 
-  .todas-caixas1 {
-    grid-template-columns: 1fr; /* Muda para 1 coluna em telas menores */
-    gap: 15px;
-    width: 95%; /* Aumenta a largura total da grid */
+  .todas-caixas2BB {
+      flex-direction: column;
+      align-items: center;
   }
 
-  .caixa1 {
-    padding: 15px;
-    width: 100%; /* Aumenta a largura das caixas */
+  .caixa2BB {
+      width: 90%;
+      margin-bottom: 15px;
+  }
+}
+
+/* MOBILE 480px */
+
+@media (max-width: 480px) {
+  .barraBB {
+      padding: 5px;
   }
 
-  .caixa1 h2 {
-    font-size: 14px;
+  .logoBB {
+      height: 40px;
   }
 
-  .caixa1 p {
-    font-size: 12px;
+  .input-pesquisaBB {
+      font-size: 14px;
+  }
+
+  .icone-perfilBB {
+      font-size: 24px;
+  }
+
+  .graficoBB img {
+      width: 100%;
+      max-width: 120px;
+  }
+
+  .titulo2BB h1 {
+      font-size: 28px;
+  }
+
+  .caixa2BB {
+      padding: 15px;
+  }
+
+  .caixa2BB h2 {
+      font-size: 16px;
+  }
+
+  .caixa2BB p {
+      font-size: 14px;
   }
 }
