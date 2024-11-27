@@ -1,7 +1,7 @@
 // src/Register.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../assets/CSS/registro.css'
+import '../'
 
 const Registro = () => {
     const [formData, setFormData] = useState({

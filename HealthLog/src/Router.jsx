@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registro from "./Pages/Registro";
 import BoasVindas from "./Pages/BoasVindas"
 import Login from "./Pages/Login";
 import LoginClinic from "./Pages/LoginClinic"; 
@@ -12,6 +11,8 @@ import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
+import Perfil from "./Pages/perfil";
+import PerfilEm from "./Pages/perfilEm";
 
 
 const Router = () => {
@@ -20,7 +21,6 @@ const Router = () => {
             <Routes>
             <Route path="/" element={<Home/>}/>
                 <Route path="/boasVindas" element={<BoasVindas/>}/>
-                <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
@@ -31,7 +31,10 @@ const Router = () => {
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
                 <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>   
-
+                <Route path="/perfil" element={<Perfil/>}/>
+                <Route path="/perfilEm" element={<PerfilEm/>}/>
+            
+                
 
             </Routes>
         </BrowserRouter>
