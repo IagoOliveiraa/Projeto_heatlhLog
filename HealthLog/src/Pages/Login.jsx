@@ -4,10 +4,12 @@ import imgFundo from "../assets/img/cachFund.jpg";
 import maletaCla from "../assets/img/maletaAzulCla.png";
 import pers from "../assets/img/persAzulEsc.png";
 import logo from "../assets/img/logo.png";
+import { useNavigate } from 'react-router-dom'; 
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +32,8 @@ function Login() {
 
       if (response.status === 200) {
         alert(data.message); // Login realizado com sucesso
-        // Redirecionar para outra página, se necessário
+        localStorage.setItem('token', data.token); // Armazenando o token no localStorage
+        navigate('/inicio'); // Redirecionando para a página inicial
       } else {
         alert(data.message); // Exibir mensagem de erro
       }

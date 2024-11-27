@@ -1,8 +1,7 @@
-
 import { FaSearch } from 'react-icons/fa';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import amorsaude from "../assets/amorsaude.jpg";
 import Centerfisio from "../assets/Centerfisio.jpg";
@@ -22,9 +21,41 @@ function Clinica() {
   const [indiceAtualSuperior, setIndiceAtualSuperior] = useState(0);
   const [indiceAtualInferior, setIndiceAtualInferior] = useState(0);
   const navegar = useNavigate();
+  const [user, setUser] = useState(null); // Adicione o estado para o usuário
+
+  // Função para verificar se o usuário está logado
+  const isLoggedIn = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      return true;
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    // Verifica se o usuário está logado ao carregar a página
+    if (!isLoggedIn()) {
+      // Se não estiver logado, redireciona para a página de login
+      navigate('/login');
+    } else {
+      // Obter dados do usuário do backend
+      fetch('/user', {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setUser(data); // Armazena as informações do usuário
+        })
+        .catch((error) => {
+          console.error('Erro ao obter dados do usuário:', error);
+        });
+    }
+  }, []); 
 
   const irParaPerfil = () => {
-    navegar("/perfil");
+    navigate("/perfil");
   };
 
   const pesquisar = (evento) => {
@@ -142,7 +173,20 @@ function Clinica() {
             <a href="/EspecialidadesEsteticas">Estética</a>
           </div>
         </div>
-        <FaRegCircleUser className="icone-perfil" onClick={irParaPerfil} />
+        <div className='PerfilHome'>
+          {user ? (
+            <>
+              <p>Bem-vindo, {user.email}!</p>
+              <button onClick={() => {
+                localStorage.removeItem('token');
+                setUser(null);
+                navigate('/login'); // Redireciona para a página inicial
+              }}>Sair</button>
+            </>
+          ) : (
+            <FaRegCircleUser className="icone-perfil" onClick={irParaPerfil} />
+          )}
+        </div>
       </div>
 
       {/* Títulos das clínicas */}

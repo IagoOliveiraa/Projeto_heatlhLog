@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../assets/CSS/agendamento.css';
 import logoh from '../assets/img/Logo1.png';
@@ -30,9 +30,8 @@ const gerarDias = (ano, mes, diaSelecionado, setDiaSelecionado) => {
   return dias;
 };
 
-const Calendario = () => {
+const Calendario = ({ diaSelecionado, setDiaSelecionado }) => {
   const [data, setData] = useState(new Date());
-  const [diaSelecionado, setDiaSelecionado] = useState(null);
 
   const mudarMes = (incremento) => {
     const novoMes = data.getMonth() + incremento;
@@ -60,9 +59,42 @@ const Calendario = () => {
 function ClinicaCalendario() {
   const [busca, setBusca] = useState("");
   const navegar = useNavigate();
+  const [diaSelecionado, setDiaSelecionado] = useState(null); 
+  const [user, setUser] = useState(null); 
+
+  // Função para verificar se o usuário está logado
+  const isLoggedIn = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      return true;
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    // Verifica se o usuário está logado ao carregar a página
+    if (!isLoggedIn()) {
+      // Se não estiver logado, redireciona para a página de login
+      navigate('/login');
+    } else {
+      // Obter dados do usuário do backend
+      fetch('/user', {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setUser(data); // Armazena as informações do usuário
+        })
+        .catch((error) => {
+          console.error('Erro ao obter dados do usuário:', error);
+        });
+    }
+  }, []); 
 
   const irParaPerfil = () => {
-    navegar("/perfil");
+    navigate("/perfil");
   };
 
   const pesquisar = (evento) => {
@@ -73,6 +105,17 @@ function ClinicaCalendario() {
 
   const handleClick = () => {
     alert('Botão clicado!'); // Ação do botão
+  };
+
+  const handleAgendamento = () => {
+    if (diaSelecionado) {
+      // Aqui você pode implementar a lógica para abrir um modal ou redirecionar para a página de agendamento
+      // com o dia selecionado.
+      // Por exemplo, você poderia redirecionar usando:
+      navegar(`/agendamento/${diaSelecionado}`);
+    } else {
+      alert("Por favor, selecione um dia no calendário."); 
+    }
   };
 
   return (
@@ -98,16 +141,29 @@ function ClinicaCalendario() {
             <a href="#">Estética</a>
           </div>
         </div>
-        <FaRegCircleUser  className="icone-perfil" onClick={irParaPerfil} />
+        <div className='PerfilHome'>
+          {user ? (
+            <>
+              <p>Bem-vindo, {user.email}!</p>
+              <button onClick={() => {
+                localStorage.removeItem('token');
+                setUser(null);
+                navigate('/'); // Redireciona para a página inicial
+              }}>Sair</button>
+            </>
+          ) : (
+            <FaRegCircleUser  className="icone-perfil" onClick={irParaPerfil} />
+          )}
+        </div>
       </div>
       <div className='botãoCalen'>
-      <Calendario />
-      <button className="botao-agendar">
+        <Calendario diaSelecionado={diaSelecionado} setDiaSelecionado={setDiaSelecionado} /> 
+        <button className="botao-agendar" onClick={handleAgendamento}> 
            Agendar Consulta
-      </button>
+        </button>
       </div>
     </div>
   );
 }
 
-export default ClinicaCalendario;
+export default ClinicaCalendario; 

@@ -11,6 +11,7 @@ import Cpdv from "./Pages/Cpdv"
 import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 import BemVindo from "./Pages/BoasVindas";
+import ClinicaCalendario from "./Pages/agendamento";
 
 
 const Router = () => {
@@ -32,6 +33,7 @@ const Router = () => {
                 <Route path="/cpdv" element={<Cpdv />} />
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
             </Routes>
         </BrowserRouter>
     );

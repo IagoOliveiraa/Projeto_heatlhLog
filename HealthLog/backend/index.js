@@ -1,9 +1,9 @@
-// index.js
 import express from 'express';
 import bodyParser from 'body-parser';
 import bcrypt from 'bcrypt';
 import cors from 'cors';
 import mysql from 'mysql2';
+import jwt from 'jsonwebtoken'; // Importando JWT
 
 // Configuração do servidor Express
 const app = express();
@@ -31,6 +31,9 @@ db.connect((err) => {
   }
   console.log('Conectado ao banco de dados MySQL!');
 });
+
+// Chave secreta para assinar os tokens
+const SECRET_KEY = 'sua_chave_secreta'; // Substitua por uma chave forte
 
 // Rota para cadastro de usuário
 app.post('/register', async (req, res) => {
@@ -78,46 +81,72 @@ app.post('/register', async (req, res) => {
   });
 });
 
-//parte do login ----------------------------------------------------------------------------------------
 // Rota para login de usuário
 app.post('/login', (req, res) => {
-    const { email, senha } = req.body;
-  
-    if (!email || !senha) {
-      return res.status(400).json({ message: 'Preencha todos os campos!' });
+  const { email, senha } = req.body;
+
+  if (!email || !senha) {
+    return res.status(400).json({ message: 'Preencha todos os campos!' });
+  }
+
+  // Verifica se o e-mail está registrado no banco de dados
+  const checkEmailQuery = 'SELECT * FROM usuarios WHERE email = ?';
+  db.query(checkEmailQuery, [email], (err, result) => {
+    if (err) {
+      console.error('Erro ao verificar email:', err);
+      return res.status(500).json({ message: 'Erro ao verificar e-mail.' });
     }
-  
-    // Verifica se o e-mail está registrado no banco de dados
-    const checkEmailQuery = 'SELECT * FROM usuarios WHERE email = ?';
-    db.query(checkEmailQuery, [email], (err, result) => {
+
+    if (result.length === 0) {
+      return res.status(400).json({ message: 'E-mail não encontrado.' });
+    }
+
+    const user = result[0];
+
+    // Compara a senha fornecida com o hash armazenado
+    bcrypt.compare(senha, user.senha, (err, isMatch) => {
       if (err) {
-        console.error('Erro ao verificar email:', err);
-        return res.status(500).json({ message: 'Erro ao verificar e-mail.' });
+        console.error('Erro ao comparar senha:', err);
+        return res.status(500).json({ message: 'Erro ao fazer login.' });
       }
-  
-      if (result.length === 0) {
-        return res.status(400).json({ message: 'E-mail não encontrado.' });
+
+      if (!isMatch) {
+        return res.status(400).json({ message: 'Senha incorreta.' });
       }
-  
-      const user = result[0];
-  
-      // Compara a senha fornecida com o hash armazenado
-      bcrypt.compare(senha, user.senha, (err, isMatch) => {
-        if (err) {
-          console.error('Erro ao comparar senha:', err);
-          return res.status(500).json({ message: 'Erro ao fazer login.' });
-        }
-  
-        if (!isMatch) {
-          return res.status(400).json({ message: 'Senha incorreta.' });
-        }
-  
-        // Senha correta, retorna sucesso
-        res.status(200).json({ message: 'Login realizado com sucesso!' });
-      });
+
+      // Senha correta, gera um token JWT
+      const token = jwt.sign(
+        { id: user.id, email: user.email }, // Payload
+        SECRET_KEY, // Chave secreta
+        { expiresIn: '1h' } // Token expira em 1 hora
+      );
+
+      res.status(200).json({ message: 'Login realizado com sucesso!', token });
     });
   });
-  
+});
+
+// Middleware para verificar o token JWT
+const authenticateToken = (req, res, next) => {
+  const token = req.headers['authorization']?.split(' ')[1];
+  if (!token) {
+    return res.status(403).json({ message: 'Token não fornecido.' });
+  }
+
+  jwt.verify(token, SECRET_KEY, (err, user) => {
+    if (err) {
+      return res.status(403).json({ message: 'Token inválido.' });
+    }
+
+    req.user = user; // Adiciona os dados do usuário ao request
+    next();
+  });
+};
+
+// Rota protegida
+app.get('/protected', authenticateToken, (req, res) => {
+  res.status(200).json({ message: `Bem-vindo, usuário ${req.user.email}!` });
+});
 
 // Inicia o servidor na porta configurada
 app.listen(PORT, () => {
