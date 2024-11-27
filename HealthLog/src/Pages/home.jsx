@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react'; // Hooks para gerenciar estado e ef
 import { FaRegUserCircle, FaSearch } from 'react-icons/fa'; // Ícones de usuário e pesquisa
 import { SlArrowDown } from 'react-icons/sl'; // Ícone de seta para dropdown
 import '../assets/CSS/home.css'; // Estilos CSS importados
-import logosite from '../assets/Logo1.png'; // Logo do site
-import bemvindo from '../assets/boasvindasFoto.png'; // Imagem da seção de boas-vindas
-import especMedicas from '../assets/Medicinafoto.png'; // Imagem de especialidade médica
-import especOdont from '../assets/OdontoFoto.png'; // Imagem de odontologia
-import especEstetica from '../assets/EsteticaFoto.png'; // Imagem de estética
-import FotoSobre from '../assets/FotoSobre.png'; // Imagem da seção "Sobre Nós"
+import logosite from '../assets/img/Logo1.png'; // Logo do site
+import bemvindo from '../assets/img/boasvindasFoto.png'; // Imagem da seção de boas-vindas
+import especMedicas from '../assets/img/Medicinafoto.png'; // Imagem de especialidade médica
+import especOdont from '../assets/img/OdontoFoto.png'; // Imagem de odontologia
+import especEstetica from '../assets/img/EsteticaFoto.png'; // Imagem de estética
+import FotoSobre from '../assets/img/FotoSobre.png'; // Imagem da seção "Sobre Nós"
 
 
 
