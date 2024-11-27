@@ -22,10 +22,10 @@ function BemVindo() {
             <div className="box-para-login">
                     <h1 className='title-box-login'>Marque a sua próxima consulta!</h1>
                     <a href="/Login" className='bottom-box-login'>Login</a>
-                    <h2 className='text-box-login'>Não tem login? <a href="/cadastro">cadastre - se</a></h2>
+                    <h2 className='text-box-login'>Não tem login? <a href="/registro">cadastre - se</a></h2>
             </div>
             <div className="deseja-continuar">
-                <a href="/inicio">Deseja continuar sem <font color="#2F80ED">login?</font> 🡪</a> 
+                <a href="/">Deseja continuar sem <font color="#2F80ED">login?</font> 🡪</a> 
             </div>                                      
             <span className='text-rodapé'>
                 <p className='CNPJ'>CNPJ: 47.854.666/0001-70</p>

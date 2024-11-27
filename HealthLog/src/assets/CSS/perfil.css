@@ -1,153 +1,37 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Cabeçalho */
-  
-  
-  
-  .logo-perfil {
+
+}
+
+/* Cabeçalho */
+
+.cabeçalhoPf{
+
+    display: flex;
+    justify-content: space-between;
+   
+    background-color: #345995;
+    padding: 10px;
+    border-bottom: 4px solid #F2B33D;
+    position: relative;
+
+}
+
+.logo-perfil{
     display: flex;
     align-items: center;
-  }
-  
-  .logo-perfil img {
+}
+
+.logo-perfil img{
     height: 150px;
     margin-right: 5px;
+}
+
+.quadrado {
+    width: 100px; /* Defina a largura desejada */
+    height: 100px; /* Defina a altura desejada */
+    background-color: #ff0000; /* Escolha a cor que deseja, nesse caso vermelho */
   }
-  
-  
-  .containerButton{
-    width: 100%;
-    height: 50%;
-    flex-direction: column;
-    display: flex;
-    margin-top: 2vw;
-  }
-  
-  .containerButton button{
-    margin-left: 15vw;
-    margin-bottom: 2vw;
-  }
-  
-  /* Alinha todo o formulário à direita */
-  .form-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 40vw;
-  }
-  
-  .tuliImg {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formDiv {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .imgT {
-    width: 14vw;
-    height: 14vw;
-    border-radius: 15vw;
-    margin-left: 15vw;
-    margin-top: 2vw;
-    background-image: url(/src/assets/fotopf.png);
-    background-size: cover;
-  }
-  
-  
-  
-  .perfil-form {
-    width: 60%;
-    height: 100%;
-    display: block;
-    justify-content: center;
-  }
-  
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    margin-left: 3%;
-  }
-  
-  label {
-    font-size: 16px;
-    color: #007bff;
-    margin-bottom: 0.5vw;
-  }
-  
-  input {
-    font-size: 16px;
-    padding: 8px;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .inputContainer input{
-    background-color: white;
-  }
-  
-  
-  .inputContainer {
-    margin-bottom: 4vw;
-  }
-  
-  #inputOne {
-    margin-top: 6vw;
-  }
-  
-  
-  .change-password {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #007bff;
-    cursor: pointer;
-  }
-  
-  input[readonly] {
-    background-color: #f0f0f0;
-    color: #000;
-  }
-  
-  .btn {
-    width: 14vw; /* Largura fixa dos botões */
-    height: 3vw;
-    border-radius: 1vw;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .excluir {
-    background-color: #0033A0; /* Cor para o botão Excluir */
-  }
-  
-  .editar {
-    background-color: #1E90FF; /* Cor para o botão Editar */
-  }
-  
-  .agendamentos {
-    background-color: #87CEFA; /* Cor para o botão Agendamentos */
-  }
-  
-  .historico {
-    background-color: #6EA2F4; /* Cor para o botão Histórico */
-  }
-  
-  
+
