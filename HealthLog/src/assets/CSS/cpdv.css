@@ -71,9 +71,9 @@
 /* Ícone de perfil */
 .icone-perfilB {
   color: white;
-  font-size: 40px;
+  font-size: 58px;
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 20px;
   cursor: pointer; /* Cursor de "mão" ao passar o mouse */
 }
 
@@ -84,6 +84,7 @@
   background-color: rgba(217, 217, 217, 0.1);
   border-radius: 50px;
   width: 120px;
+  margin-right: 4%;
 }
 
 /* Texto "Serviços" */
@@ -94,6 +95,7 @@
   align-items: center;
   margin-left: 13%;
   margin-right: 13%;
+  cursor: pointer;
 }
 
 /* Ícone de seta para baixo */
@@ -105,11 +107,20 @@
 
 /* Menu de serviços */
 .divmenuB {
-  background-color: #fff;
-  color: #000;
+  background-color: #5A82C1;
+  color: #ffffff;
   text-decoration: none;
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.divmenuB a{
+  color: white;
+  text-decoration: none;
+  margin: 7px 4px 5px 4px;
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
@@ -180,6 +191,33 @@
   margin-bottom: 3%;
 }
 
+.hamburger-menuB {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-mobileB {
+  display: flex;
+  flex-direction: column;
+  background-color: #4c78be;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.menu-mobileB a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
 @media screen and (max-width: 480px) {
   
   .barraB {
@@ -219,7 +257,7 @@
     padding: 0;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    margin-left: 0;
+    margin-left: 10px;
     width: 100%;
     color: white;
     background-color: transparent;
@@ -239,6 +277,7 @@
     margin-left: 9px;
     margin-right: 9px;
     cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+    height: 35px;
   }
 
   .divservicosB {
@@ -291,4 +330,13 @@
   .nanneshoB{
     font-size: 15px;
   }
+
+  .containerservicosB {
+    display: none;
+  }
+
+  .hamburger-menuB {
+    display: block;
+  }
 }
+

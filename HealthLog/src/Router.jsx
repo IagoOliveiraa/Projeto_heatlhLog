@@ -5,7 +5,8 @@ import Cadastro from "./Pages/Cadastro"
 import CadastroClinic from "./Pages/CadastroClinic"
 import Cpdv from "./Pages/Cpdv.jsx"
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
-import Home from "./Pages/home";
+import BemVindo from "./Pages/boasvindas.jsx";
+
 
 
 
@@ -15,15 +16,14 @@ const Router = () => {
         <BrowserRouter>
             <Routes>
 
-            <Route path="/" element={<BoasVindas/>}/>
-            <Route path="/inicio" element={<Home/>}/>
-                <Route path="/registro" element={<Registro/>}/>
-                <Route path="/loginClinic" element={<LoginClinic/>}/> 
+            <Route path="/" element={<BemVindo/>}/>
                 <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
                 <Route path="/cpdv" element={<Cpdv/>}/>
                 <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
                 <Route path="/login" element={<Login/>}/>
+                
               
 
 
