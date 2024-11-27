@@ -1,26 +1,32 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registro from "./Pages/Registro";
-import Home from "./Pages/Home";
-import Login from "./Pages/Login";
+import Login from "./Pages/Login.jsx";
 import LoginClinic from "./Pages/LoginClinic"; 
 import Cadastro from "./Pages/Cadastro"
 import CadastroClinic from "./Pages/CadastroClinic"
-import BemVindo from "./Pages/boasvindas";
-import ClinicaCalendario from "./Pages/agendamento";
+import Cpdv from "./Pages/Cpdv.jsx"
+import ConcluirCadastro from "./Pages/ConcluirCadastro";
+import Home from "./Pages/home";
+
+
 
 
 const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<Home/>}/>
-                <Route path="/boas-vindas" element={<BemVindo/>}/>
-                <Route path="/login" element={<Login/>}/>
+
+            <Route path="/" element={<BoasVindas/>}/>
+            <Route path="/inicio" element={<Home/>}/>
                 <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
-                <Route path="/agendamento" element={<ClinicaCalendario/>}/>
+                <Route path="/cpdv" element={<Cpdv/>}/>
+                <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
+                <Route path="/login" element={<Login/>}/>
+              
+
+
 
             </Routes>
         </BrowserRouter>

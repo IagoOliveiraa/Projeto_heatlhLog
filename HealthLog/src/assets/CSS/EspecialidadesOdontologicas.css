@@ -1,0 +1,374 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+ */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+ 
+.containerCpdvB{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+/* Barra de navegação */
+.barra {
+  background-color: #4C78BE;
+  width: 100%;
+  height: 150px; /* Aumentar a altura para evitar sobreposição */
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Logo da clínica */
+.logo {
+  height: 120px;
+  width: auto;
+  left: 20px;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 2px solid rgba(56, 97, 162, 1);
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 400px;
+  margin-left: 25px;
+}
+
+/* Campo de texto da pesquisa */
+.input-pesquisa {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisa {
+  color: white;
+  font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisa::placeholder {
+  color: rgb(203, 203, 203);
+  font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfil {
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; 
+}
+
+/* Seção de serviços */
+.containerservicos {
+  margin-left: 130px;
+  border: 2px solid rgba(56, 97, 162, 1);
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicos {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+/* Ícone de seta para baixo */
+.icone-seta {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Menu de serviços */
+.divmenu {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+}
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicos:hover .divmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separação do cabeçalho */
+
+.grafico {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se não houver espaço */
+  justify-content: center; /* Centraliza as imagens */
+  gap: 15px; /* Espaço entre as imagens */
+  margin-top: 200px; /* Aumentar a margem superior para evitar sobreposição */
+  margin-left: 7%; /* Espaço à esquerda do gráfico */
+}
+
+.grafico img {
+  margin: 1%;
+  height: 200px;
+  margin-top: 15%;
+  align-items: center;
+}
+
+.titulo1 h1 {
+  font-family: 'Arial', sans-serif;
+  color: #3366ff;
+  margin-bottom: 70px;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.todas-caixas1 {
+  display: flex;
+  flex-direction: row;
+  width: 93.5%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.todas-caixas1 a {
+  text-decoration: none;
+}
+
+.caixa1 {
+  border: 1px solid #ffa500;
+  width: 28vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  margin-bottom: 5%;
+  transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
+}
+
+.caixa1:hover {
+  transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+.caixa1 h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.caixa1 p {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+
+.caixa1 a:hover {
+  color: #3366ff; /* Exemplo de efeito hover nos links */
+}
+
+/* Estilos para dispositivos móveis */
+
+@media (max-width: 768px) {
+  /* Barra de navegação */
+  .barra {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .barra-pesquisa {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .input-pesquisa {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .icone-perfil {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  /* Seção de gráficos */
+  .grafico {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .grafico img {
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  /* Título principal */
+  .titulo1 h1 {
+    font-size: 22px;
+    color: #3366ff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Grid das especialidades odontológicas */
+  .todas-caixas1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Grid 2x2 */
+    gap: 15px; /* Espaçamento entre as caixas */
+    width: 95%; /* Aumenta a largura total da grid */
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .caixa1 {
+    border: 1px solid #ffa500;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Aumenta a largura das caixas */
+  }
+
+  .caixa1:hover {
+    transform: scale(1.05);
+  }
+
+  .caixa1 h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .caixa1 p {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+/* MOBILE 768px */
+
+@media (max-width: 768px) {
+  .barra {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+
+  .logoBB {
+      height: 60px;
+  }
+
+  .barra-pesquisa {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .icone-perfil {
+      font-size: 30px;
+      margin: 0;
+  }
+
+  .titulo2BB h1 {
+      font-size: 40px;
+  }
+
+  .graficoBB img {
+      height: 150px;
+      width: auto;
+      margin: 5%;
+  }
+
+  .todas-caixas2BB {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .caixa2BB {
+      width: 90%;
+      margin-bottom: 15px;
+  }
+}
+
+/* MOBILE 480px */
+
+@media (max-width: 480px) {
+  .barraBB {
+      padding: 5px;
+  }
+
+  .logoBB {
+      height: 40px;
+  }
+
+  .input-pesquisaBB {
+      font-size: 14px;
+  }
+
+  .icone-perfilBB {
+      font-size: 24px;
+  }
+
+  .graficoBB img {
+      width: 100%;
+      max-width: 120px;
+  }
+
+  .titulo2BB h1 {
+      font-size: 28px;
+  }
+
+  .caixa2BB {
+      padding: 15px;
+  }
+
+  .caixa2BB h2 {
+      font-size: 16px;
+  }
+
+  .caixa2BB p {
+      font-size: 14px;
+  }
+}
