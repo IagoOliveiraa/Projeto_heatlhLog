@@ -207,9 +207,10 @@
     background-color: rgba(217, 217, 217, 0.1);
     border: 2px solid rgba(56, 97, 162, 1);
     border-radius: 50px;
-    padding: 2px 20px;
+    padding: 3px 9px;
     width: 400px;
-    margin-left: 25px;
+    margin-left: -16px;
+    margin-right: 12px;
   }
 
   .input-pesquisaB {
@@ -222,5 +223,72 @@
     width: 100%;
     color: white;
     background-color: transparent;
+  }
+
+  .containerservicosB {
+    margin-left: 0;
+    border: 2px solid rgba(56, 97, 162, 1);
+    background-color: rgba(217, 217, 217, 0.1);
+    border-radius: 50px;
+    width: 120px;
+  }
+
+  .icone-perfilB {
+    color: white;
+    font-size: 180px;
+    margin-left: 9px;
+    margin-right: 9px;
+    cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+  }
+
+  .divservicosB {
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+    margin-right: 9%;
+  }
+
+  .titDescriB {
+    color: #005bd6;
+    margin: 3% 0 2% 4%;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 27px;
+  }
+
+  .descricaoB{
+    font-family: "Rajdhani", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    color: #3e87e9;
+    margin: 0 0 3% 0;
+    font-size: 15px;
+  }
+
+  .marqB h1{
+    font-size: 25px;
+    margin-left: 2vw;
+    margin-bottom: 4%;
+  }
+
+  .laDeBaixoB {
+    border: 2px solid #8500a6;
+    width: 28%;
+    display: flex;
+    flex-direction: column; /* Coloca o texto e o botão em uma coluna (verticalmente) */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    border-radius: 17px;
+  }
+
+  .laDeBaixoB button{
+    border-radius: 13px;
+    max-width: 79px;
+    font-size: 1.7vh;
+  }
+
+  .nanneshoB{
+    font-size: 15px;
   }
 }

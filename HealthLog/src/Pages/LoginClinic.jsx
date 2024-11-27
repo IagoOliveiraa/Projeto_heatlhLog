@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../assets/CSS/loginCLinic.css"
+
 import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
+
+
 import logo from "../assets/img/logo.png";
 import maletaEsc from "../assets/img/maletaEsc.png"
 import persCla from "../assets/img/persCla.png"
@@ -37,8 +40,10 @@ function LoginClini() {
         </div>
       </div>
 
-      <h2 className="bemA">Bem-vindo(a)!</h2>
-      <p className="preeA">Preencha seus dados corretamente para acessar sua conta.</p>
+
+      <h2>Bem-vindo(a)!</h2>
+      <p>Preencha seus dados corretamente para acessar sua conta.</p>
+
 
       <form onSubmit={handleSubmit}>
         <input className="input1A"
@@ -64,7 +69,8 @@ function LoginClini() {
       </form>
 
       <p>
-       <a className="aA" href="#">Não tem cadastro?</a>
+
+        Não tem login? <a className="aA" href="#">Cadastre-se!</a>
       </p>
     </div>
   </div>

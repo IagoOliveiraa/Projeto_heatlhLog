@@ -24,6 +24,7 @@ function Cadastro() {
   };
 
   return (
+
     <div className="login-containerI">
       <img src={imgFundo} alt="" className="background-imageI" />{" "}
       {/* Imagem de fundo diretamente aqui */}
@@ -34,12 +35,14 @@ function Cadastro() {
           <div className="images-containerI">
             <img src={maletaCla} alt="Imagem 1" className="side-imageI" />
             <img src={pers} alt="Imagem 2" className="side-image2I" />
+
           </div>
         </div>
 
         <h2>Cadastre-se!</h2>
 
         <form className="colunasSuculentasI" onSubmit={handleSubmit}>
+
           <input
             className="input1I"
             type="email"
@@ -49,6 +52,7 @@ function Cadastro() {
             required
           />
           <input
+
             className="input2I"
             type="password"
             value={password}
@@ -65,6 +69,7 @@ function Cadastro() {
             required
           />
           <input
+
             className="input4I"
             type="password"
             value={password}
@@ -73,6 +78,7 @@ function Cadastro() {
             required
           />
           <input
+
             className="input5I"
             type="password"
             value={password}
@@ -81,6 +87,7 @@ function Cadastro() {
             required
           />
           <input
+
             className="input6I"
             type="password"
             value={password}
@@ -88,6 +95,7 @@ function Cadastro() {
             placeholder="Confirmar senha.."
             required
           />
+
         </form>
 
         <div className="divButtonI">
@@ -97,6 +105,8 @@ function Cadastro() {
         </div>
 
         <p className="jaLogI">Já tem login? Entrar</p>
+
+
       </div>
     </div>
   );

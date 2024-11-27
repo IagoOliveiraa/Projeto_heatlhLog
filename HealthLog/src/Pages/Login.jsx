@@ -9,6 +9,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
   const handleSubmit = (e) => { // aviso caso todos os campos nao foram preenchidos
     e.preventDefault();
     if (email === "" || password === "") {
@@ -37,8 +38,10 @@ function Login() {
           </div>
         </div>
 
+
         <h2 className="bemV">Bem-vindo(a)!</h2>
         <p className="pree">Preencha seus dados corretamente para acessar sua conta.</p>
+
 
         <form onSubmit={handleSubmit}> {/* inputs para email e senha */}
           <input className="input1"
@@ -64,12 +67,16 @@ function Login() {
         </form>
 
         <p>
+
           Não tem login? <a className="a" href="/cadastro">Cadastre-se!</a>
         </p>
+
 
       </div>
     </div>
   );
 
 }
+
 export default Login; /* exportação do login para o router */
+
