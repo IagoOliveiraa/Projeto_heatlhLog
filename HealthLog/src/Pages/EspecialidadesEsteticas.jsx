@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"; // Importa o Link do React Router
+<<<<<<< HEAD
 
+=======
+import { FaSearch } from 'react-icons/fa';
+>>>>>>> 73b7f2f397c76adf453194da799c56b2ee1e6474
 import "../CSS/EspecialidadesEsteticas.css";
 import imagem200 from "../assets/img/grafico200.png";
 import imagem89 from "../assets/img/grafico89.png";

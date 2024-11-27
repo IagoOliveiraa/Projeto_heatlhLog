@@ -19,8 +19,11 @@ const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<Home/>}/>
-                <Route path="/boasVindas" element={<BoasVindas/>}/>
+
+
+            <Route path="/" element={<BoasVindas/>}/>
+            <Route path="/inicio" element={<Home/>}/>
+                <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
