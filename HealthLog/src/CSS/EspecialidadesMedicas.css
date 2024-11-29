@@ -294,6 +294,180 @@
     display: none;
   }
 }
+  }}
+  @media screen and (max-width: 480px) {
+    .barraBB {
+      height: auto;
+      padding: 10px 15px;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .logoBB {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+  
+    .containerservicosBB {
+      display: none;
+    }
+  
+    .barra-pesquisaBB {
+      width: 90%;
+      padding: 8px;
+      margin: 10px auto;
+    }
+  
+    .input-pesquisaBB {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .icone-pesquisaBB {
+      font-size: 18px;
+    }
+  
+    .menu-mobileBB {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #4C78BE;
+      width: calc(100% - 20px);
+      padding: 15px;
+      border-radius: 10px;
+    }
+  
+    .menu-mobileBB a {
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .graficoBB img {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+  
+    .titulo2BB h1 {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+  
+    .todas-caixas2BB {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .caixa2BB {
+      width: 90%;
+      text-align: center;
+      margin: 15px 0;
+      padding: 20px;
+    }
+  
+    .caixa2BB h2 {
+      font-size: 20px;
+    }
+  
+    .caixa2BB p {
+      font-size: 16px;
+    }
+  
+    .icone-perfilBB {
+      display: none;
+    }
   }
-
+  
+  @media screen and (max-width: 768px) {
+    .barraBB {
+      flex-direction: column;
+      padding: 10px;
+      height: auto;
+    }
+  
+    .logoBB {
+      height: 70px;
+      margin-bottom: 10px;
+    }
+  
+    .containerservicosBB {
+      display: none;
+    }
+  
+    .barra-pesquisaBB {
+      width: 80%;
+      margin: 10px auto;
+    }
+  
+    .input-pesquisaBB {
+      font-size: 16px;
+      padding: 6px;
+    }
+  
+    .icone-pesquisaBB {
+      font-size: 18px;
+    }
+  
+    .hamburger-menuBB {
+      display: block;
+      font-size: 28px;
+      margin-top: 10px;
+    }
+  
+    .menu-mobileBB {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      background-color: #4C78BE;
+      width: calc(100% - 20px);
+      padding: 15px;
+      border-radius: 10px;
+    }
+  
+    .menu-mobileBB a {
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .graficoBB img {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+  
+    .titulo2BB h1 {
+      font-size: 32px;
+      margin: 20px auto;
+    }
+  
+    .todas-caixas2BB {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .caixa2BB {
+      width: 80%;
+      text-align: center;
+      margin: 10px 0;
+      padding: 20px;
+    }
+  
+    .caixa2BB h2 {
+      font-size: 22px;
+    }
+  
+    .caixa2BB p {
+      font-size: 18px;
+    }
   }
+  

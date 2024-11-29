@@ -119,11 +119,23 @@
       flex-direction: column;
   }
   
+  .graficoAA {
+    margin-top: 50px;
+  }
+
   .graficoAA img {
-    height: 200px;
-    margin-top: 200px;
-    margin-left: 7%;
-    align-items: center;
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .graficoAA {
+    margin-top: 100px;
+    gap: 10px;
+  }
+
+  .graficoAA img {
+    height: 150px;
+    margin: 5px;
   }
   
   .titulo2AA h1 {
@@ -231,7 +243,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
   .barraAA{
     height: 16vw;
     display: flex;
@@ -272,20 +283,120 @@
     font-size: 14px;
   }
 
-  .hamburger-menuAA{
+  .hamburger-menuAA {
     display: block;
     margin-left: -5px;
     margin-top: 6px;
     margin-right: 4%;
   }
 
-  .input-pesquisaAA{
+  .input-pesquisaAA {
     padding: 0px;
   }
 
-
+ 
 
   .icone-perfilAA {
     display: none;
+  }
+}
+
+
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosAA {
+    display: none;
+  }
+
+  .graficoAA {
+    margin-top: 100px;
+    gap: 10px;
+  }
+
+  .graficoAA img {
+    height: 150px;
+    margin: 5px;
+  }
+
+  .titulo2AA h1 {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .todas-caixas2AA {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .caixa2AA {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hamburger-menuAA {
+    display: block;
+  }
+
+  .icone-perfilAA {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ 
+
+  .graficoAA {
+    margin-top: 50px;
+  }
+
+  .graficoAA img {
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .titulo2AA h1 {
+    font-size: 24px;
+  }
+
+  .caixa2AA h2 {
+    font-size: 18px;
+  }
+
+  .caixa2AA p {
+    font-size: 14px;
+  }
+
+  .caixa2AA {
+    padding: 10px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaAA {
+    width: 60%;
+  }
+
+  .todas-caixas2AA{
+    gap: 15px;
+  }
+
+  .caixa2AA {
+    width: 45%;
   }
 }

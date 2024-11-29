@@ -302,3 +302,103 @@
     display: none;
   }
 }
+
+
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosJ {
+    display: none;
+  }
+
+  .graficoJ {
+    margin-top: 100px;
+    gap: 10px;
+  }
+
+  .graficoJ img {
+    height: 150px;
+    margin: 5px;
+  }
+
+  .titulo1J h1 {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .todas-caixas1J {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .caixa1J {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hamburger-menuJ {
+    display: block;
+  }
+
+  .icone-perfilJ {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ 
+
+  .graficoJ {
+    margin-top: 50px;
+  }
+
+  .graficoJ img {
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .titulo1J h1 {
+    font-size: 24px;
+  }
+
+  .caixa1J h2 {
+    font-size: 18px;
+  }
+
+  .caixa1J p {
+    font-size: 14px;
+  }
+
+  .caixa1J {
+    padding: 10px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaJ {
+    width: 60%;
+  }
+
+  .todas-caixas1J {
+    gap: 15px;
+  }
+
+  .caixa1J {
+    width: 45%;
+  }
+}
