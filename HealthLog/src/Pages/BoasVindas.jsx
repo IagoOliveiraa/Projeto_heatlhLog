@@ -25,7 +25,7 @@ function BemVindo() {
                     <h2 className='text-box-login'>Não tem login? <a href="/cadastro">cadastre - se</a></h2>
             </div>
             <div className="deseja-continuar">
-                <a href="/">Deseja continuar sem <font color="#2F80ED">login?</font> 🡪</a> 
+                <a href="/inicio">Deseja continuar sem <font color="#2F80ED">login?</font> 🡪</a> 
             </div>                                      
             <span className='text-rodapé'>
                 <p className='CNPJ'>CNPJ: 47.854.666/0001-70</p>
