@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Registro from "./Pages/Registro";
 import BoasVindas from "./Pages/BoasVindas"
 import Login from "./Pages/Login";
 import LoginClinic from "./Pages/LoginClinic"; 
@@ -20,7 +19,6 @@ const Router = () => {
             <Routes>
             <Route path="/" element={<Home/>}/>
                 <Route path="/boasVindas" element={<BoasVindas/>}/>
-                <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>

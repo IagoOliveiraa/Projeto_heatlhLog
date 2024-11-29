@@ -3,11 +3,9 @@
 .container {
     text-align: center;
     padding: 20px;
+    margin-top: 150px;
   }
 
- 
-  
-   
   .containerCpdvB{
       margin: 0;
       padding: 0;
@@ -121,12 +119,9 @@
       flex-direction: column;
   }
   
-  
-  
   .graficoAA img {
-    margin: 1%;
     height: 200px;
-    margin-top: 15%;
+    margin-top: 200px;
     margin-left: 7%;
     align-items: center;
   }
@@ -188,3 +183,111 @@
     color: #3366ff; /* Exemplo de efeito hover nos links */
   }
 
+/* Responsividade */
+
+.divmenuAA{
+  background-color: #5A82C1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1% -37% 0 0;
+}
+
+.divmenuAA a{
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menuAA{
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-mobileAA{
+  display: flex;
+  flex-direction: column;
+  background-color: #4C78BE;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.menu-mobileAA a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+
+  .barraAA{
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logoAA{
+    height: 80px;
+    width: auto;
+  }
+
+  .containerservicosAA{
+    display: none;
+  }
+
+  .barra-pesquisaAA {
+    width: 100%;
+    padding: 10px;
+    margin-left: -5%;
+    margin-right: 4%;
+  }
+
+  .icone-pesquisaAA {
+    font-size: 16px;
+  }
+
+  .titulo2AA h1 {
+    font-size: 24px;
+  }
+
+  .caixa2AA h2 {
+    font-size: 18px;
+  }
+
+  .caixa2AA p {
+    font-size: 14px;
+  }
+
+  .hamburger-menuAA{
+    display: block;
+    margin-left: -5px;
+    margin-top: 6px;
+    margin-right: 4%;
+  }
+
+  .input-pesquisaAA{
+    padding: 0px;
+  }
+
+  .containerAA{
+
+  }
+
+  .icone-perfilAA {
+    display: none;
+  }
+}

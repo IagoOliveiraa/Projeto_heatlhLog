@@ -1,11 +1,18 @@
-/* CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 
 .containerBB {
   text-align: center;
   padding: 20px;
+  font-family: 'Arial', sans-serif;
+  margin-top: -40px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
 
 .containerCpdvB {
   margin: 0;
@@ -51,7 +58,6 @@
   border: none;
   outline: none;
   padding: 10px;
-  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   margin-left: 6px;
   width: 100%;
@@ -69,6 +75,7 @@
 .input-pesquisaBB::placeholder {
   color: rgb(203, 203, 203);
   font-size: 20px;
+
 }
 
 /* Ícone de perfil */
@@ -91,12 +98,11 @@
 
 /* Texto "Serviços" */
 .divservicosBB {
-  font-family: 'Raleway', sans-serif;
   color: white;
   display: flex;
   align-items: center;
-  margin-left: 13%;
-  margin-right: 13%;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /* Ícone de seta para baixo */
@@ -108,16 +114,15 @@
 
 /* Imagens do gráfico */
 .graficoBB img {
-  margin: 1%;
+  margin: 4%;
   height: 200px;
   margin-top: 15%;
-  margin-left: 7%;
   align-items: center;
+  margin-right: 2%;
 }
 
 /* Título da seção */
 .titulo2BB h1 {
-  font-family: 'Arial', sans-serif;
   color: #3366ff;
   margin-bottom: 70px;
   font-size: 60px;
@@ -155,100 +160,116 @@
 }
 
 .caixa2BB h2 {
-  font-family: 'Arial', sans-serif;
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
 
 .caixa2BB p {
-  font-family: 'Arial', sans-serif;
   color: #555;
   margin: 0;
   padding: 0;
 }
 
-/* MOBILE 768px */
+/* Responsividade */
 
-@media (max-width: 768px) {
-  .barraBB {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
+.divmenuBB{
+  background-color: #5A82C1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1% -37% 0 0;
+}
+
+.divmenuBB a{
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menuBB{
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 4%;
+}
+
+.menu-mobileBB{
+  display: flex;
+  flex-direction: column;
+  background-color: #4C78BE;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.menu-mobileBB a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .barraBB{
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
   }
 
-  .logoBB {
-      height: 60px;
+  .containerservicosBB{
+    display: none;
   }
 
   .barra-pesquisaBB {
-      width: 100%;
-      margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    margin-left: -5%;
+    margin-right: 4%;
   }
 
-  .icone-perfilBB {
-      font-size: 30px;
-      margin: 0;
-  }
-
-  .titulo2BB h1 {
-      font-size: 40px;
-  }
-
-  .graficoBB img {
-      height: 150px;
-      width: auto;
-      margin: 5%;
-  }
-
-  .todas-caixas2BB {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .caixa2BB {
-      width: 90%;
-      margin-bottom: 15px;
-  }
-}
-
-/* MOBILE 480px */
-
-@media (max-width: 480px) {
-  .barraBB {
-      padding: 5px;
-  }
-
-  .logoBB {
-      height: 40px;
-  }
-
-  .input-pesquisaBB {
-      font-size: 14px;
-  }
-
-  .icone-perfilBB {
-      font-size: 24px;
-  }
-
-  .graficoBB img {
-      width: 100%;
-      max-width: 120px;
+  .icone-pesquisaBB {
+    font-size: 16px;
   }
 
   .titulo2BB h1 {
-      font-size: 28px;
-  }
-
-  .caixa2BB {
-      padding: 15px;
+    font-size: 24px;
   }
 
   .caixa2BB h2 {
-      font-size: 16px;
+    font-size: 18px;
   }
 
   .caixa2BB p {
-      font-size: 14px;
+    font-size: 14px;
+  }
+
+  .hamburger-menuBB{
+    display: block;
+    margin-left: -5px;
+    margin-top: 6px;
+  }
+
+  .input-pesquisaBB{
+    padding: 0px;
+  }
+
+  .containerBB{
+
+  }
+
+  .icone-perfilBB {
+    display: none;
   }
 }

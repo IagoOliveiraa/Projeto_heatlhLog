@@ -30,7 +30,7 @@ db.connect(err => {
 });
 
 // Rota para registrar o usuário
-app.post('/Registro', (req, res) => {
+app.post('/cadastro', (req, res) => {
     const { nome, sobrenome, genero, data_nascimento, cep, email, senha } = req.body;
     
     // Verifica se todos os campos obrigatórios estão presentes

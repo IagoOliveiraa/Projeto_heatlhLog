@@ -17,6 +17,7 @@ import linhapontilhada from "../assets/Linhapontilhada.png";
  import logoh from '../assets/img/Logo1.png';
 import barraazulfinal from '../assets/img/barraazulfinal.png';
 
+
 function Clinica() {
   const [busca, setBusca] = useState("");
   const [indiceAtualSuperior, setIndiceAtualSuperior] = useState(0);

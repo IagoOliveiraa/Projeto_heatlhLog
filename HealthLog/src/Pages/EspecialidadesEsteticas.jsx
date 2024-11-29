@@ -5,7 +5,7 @@ import imagem89 from '../assets/img/grafico89.png';
 import imagemhealthlog from '../assets/img/helthloggrafico.png';
 import imagemmuitomais from '../assets/img/graficomuitomais.png';
 import logoh from '../assets/img/Logo1.png';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaTimes, FaBars } from 'react-icons/fa';
 import "../CSS/EspecialidadesEsteticas.css";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
@@ -16,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 
 function EspecialidadesEsteticas() {
 
+    const [menuAberto, setMenuAberto] = useState(false)
+    const [menuMobileAberto, setMenuMobileAberto] = useState(false)
     const [busca, setBusca] = useState("");
     const navegar = useNavigate();
 
@@ -28,6 +30,16 @@ function EspecialidadesEsteticas() {
             navegar(`/pesquisa/${busca}`);
         }
     };
+
+    const toggleMenu = () => {
+        console.log(menuAberto)
+
+        setMenuAberto(!menuAberto)
+    }
+
+    const toggleMenuMobile = () => {
+        setMenuMobileAberto(!menuMobileAberto)
+    }
 
     return (
         <div className="containerAA">
@@ -46,11 +58,31 @@ function EspecialidadesEsteticas() {
                     />
                 </div>
                 <div className="containerservicosAA">
-                    <p className="divservicosAA">
+                    <p className="divservicosAA" onClick={toggleMenu}>
                         Serviços
                         <SlArrowDown className="icone-setaAA" />
                     </p>
+                    {menuAberto && (
+                        <div className="divmenuAA">
+                            <a href="/EspecialidadesMedicas">Medicina</a>
+                            <a href="/EspecialidadesOdontologicas">Odontologia</a>
+                            <a href="/EspecialidadesEsteticas">Estética</a>
+                        </div>
+                    )}
                 </div>
+                    <div className="hamburger-menuAA" onClick={toggleMenuMobile}>
+                        {menuMobileAberto ? <FaTimes /> : <FaBars />}
+                    </div>
+                    {menuMobileAberto && (
+                        <div className="menu-mobileAA">
+                            <a href="/EspecialidadesMedicas">Medicina</a>
+                            <a href="/EspecialidadesOdontologicas">Odontologia</a>
+                            <a href="/EspecialidadesEsteticas">Estética</a>
+                            <a href="/perfil">Perfil</a>
+                        </div>
+                    )}
+
+                
                 <FaRegCircleUser className="icone-perfilAA" onClick={irParaPerfil} />
             </div>
             {/* Seção de imagens no topo */}
@@ -74,49 +106,49 @@ function EspecialidadesEsteticas() {
                 <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
                     <h2>Cirurgia Plastica</h2>
                     <p>
-                    Procedimentos cirúrgicos que modificam ou aprimoram a aparência física, como rinoplastia, lifting facial, e lipoaspiração
+                        Procedimentos cirúrgicos que modificam ou aprimoram a aparência física, como rinoplastia, lifting facial, e lipoaspiração
                     </p>
                 </Link>
 
                 <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
                     <h2>Dermatologia Estética</h2>
                     <p>
-                    Tratamentos de pele que visam melhorar a aparência, como preenchimentos faciais, botox, e peelings químicos
+                        Tratamentos de pele que visam melhorar a aparência, como preenchimentos faciais, botox, e peelings químicos
                     </p>
                 </Link>
 
                 <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
                     <h2>Odontologia Estética</h2>
                     <p>
-                    Foca na melhoria da aparência dos dentes e do sorriso através de procedimentos como clareamento dental, facetas e aparelhos ortodônticos
+                        Foca na melhoria da aparência dos dentes e do sorriso através de procedimentos como clareamento dental, facetas e aparelhos ortodônticos
                     </p>
                 </Link>
-             
-                    <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
-                        <h2>Tricologia Estética</h2>
-                        <p>
-                            Tratamentos para cabelos e couro cabeludo, incluindo transplante capilar, tratamentos contra queda de cabelo e cuidados estéticos capilares
-                        </p>
-                    </Link>
 
-                    <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
-                        <h2>Nutrição Estética</h2>
-                        <p>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
+                    <h2>Tricologia Estética</h2>
+                    <p>
+                        Tratamentos para cabelos e couro cabeludo, incluindo transplante capilar, tratamentos contra queda de cabelo e cuidados estéticos capilares
+                    </p>
+                </Link>
+
+                <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
+                    <h2>Nutrição Estética</h2>
+                    <p>
                         Planejamento alimentar voltado para a melhoria da aparência da pele, cabelo e unhas, além de manutenção de um peso saudável
-                        </p>
-                    </Link>
+                    </p>
+                </Link>
 
-                    <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
-                        <h2>Estética Corporal</h2>
-                        <p>
+                <Link to="/ClinicasPertoDeVoce" className="caixa2AA">
+                    <h2>Estética Corporal</h2>
+                    <p>
                         Procedimentos não invasivos para modelagem do corpo, como massagem modeladora, drenagem linfática e tratamentos de celulite
-                        </p>
-                    </Link>
-                </div>
-
-
+                    </p>
+                </Link>
             </div>
-  
+
+
+        </div>
+
     );
 }
 
