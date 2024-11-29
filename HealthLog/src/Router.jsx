@@ -23,17 +23,15 @@ const Router = () => {
             <Routes>
 
             <Route path="/" element={<BemVindo/>}/>
-                <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
-                <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
-            <Route path="/" element={<BoasVindas/>}/>
             <Route path="/inicio" element={<Home/>}/>
-                <Route path="/registro" element={<Registro/>}/>
-                <Route path="/loginClinic" element={<LoginClinic/>}/> 
+            <Route path="/Login" element={<Login/>}/>
+            <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
+            <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
+            <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
                 <Route path="/cpdv" element={<Cpdv/>}/>
                 <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
-                <Route path="/Login" element={<Login/>}/>
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
