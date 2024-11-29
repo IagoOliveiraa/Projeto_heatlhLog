@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"; 
-import imagem200 from '../assets/img/grafico200.png';
-import imagem89 from '../assets/img/grafico89.png';
-import imagemhealthlog from '../assets/img/helthloggrafico.png';
-import imagemmuitomais from '../assets/img/graficomuitomais.png';
-import logoh from '../assets/img/Logo1.png';
+import { Link } from "react-router-dom"; // Importa o Link do React Router
 import { FaSearch } from 'react-icons/fa';
-import '../assets/CSS/EspecialidadesEsteticas.css';
+import "../CSS/EspecialidadesEsteticas.css";
+import imagem200 from "../assets/img/grafico200.png";
+import imagem89 from "../assets/img/grafico89.png";
+import imagemhealthlog from "../assets/img/helthloggrafico.png";
+import imagemmuitomais from "../assets/img/graficomuitomais.png";
+import logoh from'../assets/img/Logo1.png';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState, useEffect } from "react";

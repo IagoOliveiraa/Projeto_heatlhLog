@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Login from "./Pages/Login";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
@@ -12,6 +13,8 @@ import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 import BemVindo from "./Pages/BoasVindas";
 import ClinicaCalendario from "./Pages/agendamento";
+import Perfil from "./Pages/perfil";
+import PerfilEm from "./Pages/perfilEm";
 
 
 const Router = () => {
@@ -20,18 +23,26 @@ const Router = () => {
             <Routes>
 
             <Route path="/" element={<BemVindo/>}/>
-                <Route path="/inicio" element={<Home />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/ClinicasPertoDeVoce" element={<Clinica />} />
-                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas />} />
-                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas />} />
-                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>} />
-                <Route path="/LoginClinic" element={<LoginClinic />} />
-                <Route path="/CadastroClinic" element={<CadastroClinic />} />
                 <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
-                <Route path="/cpdv" element={<Cpdv />} />
-                <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
+            <Route path="/" element={<BoasVindas/>}/>
+            <Route path="/inicio" element={<Home/>}/>
+                <Route path="/registro" element={<Registro/>}/>
+                <Route path="/loginClinic" element={<LoginClinic/>}/> 
+                <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
+                <Route path="/cpdv" element={<Cpdv/>}/>
+                <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
+                <Route path="/Login" element={<Login/>}/>
+                <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
+                <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
+                <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
+                <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>   
+                <Route path="/perfil" element={<Perfil/>}/>
+                <Route path="/perfilEm" element={<PerfilEm/>}/>
+            
+                
+
             </Routes>
         </BrowserRouter>
     );

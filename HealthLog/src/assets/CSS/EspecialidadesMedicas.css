@@ -1,3 +1,4 @@
+<<<<<<< HEAD:HealthLog/src/assets/CSS/EspecialidadesMedicas.css
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
 
@@ -81,6 +82,12 @@ body {
     font-size: 26px;
 }
 
+=======
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
+
+>>>>>>> fa4d8c8dddbaf95e55b6e0cf2d3b3636943515fb:HealthLog/src/CSS/EspecialidadesMedicas.css
 .container {
     text-align: center;
     padding: 20px;
@@ -93,7 +100,11 @@ body {
       width: 100%;
   }
   /* Barra de navegação */
+<<<<<<< HEAD:HealthLog/src/assets/CSS/EspecialidadesMedicas.css
 
+=======
+=======
+>>>>>>> fa4d8c8dddbaf95e55b6e0cf2d3b3636943515fb:HealthLog/src/CSS/EspecialidadesMedicas.css
 /* CSS */
 
 .containerBB {
@@ -266,6 +277,7 @@ body {
 /* MOBILE 768px */
 
 @media (max-width: 768px) {
+>>>>>>> 73b7f2f397c76adf453194da799c56b2ee1e6474
   .barraBB {
       flex-direction: column;
       height: auto;
