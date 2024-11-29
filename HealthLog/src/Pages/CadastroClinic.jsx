@@ -4,6 +4,7 @@ import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
 import maletaEsc from "../assets/img/maletaEsc.png";
 import persCla from "../assets/img/persCla.png";
 
+
 import logo from "../assets/img/logo.png";
 
 function CadastroClinic() {
@@ -41,6 +42,7 @@ function CadastroClinic() {
         <h2>Cadastre sua clínica!</h2>
 
         <form className="colunasSuculentasC" onSubmit={handleSubmit}>
+
           <input
             className="input1C"
             type="email"
@@ -89,6 +91,7 @@ function CadastroClinic() {
             placeholder="CEP.."
             required
           />
+
         </form>
 
         <div className="divButtonC">
@@ -100,6 +103,7 @@ function CadastroClinic() {
             Próximo
           </button>
         </div>
+
       </div>
     </div>
   );

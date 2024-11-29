@@ -37,8 +37,10 @@ function LoginClini() {
         </div>
       </div>
 
+
       <h2>Bem-vindo(a)!</h2>
       <p>Preencha seus dados corretamente para acessar sua conta.</p>
+
 
       <form onSubmit={handleSubmit}>
         <input className="input1A"
@@ -64,6 +66,7 @@ function LoginClini() {
       </form>
 
       <p>
+
         Não tem login? <a className="aA" href="#">Cadastre-se!</a>
       </p>
     </div>

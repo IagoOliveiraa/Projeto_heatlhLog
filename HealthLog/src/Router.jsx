@@ -17,6 +17,10 @@ import Perfil from "./Pages/perfil";
 import PerfilEm from "./Pages/perfilEm";
 
 
+
+
+
+
 const Router = () => {
     return (
         <BrowserRouter>
@@ -27,11 +31,11 @@ const Router = () => {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
             <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
-            <Route path="/loginClinic" element={<LoginClinic/>}/> 
+
                 <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
                 <Route path="/cpdv" element={<Cpdv/>}/>
-                <Route path="/concluirCadastro" element={<ConcluirCadastro/>}/>
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
@@ -40,6 +44,10 @@ const Router = () => {
                 <Route path="/perfilEm" element={<PerfilEm/>}/>
             
                 
+                
+              
+
+
 
             </Routes>
         </BrowserRouter>

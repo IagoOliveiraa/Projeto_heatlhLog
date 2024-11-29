@@ -1,6 +1,6 @@
 import "../assets/CSS/cpdv.css";
 import logoh from "../assets/img/Logo1.png";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState, useEffect } from "react";
@@ -10,6 +10,8 @@ import { Link } from "react-router-dom"; // Importe o Link do React Router
 
 function Cpdv() {
   const [busca, setBusca] = useState("");
+  const [menuAberto, setMenuAberto] = useState(false); // Estado para o menu desktop
+  const [menuMobileAberto, setMenuMobileAberto] = useState(false); // Estado para o menu mobile
   const navegar = useNavigate();
   const [user, setUser] = useState(null); // Adicione o estado para o usuário
 
@@ -54,11 +56,21 @@ function Cpdv() {
     }
   };
 
+  const toggleMenu = () => {
+    console.log(menuAberto);
+    
+    setMenuAberto(!menuAberto); // Alterna entre aberto e fechado no desktop
+  };
+
+  const toggleMenuMobile = () => {
+    setMenuMobileAberto(!menuMobileAberto); // Alterna entre aberto e fechado no mobile
+  };
+
   return (
     <>
       <div className="containerCpdvB">
         <div className="barraB">
-          <img src={logoh} alt="Logo" className="logo" />
+          <img src={logoh} alt="Logo" className="logoB" />
           <div className="barra-pesquisaB">
             <FaSearch className="icone-pesquisaB" />
             <input
@@ -70,12 +82,22 @@ function Cpdv() {
               onKeyPress={pesquisar}
             />
           </div>
-          <div className="containerservicosB">
-            <p className="divservicosB">
+
+          {/* Menu Serviços (Desktop) */}
+          <div className="containerservicosB" >
+            <div className="divservicosB" onClick={toggleMenu}>
               Serviços
               <SlArrowDown className="icone-setaB" />
-            </p>
+            </div>
+            {menuAberto && (
+              <div className="divmenuB">
+                <a href="/EspecialidadesMedicas">Medicina</a>
+                <a href="/EspecialidadesOdontologicas">Odontologia</a>
+                <a href="/EspecialidadesEsteticas">Estética</a>
+              </div>
+            )}
           </div>
+
           <div className='PerfilHome'>
           {user ? (
             <>
@@ -90,6 +112,21 @@ function Cpdv() {
             <FaRegCircleUser className="icone-perfilB" onClick={irParaPerfil} />
           )}
         </div>
+
+
+          {/* Menu Hamburguer (Mobile) */}
+          <div className="hamburger-menuB" onClick={toggleMenuMobile}>
+            {menuMobileAberto ? <FaTimes /> : <FaBars />}
+          </div>
+          {menuMobileAberto && (
+            <div className="menu-mobileB">
+              <a href="/EspecialidadesMedicas">Medicina</a>
+              <a href="/EspecialidadesOdontologicas">Odontologia</a>
+              <a href="/EspecialidadesEsteticas">Estética</a>
+            </div>
+          )}
+
+          <FaRegCircleUser className="icone-perfilB" onClick={irParaPerfil} />
         </div>
 
         <div>
@@ -99,24 +136,24 @@ function Cpdv() {
         <div className="abracoB">
           <h1 className="titDescriB">Clinica A</h1>
           <h3 className="descricaoB">
-            Nossa clinica A é espcializada nas areas de X, Y e Z trazendo boas
-            experiencias de atendimento e resultado ao decorrer dos ultimos 15
-            anos
+            Nossa clinica A é especializada nas áreas de X, Y e Z, trazendo boas
+            experiências de atendimento e resultado ao decorrer dos últimos 15
+            anos.
           </h3>
         </div>
 
-        <div className="marqB"><h1>Marque já sua consulta</h1></div>
+
+        <div className="marqB">
+          <h1>Marque já sua consulta</h1>
+        </div>
 
         <div className="containerLaDeBaixoB">
           <div className="laDeBaixoB">
-              <h2 className="nanneshoB">Ortopedia</h2>
-              <Link to="/agendamento"> <button>Marcar Agendamento</button> </Link> {/* Utilize o Link aqui */}
-
+            <h2 className="nanneshoB">Ortopedia</h2>
+            <button>Marcar Agendamento</button>
           </div>
         </div>
       </div>
-
-
     </>
   );
 }

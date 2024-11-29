@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "../assets/CSS/login.css"; 
-import imgFundo from "../assets/img/cachFund.jpg";
-import maletaCla from "../assets/img/maletaAzulCla.png";
-import pers from "../assets/img/persAzulEsc.png";
-import logo from "../assets/img/logo.png";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from "react-router-dom"; // Certifique-se de importar useNavigate corretamente
+import "../assets/CSS/login.css"; // Importação do CSS
+import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
+import maletaCla from "../assets/img/maletaAzulCla.png"; // Imagem maleta clara
+import pers from "../assets/img/persAzulEsc.png"; // Imagem pessoa
+import logo from "../assets/img/logo.png"; // Imagem logo
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate(); // Certifique-se de estar usando o hook correto do React Router
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { // Adicionei `async` aqui
     e.preventDefault();
 
     if (email === "" || password === "") {
@@ -30,10 +30,10 @@ function Login() {
 
       const data = await response.json();
 
-      if (response.status === 200) {
+      if (response.ok) { // Verifica se o status é 200-299
         alert(data.message); // Login realizado com sucesso
-        localStorage.setItem('token', data.token); // Armazenando o token no localStorage
-        navigate('/inicio'); // Redirecionando para a página inicial
+        localStorage.setItem("token", data.token); // Armazenando o token no localStorage
+        navigate("/inicio"); // Redirecionando para a página inicial
       } else {
         alert(data.message); // Exibir mensagem de erro
       }
@@ -48,15 +48,17 @@ function Login() {
       <img src={imgFundo} alt="" className="background-image" />
       <div className="login-box">
         <div className="logo-with-images">
-          <img src={logo} alt="Imagem 1" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />
           <div className="images-container">
-            <img src={maletaCla} alt="Imagem 1" className="side-image" />
-            <img src={pers} alt="Imagem 2" className="side-image2" />
+            <img src={maletaCla} alt="Maleta" className="side-image" />
+            <img src={pers} alt="Pessoa" className="side-image2" />
           </div>
         </div>
 
-        <h2>Bem-vindo(a)!</h2>
-        <p>Preencha seus dados corretamente para acessar sua conta.</p>
+        <h2 className="bemV">Bem-vindo(a)!</h2>
+        <p className="pree">
+          Preencha seus dados corretamente para acessar sua conta.
+        </p>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -80,7 +82,9 @@ function Login() {
             Esqueci minha senha
           </a>
 
-          <button className="button" type="submit">Entrar</button>
+          <button className="button" type="submit">
+            Entrar
+          </button>
         </form>
 
         <p>
@@ -91,4 +95,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login; // Exportação do login para o router

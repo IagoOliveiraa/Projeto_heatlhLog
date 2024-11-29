@@ -1,4 +1,5 @@
 
+
 .background-imageB {
   position: absolute;
   top: 0;
@@ -205,46 +206,189 @@
     
   }
   
+.background-imageI {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/imgFundoMulherRuiva.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Para ficar abaixo de todos os outros elementos */
+}
+
+.colorI {
+  background-color: #ffd900;
+}
+
+.logoI {
+  font-family: "Times New Roman", Times, serif;
+  color: #355995;
+  width: 30%;
+  margin-left: 1vw;
+}
+
+.login-containerI {
+  font-family: Arial, sans-serif;
+  background-image: url("../assets/imgFundoMulherRuiva.png"); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-boxI {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 47vw;
+  padding: 1vw;
+  text-align: center;
+  position: relative; /* Necessário para aplicar z-index */
+  z-index: 10; /* A caixa de login deve estar na frente */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0%, 11%);
+}
+
+.logo-with-imagesI {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.images-containerI {
+  display: flex;
+  aspect-ratio: 140/69;
+  width: 70px;
+}
+
+.login-boxI h2 {
+  color: #345995;
+  margin-bottom: 4%;
+  font-weight: 200;
+}
+
+.login-boxI p {
+  color: #71a7ff;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.input1I,
+.input2I,
+.input3I,
+.input4I,
+.input5I,
+.input6I {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1.5px solid #ffd900;
+  border-radius: 4px;
+  background-color: #d3e4ff;
+}
+
+.input1I,
+.input2I,
+.input3I,
+.input4I,
+.input5I,
+.input6I ::placeholder {
+  color: #355995; /* Estiliza o texto do placeholder */
+}
+
+.divButtonI {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.buttonI {
+  padding: 3% 6% 3% 6%;
+  background-color: #acd0ff;
+  border: none;
+  border-radius: 7px;
+  color: #003fa5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.buttonI:hover {
+  background-color: #3867d6;
+}
+
+.aI {
+  text-decoration: none;
+  color: #487eb0;
+}
+
+.aI:hover {
+  text-decoration: underline;
+}
+
+.colunasSuculentasI {
+  display: grid;
+  margin-left: 10%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.jaLogI {
+  margin: 2% 0 3% 0;
+}
+
+@media screen and (max-width: 480px) {
+  .background-imageI {
+    display: none;
+  }
+
+  .side-imageI,
+  .side-image2I {
+    height: 130%;
+    width: 130%;
+  }
+
+  .logoI {
+    display: none;
+  }
+
+  .login-boxI {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding: 0 0 0 0;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+
   .login-boxI p {
-    color: #71a7ff;
-    font-size: 14px;
-    font-weight: 100;
-   
-   
+    padding-bottom: 4vh;
   }
 
-  .input1I,.input2I, 
-  .input3I,.input4I,
-  .input5I,.input6I {
-    width: 70%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1.5px solid #ffd900;
-    border-radius: 4px;
-    background-color: #d3e4ff;
+  .login-boxI h2 {
+    justify-content: flex-start;
+    display: flex;
+    padding-left: 15%;
+    margin-bottom: 10%;
   }
 
-  
-  .input1I, .input2I,
-  .input3I, .input4I,
-  .input5I, .input6I ::placeholder {
-    color: #355995; /* Estiliza o texto do placeholder */
-  }
-  
-  .divButtonI{
+  .images-containerI {
     display: flex;
     justify-content: center;
-    max-width: 100%;
   }
-  
-  .buttonI {
-    padding: 3% 6% 3% 6%;
-    background-color: #acd0ff;
-    border: none;
-    border-radius: 7px;
-    color: #003fa5;
-    cursor: pointer; 
-    display: flex;
+
+  .logo-with-imagesI {
+    text-align: center;
+    max-width: 100%;
     justify-content: center;
     margin-top: 6%;
   }
@@ -266,8 +410,18 @@
     display: grid;
     margin-left: 10%;
     grid-template-columns: 1fr 1fr;
+
+    margin-top: none;
+    margin-bottom: 12%;
   }
 
-  .jaLogI{
-    margin: 2% 0 3% 0;
+  .forgot-passwordI {
+    padding-left: 9%;
+    margin-top: -1%;
   }
+
+  .buttonI {
+    margin-top: 9%;
+    margin-bottom: 5%;
+  }
+}
