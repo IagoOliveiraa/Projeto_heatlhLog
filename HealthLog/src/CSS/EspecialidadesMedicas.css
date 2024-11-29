@@ -1,12 +1,11 @@
-<<<<<<< HEAD
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   
 }
-=======
-<<<<<<< HEAD
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
 
 
@@ -22,9 +21,7 @@
       width: 100%;
   }
   /* Barra de navegação */
-=======
 /* CSS */
->>>>>>> fa4d8c8dddbaf95e55b6e0cf2d3b3636943515fb
 
 .containerBB {
   text-align: center;
@@ -194,7 +191,6 @@
 
 /* Responsividade */
 
-<<<<<<< HEAD
 .divmenuBB{
   background-color: #5A82C1;
   color: white;
@@ -248,14 +244,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 0;
-=======
+
 @media (max-width: 768px) {
->>>>>>> 73b7f2f397c76adf453194da799c56b2ee1e6474
   .barraBB {
       flex-direction: column;
       height: auto;
       padding: 10px;
->>>>>>> fa4d8c8dddbaf95e55b6e0cf2d3b3636943515fb
   }
 
   .containerservicosBB{
@@ -295,11 +289,11 @@
     padding: 0px;
   }
 
-  .containerBB{
-
-  }
 
   .icone-perfilBB {
     display: none;
   }
 }
+  }
+
+  }

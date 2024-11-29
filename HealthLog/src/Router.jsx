@@ -10,9 +10,9 @@ import Home from "./Pages/home";
 import EspecialidadesMedicas from "./Pages/EspecialidadesMedicas";
 import EspecialidadesOdontologicas from "./Pages/EspecialidadesOdontologicas";
 import Clinica from "./Pages/Clinicaspertodevocê";
-import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 import Perfil from "./Pages/perfil";
 import PerfilEm from "./Pages/perfilEm";
+import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 
 
 const Router = () => {
@@ -22,7 +22,6 @@ const Router = () => {
 
             <Route path="/" element={<BoasVindas/>}/>
             <Route path="/inicio" element={<Home/>}/>
-                <Route path="/registro" element={<Registro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
