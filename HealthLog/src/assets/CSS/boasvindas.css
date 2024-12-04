@@ -7,7 +7,7 @@
     z-index: -1; /* Coloca a imagem atrás do conteúdo */
 }
 
-.LOGOR{
+.LOGOR {
     position: absolute;
     right: 0px;
     transform: scale(1); 
@@ -39,29 +39,29 @@
 .text-boaV > p {
     color: white; /* Mantém o texto branco */
     font-size: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
     text-align: left;
     margin-right: 70%;
 }
 
-.linha{
+.linha {
     margin-top: 2%;
     width: 33%;
     border-bottom: 3px solid #ffffff;
 }
 
-.box-para-login{
-    background: rgb(117, 117, 117, 0.5);
+.box-para-login {
+    background: rgba(117, 117, 117, 0.5);
     width: 33%;
     height: 163px;
     border-radius: 50px;
     padding-top: 1px;
-    margin-top:2%;
-    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-bottom: 7%;
 }
 
-.title-box-login{
-    text-align:center;
+.title-box-login {
+    text-align: center;
     color: white;
     font-size: 19px;
     padding-top: 1px;
@@ -69,7 +69,7 @@
     margin-bottom: 10%;
 }
 
-.bottom-box-login{
+.bottom-box-login {
     background: #ffffff;
     border-radius: 60px;
     font-size: 20px;
@@ -79,28 +79,73 @@
     color: black;
 }
 
-.text-box-login{
+.text-box-login {
     text-align: center;
     margin-top: 10%;
     font-size: 13.8px;
     color: white;
 }
 
-.text-box-login > a{
+.text-box-login > a {
     text-decoration: none;
     color: #2F80ED;
 }
 
-.deseja-continuar > a{
+.deseja-continuar > a {
     text-decoration: none;
     color: white;
 }
 
-.CNPJ{
+.CNPJ {
     margin-top: 10%;
 }
 
-.text-rodapé > p{
+.text-rodapé > p {
     color: white;
     margin-right: 10%;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 480px) {
+    .LOGOR{
+        width: 15vh;
+        height: 15vh;
+        margin-top: 5%;
+    }
+    .text-boaV h1{
+        font-size: 95%;
+        margin-right: 35%;
+    }
+    .text-boaV p{
+        font-size: 95%;
+        margin-right: 45%;
+    }
+    .linha{
+        width: 56%;
+    }
+    .title-box-login{
+        font-size: 77%;
+    }
+    .box-para-login {
+        width: 56%;
+        height: 120px;
+        border-radius: 50px;
+        padding-top: 4%;
+        margin-top: 10%;
+        margin-bottom: 10vh;
+    }
+    .bottom-box-login {
+        margin-left: 28%;
+        font-size: 15px;
+        padding: 15px 35px;
+    }
+    .text-box-login{
+        font-size: x-small;
+    }
+    .deseja-continuar{
+        margin-bottom: 35%;
+    }
+    .text-rodapé{
+        font-size: small;
+    }
+} 

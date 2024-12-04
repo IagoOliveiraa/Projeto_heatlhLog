@@ -2,136 +2,134 @@
 
 /* Barra de navegação */
 .barra {
-    background-color: #4C78BE;
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    z-index: 1000;
+  background-color: #4C78BE;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 /* Logo da clínica */
 .logo {
-    height: 120px;
-    width: auto;
-    left: 20px;
+  height: 120px;
+  width: auto;
+  left: 20px;
 }
 
 /* Barra de pesquisa */
 .barra-pesquisa {
-    display: flex;
-    align-items: center;
-    background-color: rgba(217, 217, 217, 0.1);
-    border: 2px solid rgba(56, 97, 162, 1);
-    border-radius: 50px;
-    padding: 2px 20px;
-    width: 400px;
-    margin-left: 25px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 2px solid rgba(56, 97, 162, 1);
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 400px;
+  margin-left: 50px;
 }
 
 /* Campo de texto da pesquisa */
 .input-pesquisa {
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    margin-left: 6px;
-    width: 100%;
-    color: white;
-    background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
 }
 
 /* Ícone de pesquisa */
 .icone-pesquisa {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 /* Placeholder da pesquisa */
 .input-pesquisa::placeholder {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 /* Ícone de perfil */
 .icone-perfil {
-    color: white;
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: 50px;
-    cursor: pointer; /* Cursor de "mão" ao passar o mouse */
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; /* Cursor de "mão" ao passar o mouse */
 }
 
 /* Seção de serviços */
 .containerservicos {
-    margin-left: 130px;
-    border: 2px solid rgba(56, 97, 162, 1);
-    background-color: rgba(217, 217, 217, 0.1);
-    border-radius: 50px;
-    padding: 10px;
-    width: 120px;
+  margin-left: 130px;
+  border: 2px solid rgba(56, 97, 162, 1);
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  padding: 10px;
+  width: 120px;
 }
 
 /* Texto "Serviços" */
 .divservicos {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    display: flex;
-    align-items: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 /* Ícone de seta para baixo */
 .icone-seta {
-    color: white;
-    font-size: 20px;
-    margin-left: 10px;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 /* Menu de serviços */
 .divmenu {
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    display: none;
-    position: absolute;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
 .containerservicos:hover .divmenu {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Texto "Clínicas perto de você" */
 .texto-clinicas {
-    margin-top: 140px; /* Ajuste de margem para ficar abaixo da barra de navegação */
-    text-align: left; /* Alinhamento à esquerda */
-    margin-left: 55px; /* Margem à esquerda para dar espaço */
+  margin-top: 140px; /* Ajuste de margem para ficar abaixo da barra de navegação */
+  text-align: left; /* Alinhamento à esquerda */
+  margin-left: 55px; /* Margem à esquerda para dar espaço */
 }
 
 .texto-clinicas h1 {
-    font-family: 'Rajdhani', sans-serif;
-    color: #005BD6;
-    font-size: 46px;
+  font-family: 'Rajdhani', sans-serif;
+  color: #005BD6;
+  font-size: 46px;
 }
 
 /* Estilo dos retângulos */
 .retangulos-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os retângulos se ajustem em várias linhas */
-    justify-content: center;
-    margin-top: 5px; /* Aumenta a margem superior para dar mais espaço acima */
-    gap: 120px; /* Espaço entre os retângulos */
+  display: flex;
+  flex-wrap: wrap; /* Permite que os retângulos se ajustem em várias linhas */
+  justify-content: center;
+  margin-top: 5px; /* Aumenta a margem superior para dar mais espaço acima */
+  gap: 120px; /* Espaço entre os retângulos */
 }
 
-
-/* Aqui começa o CSS do calendário */
+/* Calendário */
 .calendario {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -140,7 +138,12 @@
   max-width: 400px;
   margin: 20px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20%;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+.botao-agendar{
+  margin-left: 45%;
 }
 
 .cabecalho {
@@ -208,4 +211,230 @@ button:hover {
 .dia.clicado {
   background-color: #007BFF; /* Cor de fundo quando clicado */
   color: white; /* Cor do texto quando clicado */
+}
+
+/* agendamento.css */
+
+.calendar {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  background-color: #f0f0f0;
+}
+
+.calendar-header-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 10px;
+}
+
+.calendar-cell {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar-cell:hover {
+  background-color: #e0e0e0;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.popup h2 {
+  margin: 0 0 10px 0;
+}
+
+.popup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup li {
+  margin: 5px 0;
+}
+
+.popup button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.absolute {
+  position: absolute;
+  top: 12px; /* Ajuste conforme necessário */
+  right: 50px; /* Mova o menu para fora da tela */
+  transition: right 0.2s ease; /* Transição suave */
+}
+
+.hamburger-menu.open .absolute {
+  right: 0; /* Quando aberto, traga o menu para a tela */
+}
+
+.logo2{
+  display: none ;
+}
+
+
+/* Aqui e onde mexe no hamburger */
+
+.bg-white {
+  background-color: white;
+
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.px-4 {
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.text-black {
+  color: black;
+  text-decoration: none;
+   display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #e5e7eb;
+}
+
+.hamburger-menu { 
+  display: none; /* Esconde o menu por padrão */ 
+  position: relative; /* Para que o menu se posicione em relação a este elemento */
+}
+
+@media screen and (max-width: 480px) {
+  .icone-perfil{
+    display: none;
+  }
+
+  .hamburger-menu { 
+    display: block; /* Mostra o menu em telas pequenas */ 
+    margin-left: 20vw;
+    color: white;
+  }
+
+  .itens-do-menu {
+    position: absolute; /* Adiciona a posição absoluta */
+    top: 3rem; /* Ajustei para um valor mais semântico (12 unidades seriam pequenas demais) */
+    left: 0;
+    width: 12rem; /* Corrigi para um valor mais coerente com w-48 do Tailwind, que é 12rem */
+    background-color:#4C78BE;
+    border-radius: 0.375rem; /* Correspondente a rounded-lg no Tailwind */
+    margin-left: -325%;
+  }
+  
+  .letras-da-box {
+    display: block; /* Correspondente a 'block' no Tailwind */
+    padding-left: 1rem; /* 'px-4' no Tailwind é 1rem */
+    padding-right: 1rem; /* 'px-4' no Tailwind é 1rem */
+    padding-top: 0.5rem; /* 'py-2' no Tailwind é 0.5rem */
+    padding-bottom: 0.5rem; /* 'py-2' no Tailwind é 0.5rem */
+    color: white; /* 'text-white' no Tailwind é cor branca */
+    transition:  0.2s; /* Adiciona uma transição suave para o hover */
+  }
+  
+  .containerservicos {
+    display: none;   
+  }
+
+  .barra {
+    height: 10%;
+    display: flex;
+  }
+
+  .barra-pesquisa {
+    width: 45vh;
+  }
+  .calendario {
+    margin-top: 40%;
+    width: 100%; /* Definindo a largura do calendário para 100% do contêiner pai */
+    max-width: 300px; /* Largura máxima */
+    padding: 10px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    border: 1px solid #ccc; /* Borda do calendário */
+    border-radius: 5px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites */
+    margin-bottom: 15%;
+  }
+  .dias {
+    display: grid; /* Usando grid para organizar os dias */
+    grid-template-columns: repeat(7, 1fr); /* 7 colunas */
+    gap: 2px; /* Espaço entre os dias */
+  }
+  .dia {
+    padding: 5px; /* Espaçamento interno dos dias */
+    background-color: #f9f9f9; /* Cor de fundo dos dias */
+    border: 1px solid #e0e0e0; /* Borda leve para cada dia */
+    border-radius: 3px; /* Cantos arredondados dos dias */
+    text-align: center; /* Centraliza o texto */
+    height: 30px; /* Altura fixa para os dias */
+    box-sizing: border-box; /* Para incluir padding e borda no cálculo da largura */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites do dia */
+  }
+  .cabecalho h2{
+    font-size:small;
+  }
+  .logo{
+    display: none;
+  }
+  .logo2{
+    display: flex;
+    max-width: 85%;
+    max-height: 85%;
+  }
+  .botao-agendar{
+    margin-left: 35%;
+  }
 }
