@@ -151,7 +151,7 @@ function Cpdv() {
         <div className="containerLaDeBaixoB">
           <div className="laDeBaixoB">
             <h2 className="nanneshoB">Ortopedia</h2>
-            <button>Marcar Agendamento</button>
+            <a href="/agendamento"><button >Marcar Agendamento</button></a>
           </div>
         </div>
       </div>
