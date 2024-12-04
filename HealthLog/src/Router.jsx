@@ -18,7 +18,7 @@ import PerfilEm from "./Pages/perfilEm";
 
 
 
-
+import ClinicasOftamologia from "./Pages/clinicasOftamologia";
 
 
 
@@ -38,9 +38,12 @@ const Router = () => {
                 <Route path="/EspecialidadesEsteticas" element={<EspecialidadesEsteticas/>}/>
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
-                <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>   
+                {/* <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>  */}  
                 <Route path="/perfil" element={<Perfil/>}/>
                 <Route path="/perfilEm" element={<PerfilEm/>}/>
+
+
+                <Route path="/clinicaOftamologia" element={<ClinicasOftamologia/>}/>
             </Routes>
         </BrowserRouter>
 

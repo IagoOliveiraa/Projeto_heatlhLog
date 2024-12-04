@@ -144,21 +144,18 @@ function Home() {
           <div className="service-items">
             <div className="especialidade-card">
               <h4>Oftalmologia</h4>
-              <p>Profissionais: Dra. Julia, Dr. Sandro</p>
-              <p>Consultório: Clínica A</p>
-              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
+              <p>Veja opções de clinicas</p>
+              <a href="/clinicaOftamologia"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Dermatologia</h4>
-              <p>Profissionais: Dra. Ana, Dr. Benicio</p>
-              <p>Consultório: Clínica B</p>
-              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
+              <p>Veja opções de clinicas</p>
+              <a href="/clinicasOftamologia"><button>Marcar agendamento</button></a>
             </div>
             <div className="especialidade-card">
               <h4>Ortopedia</h4>
-              <p>Profissionais: Dra. Pietra, Dr. Marcos</p>
-              <p>Consultório: Clínica C</p>
-              <a href="/Clinicaspertodevoce"><button>Marcar agendamento</button></a>
+              <p>Veja opções de clinicas</p>
+              <a href="/clinicasOftamologia"><button>Marcar agendamento</button></a>
             </div>
           </div>
 
