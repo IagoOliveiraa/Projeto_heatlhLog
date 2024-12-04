@@ -1,62 +1,40 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
-
-
-.container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-   
-  .containerCpdvB{
-      margin: 0;
-      padding: 0;
-      width: 100%;
-  }
-  /* Barra de navegação */
-/* CSS */
 
 .containerBB {
   text-align: center;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  margin-top: -40px;
 }
 
 
+.containerCpdvBB{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 800px;
 
-.containerCpdvB {
-  margin: 0;
-  padding: 0;
-  width: 100%;
 }
 
 /* Barra de navegação */
 .barraBB {
   background-color: #4C78BE;
   width: 100%;
-  height: 100px;
+  height: 100px; /* Aumentar a altura para evitar sobreposição */
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
-  position: fixed;
-  z-index: 100;
+  padding: 20px;
 }
 
 /* Logo da clínica */
 .logoBB {
-  height: 80px;
+  height: 120px;
   width: auto;
+  left: 20px;
 }
 
 /* Barra de pesquisa */
@@ -76,6 +54,7 @@
   border: none;
   outline: none;
   padding: 10px;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   margin-left: 6px;
   width: 100%;
@@ -93,7 +72,6 @@
 .input-pesquisaBB::placeholder {
   color: rgb(203, 203, 203);
   font-size: 20px;
-
 }
 
 /* Ícone de perfil */
@@ -102,7 +80,7 @@
   font-size: 40px;
   margin-left: auto;
   margin-right: 50px;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 /* Seção de serviços */
@@ -116,11 +94,12 @@
 
 /* Texto "Serviços" */
 .divservicosBB {
+  font-family: 'Raleway', sans-serif;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
 /* Ícone de seta para baixo */
@@ -130,17 +109,41 @@
   margin-left: 10px;
 }
 
-/* Imagens do gráfico */
-.graficoBB img {
-  margin: 4%;
-  height: 200px;
-  margin-top: 15%;
-  align-items: center;
-  margin-right: 2%;
+/* Menu de serviços */
+.divmenuBB {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
 }
 
-/* Título da seção */
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicosBB:hover .divmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separação do cabeçalho */
+
+.graficoBB {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 200px; 
+  margin-left: 7%;
+}
+
+.graficoBB img {
+  margin: 1%;
+  height: 200px;
+  margin-right: 60px;
+ 
+}
+
 .titulo2BB h1 {
+  font-family: 'Arial', sans-serif;
   color: #3366ff;
   margin-bottom: 70px;
   font-size: 60px;
@@ -148,7 +151,6 @@
   margin-top: 5%;
 }
 
-/* Grid das especialidades */
 .todas-caixas2BB {
   display: flex;
   flex-direction: row;
@@ -170,23 +172,29 @@
   text-align: left;
   background-color: #f9f9f9;
   margin-bottom: 5%;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
 }
 
 .caixa2BB:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efeito ao passar o mouse */
 }
 
 .caixa2BB h2 {
+  font-family: 'Arial', sans-serif;
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
 
 .caixa2BB p {
+  font-family: 'Arial', sans-serif;
   color: #555;
   margin: 0;
   padding: 0;
+}
+
+.caixa2BB a:hover {
+  color: #3366ff; /* Exemplo de efeito hover nos links */
 }
 
 /* Responsividade */
@@ -215,7 +223,6 @@
   color: white;
   cursor: pointer;
   margin-left: auto;
-  margin-right: 4%;
 }
 
 .menu-mobileBB{
@@ -244,12 +251,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 0;
+  }
 
-@media (max-width: 768px) {
-  .barraBB {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
+  .logoBB{
+    height: 80px;
+    width: auto;
   }
 
   .containerservicosBB{
@@ -279,195 +285,120 @@
     font-size: 14px;
   }
 
-  .hamburger-menuBB{
+  .hamburger-menuBB {
     display: block;
     margin-left: -5px;
     margin-top: 6px;
+    margin-right: 4%;
   }
 
-  .input-pesquisaBB{
+  .input-pesquisaBB {
     padding: 0px;
   }
 
+ 
 
   .icone-perfilBB {
     display: none;
   }
 }
-  }}
-  @media screen and (max-width: 480px) {
-    .barraBB {
-      height: auto;
-      padding: 10px 15px;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    .logoBB {
-      height: 60px;
-      margin-bottom: 10px;
-    }
-  
-    .containerservicosBB {
-      display: none;
-    }
-  
-    .barra-pesquisaBB {
-      width: 90%;
-      padding: 8px;
-      margin: 10px auto;
-    }
-  
-    .input-pesquisaBB {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    .icone-pesquisaBB {
-      font-size: 18px;
-    }
-  
-    .menu-mobileBB {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      background-color: #4C78BE;
-      width: calc(100% - 20px);
-      padding: 15px;
-      border-radius: 10px;
-    }
-  
-    .menu-mobileBB a {
-      font-size: 16px;
-      color: white;
-      text-align: center;
-      margin: 10px 0;
-    }
-  
-    .graficoBB img {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-    }
-  
-    .titulo2BB h1 {
-      font-size: 28px;
-      margin: 20px 0;
-    }
-  
-    .todas-caixas2BB {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .caixa2BB {
-      width: 90%;
-      text-align: center;
-      margin: 15px 0;
-      padding: 20px;
-    }
-  
-    .caixa2BB h2 {
-      font-size: 20px;
-    }
-  
-    .caixa2BB p {
-      font-size: 16px;
-    }
-  
-    .icone-perfilBB {
-      display: none;
-    }
+
+
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosBB {
+    display: none;
   }
-  
-  @media screen and (max-width: 768px) {
-    .barraBB {
-      flex-direction: column;
-      padding: 10px;
-      height: auto;
-    }
-  
-    .logoBB {
-      height: 70px;
-      margin-bottom: 10px;
-    }
-  
-    .containerservicosBB {
-      display: none;
-    }
-  
-    .barra-pesquisaBB {
-      width: 80%;
-      margin: 10px auto;
-    }
-  
-    .input-pesquisaBB {
-      font-size: 16px;
-      padding: 6px;
-    }
-  
-    .icone-pesquisaBB {
-      font-size: 18px;
-    }
-  
-    .hamburger-menuBB {
-      display: block;
-      font-size: 28px;
-      margin-top: 10px;
-    }
-  
-    .menu-mobileBB {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 10px;
-      background-color: #4C78BE;
-      width: calc(100% - 20px);
-      padding: 15px;
-      border-radius: 10px;
-    }
-  
-    .menu-mobileBB a {
-      font-size: 16px;
-      color: white;
-      text-align: center;
-      margin: 10px 0;
-    }
-  
-    .graficoBB img {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-    }
-  
-    .titulo2BB h1 {
-      font-size: 32px;
-      margin: 20px auto;
-    }
-  
-    .todas-caixas2BB {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .caixa2BB {
-      width: 80%;
-      text-align: center;
-      margin: 10px 0;
-      padding: 20px;
-    }
-  
-    .caixa2BB h2 {
-      font-size: 22px;
-    }
-  
-    .caixa2BB p {
-      font-size: 18px;
-    }
+
+  .graficoBB {
+    margin-top: 100px;
+    gap: 10px;
   }
-  
+
+  .graficoBB img {
+    height: 150px;
+    margin: 5px;
+  }
+
+  .titulo1BB h1 {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .todas-caixas2BB {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .caixa2BB {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hamburger-menuBB {
+    display: block;
+  }
+
+  .icone-perfilBB {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ 
+
+  .graficoBB {
+    margin-top: 50px;
+  }
+
+  .graficoBB img {
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .titulo2BB h1 {
+    font-size: 24px;
+  }
+
+  .caixa2BB h2 {
+    font-size: 18px;
+  }
+
+  .caixa2BB p {
+    font-size: 14px;
+  }
+
+  .caixa2BB {
+    padding: 10px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaBB {
+    width: 60%;
+  }
+
+  .todas-caixas2BB {
+    gap: 15px;
+  }
+
+  .todas-caixas2BB {
+    width: 45%;
+  }
+}
