@@ -2,6 +2,7 @@
 
 /* Reset de margem e padding */
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -116,14 +117,27 @@
   border-radius: 50px;
   padding: 10px;
   width: 120px;
+  text-underline-offset: -200px; /* Move o sublinhado para fora da área visível */
+  
 }
 
 /* Texto "Serviços" */
+
+.divmenuHome a{
+
+color: #000;
+
+
+}
+
+
+
 .divservicosHome {
   font-family: 'Raleway', sans-serif;
   color: white;
   display: flex;
   align-items: center;
+  
 }
 
 /* Ícone de seta para baixo */
@@ -135,15 +149,15 @@
 
 /* Menu de serviços */
 .divmenuHome {
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
+  background-color:#fff;
+  border-radius: 10px;
+  text-align: center;
   display: none;
-  position: absolute;
+ 
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
-.containerservicosHome:hover .divmenu {
+.containerservicosHome:hover .divmenuHome {
   display: flex;
   flex-direction: column;
 }
@@ -418,31 +432,6 @@
   /* Bordas arredondadas */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .service-items {
-    flex-direction: column;
-    /* Coloca os itens em coluna em telas menores */
-  }
-
-  .service-item {
-    width: 100%;
-    /* Aumenta a largura para preencher a tela */
-    margin-bottom: 20px;
-    /* Margem inferior */
-  }
-
-  .procedure-card {
-    width: 100%;
-    /* Aumenta a largura dos cards */
-  }
-
-  .slideshow-container {
-    max-width: 100%;
-    /* Ajusta a largura do slideshow */
-  }
-}
-
 /* Rodapé */
 footer h3 {
   color: #345995;
@@ -504,3 +493,118 @@ footer img {
   margin-left: -80px;
   /* Espaçamento à esquerda */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /* Aqui começa o Mobile */
+
+
+
+
+
+
+/* Esconder a imagem de boas-vindas em telas menores que 900px */
+@media (max-width: 900px) {
+  .img-boasvindas {
+    display: none;
+  }
+}
+
+
+/* Esconder a imagem de boas-vindas e a div feijoes em telas menores que 400px */
+@media (max-width: 900px) {
+  
+  .containerservicosHome,
+  .img-boasvindas,
+  .feijoes {
+    display: none;
+  }
+
+
+.PerfilHome{
+  height: 5px;
+  width: 5px;
+}
+
+
+
+
+}
+
+
+@media (max-width:700px) {
+  
+.logoHome{
+
+  height: 5vw;
+
+
+}
+
+
+
+}
+
+
+
+/* Responsividade para dispositivos com largura de até 768px */
+@media (max-width: 900px) {
+
+  .barra-home{
+
+    max-height: 12%;
+
+  }
+
+  /* Logo */
+  .logoHome {
+    height: 29vw;
+    width: 59vw;
+   margin-left: -50px;
+   margin-top: -20px;
+  }
+
+  /* Barra de pesquisa */
+  .barra-pesquisaHome {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+
+  .conteudo-principal h3{
+
+    margin-top: 10vh;
+
+
+  }
+
+  /* Rodapé */
+  footer h3 {
+    font-size: 24px;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  footer img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+
+             /* Aqui termina o Mobile */

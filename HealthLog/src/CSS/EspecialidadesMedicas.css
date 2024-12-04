@@ -1,78 +1,404 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerBB {
+  text-align: center;
+}
+
+
+.containerCpdvBB{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    margin-top: 800px;
+
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Barra de navegação */
+.barraBB {
+  background-color: #4C78BE;
+  width: 100%;
+  height: 100px; /* Aumentar a altura para evitar sobreposição */
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-
-
-.esteticas-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 20px;
+/* Logo da clínica */
+.logoBB {
+  height: 120px;
+  width: auto;
+  left: 20px;
 }
 
+/* Barra de pesquisa */
+.barra-pesquisaBB {
+  display: flex;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 2px solid rgba(56, 97, 162, 1);
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 400px;
+  margin-left: 25px;
+}
 
+/* Campo de texto da pesquisa */
+.input-pesquisaBB {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+}
 
-.cabeçalho {
+/* Ícone de pesquisa */
+.icone-pesquisaBB {
+  color: white;
+  font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisaBB::placeholder {
+  color: rgb(203, 203, 203);
+  font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfilBB {
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; 
+}
+
+/* Seção de serviços */
+.containerservicosBB {
+  margin-left: 130px;
+  border: 2px solid rgba(56, 97, 162, 1);
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicosBB {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+/* Ícone de seta para baixo */
+.icone-setaBB {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Menu de serviços */
+.divmenuBB {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+}
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicosBB:hover .divmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separação do cabeçalho */
+
+.graficoBB {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 200px; 
+  margin-left: 7%;
+}
+
+.graficoBB img {
+  margin: 1%;
+  height: 200px;
+  margin-right: 60px;
+ 
+}
+
+.titulo2BB h1 {
+  font-family: 'Arial', sans-serif;
+  color: #3366ff;
+  margin-bottom: 70px;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.todas-caixas2BB {
+  display: flex;
+  flex-direction: row;
+  width: 93.5%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.todas-caixas2BB a {
+  text-decoration: none;
+}
+
+.caixa2BB {
+  border: 1px solid #ffa500;
+  width: 28vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  margin-bottom: 5%;
+  transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
+}
+
+.caixa2BB:hover {
+  transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+.caixa2BB h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.caixa2BB p {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+
+.caixa2BB a:hover {
+  color: #3366ff; /* Exemplo de efeito hover nos links */
+}
+
+/* Responsividade */
+
+.divmenuBB{
+  background-color: #5A82C1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1% -37% 0 0;
+}
+
+.divmenuBB a{
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menuBB{
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-mobileBB{
+  display: flex;
+  flex-direction: column;
+  background-color: #4C78BE;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.menu-mobileBB a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .barraBB{
+    height: 16vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    background-color: #345995;
-    padding: 60px;
-    border-bottom: 4px solid #F2B33D;
-}
+    padding: 0;
+  }
 
+  .logoBB{
+    height: 80px;
+    width: auto;
+  }
 
+  .containerservicosBB{
+    display: none;
+  }
 
-.logo h1 {
+  .barra-pesquisaBB {
+    width: 100%;
+    padding: 10px;
+    margin-left: -5%;
+    margin-right: 4%;
+  }
+
+  .icone-pesquisaBB {
+    font-size: 16px;
+  }
+
+  .titulo2BB h1 {
     font-size: 24px;
-    color: #333;
+  }
+
+  .caixa2BB h2 {
+    font-size: 18px;
+  }
+
+  .caixa2BB p {
+    font-size: 14px;
+  }
+
+  .hamburger-menuBB {
+    display: block;
+    margin-left: -5px;
+    margin-top: 6px;
+    margin-right: 4%;
+  }
+
+  .input-pesquisaBB {
+    padding: 0px;
+  }
+
+ 
+
+  .icone-perfilBB {
+    display: none;
+  }
 }
 
-.pesquisa-login {
-    display: flex;
+
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosBB {
+    display: none;
+  }
+
+  .graficoBB {
+    margin-top: 100px;
+    gap: 10px;
+  }
+
+  .graficoBB img {
+    height: 150px;
+    margin: 5px;
+  }
+
+  .titulo1BB h1 {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .todas-caixas2BB {
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  .caixa2BB {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hamburger-menuBB {
+    display: block;
+  }
+
+  .icone-perfilBB {
+    display: none;
+  }
 }
 
-.pesquisa-login input {
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+@media screen and (max-width: 480px) {
+ 
+
+  .graficoBB {
+    margin-top: 50px;
+  }
+
+  .graficoBB img {
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .titulo2BB h1 {
+    font-size: 24px;
+  }
+
+  .caixa2BB h2 {
+    font-size: 18px;
+  }
+
+  .caixa2BB p {
+    font-size: 14px;
+  }
+
+  .caixa2BB {
+    padding: 10px;
+  }
+ 
 }
 
-.pesquisa-login a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.box {
-    border: 2px solid #4a90e2; /* Cor da borda */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 25px; /* Espaçamento interno */
-    width: 250px;
-    height: 200px;
-    text-align: left;
-    text-align: start;
-    
-    
-}
-  
-.box h3 h4aw {
-    margin: 0; /* Remove a margem padrão do h2 */
-    font-size: 24px; /* Tamanho da fonte */
-    margin-top: -90px;
-    text-align: initial;
-    
-}
 
-.box h3{
-    font-size: 26px;
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaBB {
+    width: 60%;
+  }
+
+  .todas-caixas2BB {
+    gap: 15px;
+  }
+
+  .todas-caixas2BB {
+    width: 45%;
+  }
 }

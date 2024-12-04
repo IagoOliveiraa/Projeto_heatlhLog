@@ -1,183 +1,404 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
-
-.container {
-  text-align: center;
-  padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- 
-.containerCpdvB{
+.containerJ {
+  text-align: center;
+}
+
+
+.containerCpdvJ{
     margin: 0;
     padding: 0;
     width: 100%;
+    margin-top: 800px;
+
 }
+
 /* Barra de navegação */
-.barra {
-    background-color: #4C78BE;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-}
- 
-/* Logo da clínica */
-.logo {
-    height: 120px;
-    width: auto;
-    left: 20px;
-}
- 
-/* Barra de pesquisa */
-.barra-pesquisa {
-    display: flex;
-    align-items: center;
-    background-color: rgba(217, 217, 217, 0.1);
-    border: 2px solid rgba(56, 97, 162, 1);
-    border-radius: 50px;
-    padding: 2px 20px;
-    width: 400px;
-    margin-left: 25px;
-}
- 
-/* Campo de texto da pesquisa */
-.input-pesquisa {
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    margin-left: 6px;
-    width: 100%;
-    color: white;
-    background-color: transparent;
-}
- 
-/* Ícone de pesquisa */
-.icone-pesquisa {
-    color: white;
-    font-size: 20px;
-}
- 
-/* Placeholder da pesquisa */
-.input-pesquisa::placeholder {
-    color: rgb(203, 203, 203);
-    font-size: 20px;
-}
- 
-/* Ícone de perfil */
-.icone-perfil {
-    color: white;
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: 50px;
-    cursor: pointer; /* Cursor de "mão" ao passar o mouse */
-}
- 
-/* Seção de serviços */
-.containerservicos {
-    margin-left: 130px;
-    border: 2px solid rgba(56, 97, 162, 1);
-    background-color: rgba(217, 217, 217, 0.1);
-    border-radius: 50px;
-    width: 120px;
-}
- 
-/* Texto "Serviços" */
-.divservicos {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-left: 13%;
-    margin-right: 13%;
-}
- 
-/* Ícone de seta para baixo */
-.icone-seta {
-    color: white;
-    font-size: 20px;
-    margin-left: 10px;
-}
- 
-/* Menu de serviços */
-.divmenu {
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    display: none;
-    position: absolute;
-}
- 
-/* Mostrar menu de serviços ao passar o mouse */
-.containerservicos:hover .divmenu {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-.grafico img {
-  margin: 3%;
+.barraJ {
+  background-color: #4C78BE;
+  width: 100%;
+  height: 100px; /* Aumentar a altura para evitar sobreposição */
+  top: 0;
+  left: 0;
+  display: flex;
   align-items: center;
-  height: 200px;
-  margin-top: 11%;
+  justify-content: center;
+  padding: 20px;
 }
 
-.titulo1 h1 {
+/* Logo da clínica */
+.logoJ {
+  height: 120px;
+  width: auto;
+  left: 20px;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisaJ {
+  display: flex;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 2px solid rgba(56, 97, 162, 1);
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 400px;
+  margin-left: 25px;
+}
+
+/* Campo de texto da pesquisa */
+.input-pesquisaJ {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-left: 6px;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisaJ {
+  color: white;
+  font-size: 20px;
+}
+
+/* Placeholder da pesquisa */
+.input-pesquisaJ::placeholder {
+  color: rgb(203, 203, 203);
+  font-size: 20px;
+}
+
+/* Ícone de perfil */
+.icone-perfilJ {
+  color: white;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; 
+}
+
+/* Seção de serviços */
+.containerservicosJ {
+  margin-left: 130px;
+  border: 2px solid rgba(56, 97, 162, 1);
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 50px;
+  width: 120px;
+}
+
+/* Texto "Serviços" */
+.divservicosJ {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+/* Ícone de seta para baixo */
+.icone-setaJ {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Menu de serviços */
+.divmenuJ {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  display: none;
+  position: absolute;
+}
+
+/* Mostrar menu de serviços ao passar o mouse */
+.containerservicosJ:hover .divmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separação do cabeçalho */
+
+.graficoJ {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 200px; 
+  margin-left: 7%;
+}
+
+.graficoJ img {
+  margin: 1%;
+  height: 200px;
+  margin-right: 60px;
+ 
+}
+
+.titulo1J h1 {
   font-family: 'Arial', sans-serif;
   color: #3366ff;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
   font-size: 60px;
+  text-align: center;
+  margin-top: 5%;
 }
 
-.todas-caixas1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.todas-caixas1J {
+  display: flex;
+  flex-direction: row;
+  width: 93.5%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
-.todas-caixas1 a{
+.todas-caixas1J a {
   text-decoration: none;
 }
 
-.caixa1 {
+.caixa1J {
   border: 1px solid #ffa500;
+  width: 28vw;
   border-radius: 20px;
   padding: 20px;
   text-align: left;
   background-color: #f9f9f9;
-  margin-top: 10%;
+  margin-bottom: 5%;
   transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
 }
 
-.caixa1:hover {
+.caixa1J:hover {
   transform: scale(1.05); /* Efeito ao passar o mouse */
 }
 
-.caixa1 h2 {
+.caixa1J h2 {
   font-family: 'Arial', sans-serif;
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
 
-.caixa1 p {
+.caixa1J p {
   font-family: 'Arial', sans-serif;
   color: #555;
   margin: 0;
   padding: 0;
-  
 }
 
-.caixa1 a:hover {
+.caixa1J a:hover {
   color: #3366ff; /* Exemplo de efeito hover nos links */
 }
 
+/* Responsividade */
+
+.divmenuJ{
+  background-color: #5A82C1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1% -37% 0 0;
+}
+
+.divmenuJ a{
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menuJ{
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-mobileJ{
+  display: flex;
+  flex-direction: column;
+  background-color: #4C78BE;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.menu-mobileJ a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .barraJ{
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logoJ{
+    height: 80px;
+    width: auto;
+  }
+
+  .containerservicosJ{
+    display: none;
+  }
+
+  .barra-pesquisaJ {
+    width: 100%;
+    padding: 10px;
+    margin-left: -5%;
+    margin-right: 4%;
+  }
+
+  .icone-pesquisaJ {
+    font-size: 16px;
+  }
+
+  .titulo2J h1 {
+    font-size: 24px;
+  }
+
+  .caixa2J h2 {
+    font-size: 18px;
+  }
+
+  .caixa2J p {
+    font-size: 14px;
+  }
+
+  .hamburger-menuJ {
+    display: block;
+    margin-left: -5px;
+    margin-top: 6px;
+    margin-right: 4%;
+  }
+
+  .input-pesquisaJ {
+    padding: 0px;
+  }
+
+ 
+
+  .icone-perfilJ {
+    display: none;
+  }
+}
 
 
-  
-    
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosJ {
+    display: none;
+  }
+
+  .graficoJ {
+    margin-top: 100px;
+    gap: 10px;
+  }
+
+  .graficoJ img {
+    height: 150px;
+    margin: 5px;
+  }
+
+  .titulo1J h1 {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .todas-caixas1J {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .caixa1J {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .hamburger-menuJ {
+    display: block;
+  }
+
+  .icone-perfilJ {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ 
+
+  .graficoJ {
+    margin-top: 50px;
+  }
+
+  .graficoJ img {
+    height: 120px;
+    margin: 5px 0;
+  }
+
+  .titulo1J h1 {
+    font-size: 24px;
+  }
+
+  .caixa1J h2 {
+    font-size: 18px;
+  }
+
+  .caixa1J p {
+    font-size: 14px;
+  }
+
+  .caixa1J {
+    padding: 10px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaJ {
+    width: 60%;
+  }
+
+  .todas-caixas1J {
+    gap: 15px;
+  }
+
+  .caixa1J {
+    width: 45%;
+  }
+}

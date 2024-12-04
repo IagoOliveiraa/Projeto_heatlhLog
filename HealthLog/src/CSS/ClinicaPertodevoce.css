@@ -93,9 +93,8 @@ body{
 /* Ícone de Seta para Baixo*/
 .icone-seta {
     color: white; /* Cor branca para o ícone */
-    font-size: 16px; /* Tamanho do ícone */
-    margin-left: 5px !important; /* Espaçamento à esquerda */
-    margin-top: 10px !important;
+    font-size: 20px; /* Tamanho do ícone */
+    margin-left: 10px; /* Espaçamento à esquerda */
 }
 
 /* Menu de Serviços */
@@ -141,7 +140,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     margin-left: 55px; /* Alinha com o primeiro título */
-    margin-top: 130px; /* Espaçamento abaixo da barra de navegação */
+    margin-top: 160px; /* Espaçamento abaixo da barra de navegação */
 }
 
 
@@ -285,130 +284,81 @@ body{
     width: 100%;
 }
 
-.hamburger-menu{
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.menu-mobile{
-    display: flex;
-    flex-direction: column;
-    background-color: #4c78be;
-    position: absolute;
-    top: 58px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 10;
-}
-
-.menu-mobile a{
-    text-decoration: none;
-    color: white;
-}
-
-/* Estilos gerais para dispositivos móveis */
-
-/* Estilos para telas ainda menores (até 430px) */
-@media (max-width: 480px) {
-    
-    .barra{
-        height: 16vw;
-        padding: 0;
+/* Responsividade para Dispositivos Menores */
+@media (max-width: 768px) {
+    /* Barra de Navegação Responsiva */
+    .barra {
+        flex-direction: column; /* Altera a direção para coluna */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 10px; /* Espaçamento interno */
     }
 
+    /*Logo Responsiva */
     .logo {
-        max-width: 50%;
-        height: auto;
+        height: 80px; /* Reduz a altura da logo */
+        margin-bottom: 10px; /* Espaçamento inferior */
     }
 
-    .icone-perfil {
-        font-size: 24px;
-        display: none;
-    }
-
+    /* Barra de Pesquisa Responsiva*/
     .barra-pesquisa {
-        margin-left: 0;
-        margin-right: 0;
-        height: 58%;
-        width: 40%;
-        padding: 0 3% 0 3%;
+        width: 100%; /* Ocupa toda a largura */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        margin-bottom: 10px; /* Espaçamento inferior */
     }
 
+    /* Seção de Serviços Responsiva*/
+    .containerservicos {
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    /* Linha de Retângulos Responsiva */
+    .linha-retangulos {
+        flex-direction: column; /* Altera a direção para coluna */
+        align-items: center; /* Alinha itens ao centro */
+    }
+
+    /* Retângulos Responsivos */
     .retangulo {
-        padding: 10px;
+        width: 90%; /* Reduz a largura para 90% */
     }
 
-    .retangulo h2 {
-       
-        font-size: 20px;
+    /* Setas Responsiva*/
+    .setas-laterais, .setas-de-cima, .setas-de-baixo {
+        max-width: 90%; /* Reduz a largura máxima para 90% */
     }
 
-    .retangulo p {
-        font-size: 14px;
+    .imagem-pontilhada {
+        max-width: 90%; /* Reduz a largura máxima para 90% */
     }
 
-    .setas-de-cima, .setas-de-baixo {
-        margin-top: 3%;
-    }
-
-    .divservicos{
-
-        margin-top: -15%;
-
-    }
-
-
-    .containerservicos{
-
-        
-        height: 15%;
-        margin-left: -10%;
-        margin-top: -5%;
-        display: none;
-
-    }
-
-    .clinicas-titles{
-
-        margin-top: - 20%;
-
-    }
-
-    .texto-clinicas h1{
-
-        font-size: 30px;
-
-    }
-
-    .barra-inferior img{
-
-        width: 100%;
-        margin-top: -20%;
-
-    }
-    
-    .containerservicos{
-        display: none;
-    }
-
-    .hamburger-menu{
-        display: block;
-        margin-top: 2%;
-        margin-right: 5%;
-        padding-left: 5%;
-    }
-
+    /* Ajuste para o contêiner dos títulos "Clínicas"*/
     .clinicas-titles {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 55px; /* Alinha com o primeiro título */
-        margin-top: 28%; /* Espaçamento abaixo da barra de navegação */
+        margin-left: 35px; /* Ajusta a margem esquerda para alinhar corretamente em dispositivos menores */
+        margin-top: 160px; /* Espaçamento abaixo da barra de navegação */
     }
+
+    /* Ajuste para garantir espaçamento adequado entre os títulos em dispositivos menores */
+    .clinicas-titles {
+        margin-top: 20px; /* Ajuste vertical para espaçamento */
+        margin-bottom: 10px;
+    }
+
+    #teste{
+        margin-left: -10vw;
+    }
+
+
+    /* Remove margens negativas das setas em dispositivos menores */
+    .setas-de-cima, .setas-de-baixo {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .barra-final{
+        width: 30%;
+        
+    }
+
+  
 }

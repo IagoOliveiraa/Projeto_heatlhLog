@@ -1,7 +1,5 @@
-import "../CSS/ClinicaPertodevoce.css";
-import logoh from "../assets/Logo1.png";
-import barraazulfinal from "../assets/barraazulfinal.png";
-import { FaSearch, FaTimes, FaBars } from 'react-icons/fa';
+
+import { FaSearch } from 'react-icons/fa';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
@@ -9,27 +7,18 @@ import { useNavigate } from "react-router-dom";
 import amorsaude from "../assets/amorsaude.jpg";
 import Centerfisio from "../assets/Centerfisio.jpg";
 import clinicapsicologia from "../assets/clinicapsicologia.webp";
-import ClinicasImg from "../assets/Clinicas.png";
+import ClinicasImg from '../assets/img/Clinicas.png';
 import Drconsulta from "../assets/Dr.consulta.webp";
 import estetica from "../assets/estetica.webp";
 import odontocompany from "../assets/odonto company.jpg";
 import prope from "../assets/propé.webp";
-import linhapontilhada from "../assets/Linhapontilhada.png";
+import linhapontilhada from "../assets/Linhapontilhada.png"; 
+ import "../CSS/ClinicaPertodevoce.css";
+ import logoh from '../assets/img/Logo1.png';
+import barraazulfinal from '../assets/img/barraazulfinal.png';
+
 
 function Clinica() {
-  const [menuAberto, setMenuAberto] = useState(false)
-  const [menuMobileAberto, setMenuMobileAberto] = useState(false)
-
-  const toggleMenu = () => {
-    console.log(menuAberto)
-
-    setMenuAberto(!menuAberto)
-  }
-
-  const toggleMenuMobile = () => {
-    setMenuMobileAberto(!menuMobileAberto)
-  }
-
   const [busca, setBusca] = useState("");
   const [indiceAtualSuperior, setIndiceAtualSuperior] = useState(0);
   const [indiceAtualInferior, setIndiceAtualInferior] = useState(0);
@@ -146,7 +135,7 @@ function Clinica() {
         <div className="containerservicos">
           <p className="divservicos">
             Serviços
-            <a href="#"><SlArrowDown className="icone-seta" /></a>
+            <SlArrowDown className="icone-seta" />
           </p>
           <div className="divmenu">
             <a href="/EspecialidadesMedicas">Medicina</a>
@@ -154,19 +143,6 @@ function Clinica() {
             <a href="/EspecialidadesEsteticas">Estética</a>
           </div>
         </div>
-
-        <div className="hamburger-menu" onClick={toggleMenuMobile}>
-                        {menuMobileAberto ? <FaTimes /> : <FaBars />}
-                    </div>
-                    {menuMobileAberto && (
-                        <div className="menu-mobile">
-                            <a href="/EspecialidadesMedicas">Medicina</a>
-                            <a href="/EspecialidadesOdontologicas">Odontologia</a>
-                            <a href="/EspecialidadesEsteticas">Estética</a>
-                            <a href="/perfil">Perfil</a>
-                        </div>
-                    )}
-
         <FaRegCircleUser className="icone-perfil" onClick={irParaPerfil} />
       </div>
 
@@ -215,7 +191,7 @@ function Clinica() {
         </div>
 
         {/* Linha pontilhada entre as duas linhas de retângulos */}
-        <div className="linha-pontilhada" style={{ marginTop: "-150px" }}>
+        <div className="linha-pontilhada"  style={{ marginTop: "-150px" }}>
           <img src={linhapontilhada} alt="Linha Pontilhada" className="imagem-linha" />
         </div>
 
