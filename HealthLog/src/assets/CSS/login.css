@@ -1,5 +1,12 @@
 /* Estilos gerais */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .background-image {
   position: absolute;
   top: 0;
@@ -27,6 +34,10 @@
 .logo {
   font-family: "Times New Roman", Times, serif;
   color: #355995;
+
+  margin-left: 1vw;
+  width: 30%;
+
 }
 
 .login-container {
@@ -43,31 +54,37 @@
 .login-box {
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
-  padding: 22px;
+
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  width: 47vw;
+  padding: 1vw;
   text-align: center;
   position: relative; /* Necessário para aplicar z-index */
   z-index: 10; /* A caixa de login deve estar na frente */
-  margin-top: 4%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0%, 15%);
+
 }
 
 .logo-with-images {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  max-width: 350px;
-  margin-left: -6%;
+
+  max-width: 54%;
+  justify-content: space-between;
+  margin-bottom: 2%;
+
 }
 
 .images-container {
   display: flex;
   aspect-ratio: 140/69;
-  width: 70px;
-}
 
-.logo {
-  width: 23%;
+  width: 18%;
+  justify-content: center;
+
 }
 
 .login-box h2 {
@@ -81,13 +98,18 @@
   font-size: 14px;
   font-weight: 100;
   margin-top: 12px;
+
+  padding-bottom: 2vh;
+
 }
 
 .input1,
 .input2 {
   width: 70%;
   padding: 10px;
-  margin: 10px 0;
+
+  margin: 12px 0;
+
   border: 1.5px solid #ffd900;
   border-radius: 4px;
   background-color: #d3e4ff;
@@ -111,7 +133,9 @@
   display: block;
   margin-bottom: 10%;
   margin-top: -10px;
-  margin-left: 250px;
+
+  margin-left: 30vw;
+
   color: #487eb0;
   font-size: 12px;
 }
@@ -128,3 +152,59 @@
 .p {
   margin-top: 30px;
 }
+
+
+.side-image
+, .side-image2{
+  height: 130%;
+  width: 130%;
+}
+
+@media screen and (max-width: 480px) {
+  .background-image{
+    display: none;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .login-box{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding: 0 0 0 0;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+
+
+
+  .logo-with-images{
+    text-align: center;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: -2%;
+    margin-bottom: 14%;
+  }
+
+  .bemV{
+    padding-left: 14%;
+    text-align: left;
+  }
+
+  .pree{
+    max-width: 75%;
+    padding-left: 14%;
+    text-align: left;
+  }
+
+  .forgot-password{
+    padding-left: 9%;
+    margin-top: -1%;
+  }
+
+  
+}
+

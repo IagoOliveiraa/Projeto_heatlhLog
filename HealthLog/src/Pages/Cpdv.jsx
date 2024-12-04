@@ -1,31 +1,50 @@
 import "../assets/CSS/cpdv.css";
 import logoh from "../assets/img/Logo1.png";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
-import { SlArrowDown, } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import posHeader from "../assets/img/amorsaude.jpg";
- 
+import posHeader from "../assets/img/posHeader.png";
+
 function Cpdv() {
   const [busca, setBusca] = useState("");
+  const [menuAberto, setMenuAberto] = useState(false); // Estado para o menu desktop
+  const [menuMobileAberto, setMenuMobileAberto] = useState(false); // Estado para o menu mobile
   const navegar = useNavigate();
- 
+
   const irParaPerfil = () => {
     navegar("/perfil");
   };
- 
+
+
   const pesquisar = (evento) => {
     if (evento.key === "Enter") {
       navegar(`/pesquisa/${busca}`);
     }
   };
- 
+
+
+  const toggleMenu = () => {
+    console.log(menuAberto);
+    
+    setMenuAberto(!menuAberto); // Alterna entre aberto e fechado no desktop
+  };
+
+  const toggleMenuMobile = () => {
+    setMenuMobileAberto(!menuMobileAberto); // Alterna entre aberto e fechado no mobile
+  };
+
+
   return (
     <>
       <div className="containerCpdvB">
         <div className="barraB">
+
           <img src={logoh} alt="Logo" className="logo" />
+
+          <img src={logoh} alt="Logo" className="logoB" />
+
           <div className="barra-pesquisaB">
             <FaSearch className="icone-pesquisaB" />
             <input
@@ -37,6 +56,7 @@ function Cpdv() {
               onKeyPress={pesquisar}
             />
           </div>
+
           <div className="containerservicosB">
             <p className="divservicosB">
               Serviços
@@ -76,3 +96,4 @@ function Cpdv() {
 }
  
 export default Cpdv;
+
