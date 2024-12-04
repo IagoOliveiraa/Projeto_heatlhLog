@@ -31,7 +31,6 @@ const Router = () => {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
             <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
-
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
