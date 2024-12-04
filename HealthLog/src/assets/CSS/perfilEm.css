@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cabeçalho */
+
+  body, html {
+    height: 100%;
+    margin: 0; /* Certifique-se de que não há margens extras */
+    padding: 0; /* Certifique-se de que não há paddings extras */
+    display: flex;
+    flex-direction: column;
+}
+
+  
+.naveBarBlue {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Ajuste conforme necessário */
+}
+
+.LogoHealthImg img{
+    width: 40vh;
+    height: 15vh;
+    margin-top: -2vh;
+}
+
+.LogoHealthImg{
+    height:  100%;
+    background-color: #4C78BE;
+}
+
+  
+  .logo-perfil {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-perfil img {
+    height: 150px;
+    margin-right: 5px;
+    margin-top: 10vh;
+  }
+  
+  
+  .containerButton{
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    display: flex;
+    margin-top: 10%;
+  }
+  
+  .containerButton button{
+    margin-left: 15vw;
+    margin-bottom: 2vw;
+  }
+  
+  /* Alinha todo o formulário à direita */
+  .form-container {
+    margin-top: 9vh;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  
+  .tuliImg {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ipaImg {
+    width: 40%;
+    height: 40%;
+    margin-left: 35%;
+  }
+  
+  .formDiv {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imgT {
+    width: 14vw;
+    height: 14vw;
+    border-radius: 15vw;
+    margin-left: 15vw;
+    margin-top: 2vw;
+    background-image: url(/src/assets/fotopf.png);
+    background-size: cover;
+  }
+  
+  
+  
+  .perfil-form {
+    width: 60%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+  }
+  
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-left: 3%;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #007bff;
+    margin-bottom: 0.5vw;
+  }
+  
+  input {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .inputContainer input{
+    background-color: white;
+  }
+  
+  
+  .inputContainer {
+    margin-bottom: 4vw;
+  }
+  
+  #inputOne {
+    margin-top: 6vw;
+  }
+  
+  
+  .change-password {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  input[readonly] {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  .btn {
+    width: 14vw; /* Largura fixa dos botões */
+    height: 3vw;
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .excluir {
+    background-color: #0033A0; /* Cor para o botão Excluir */
+  }
+  
+  .editar {
+    background-color: #1E90FF; /* Cor para o botão Editar */
+  }
+  
+  .botaoem {
+    height: 5%;
+    width: 7%;
+  }
+
+  .botaoem button{
+    margin-left: 15vw;
+    margin-bottom: 2vw;
+  }
+
+  .botaoem-container{
+     display: flex;
+     flex-direction: column; /* Organiza os textos e grupos de botões em coluna */
+     gap: 20px; /* Espaçamento entre cada seção (texto + botões) */
+     margin-top: 20px; /* Espaço acima do container */
+  }
+    
+  
+
+  .bntt {
+    background-color: #3b7bcf; /* Cor azul */
+    color: black;              /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .botaoem-text {
+    font-size: 1.2vw; /* Tamanho do texto */
+    color: black;     /* Cor do texto */
+    margin-bottom: 2%; /* Espaçamento entre o texto e os botões */
+  }
+
+  .button-group {
+    display: flex; /* Deixa os botões lado a lado */
+    gap: 10%;     /* Espaçamento entre os botões */
+    justify-content: flex-start;
+  }
+
+  .botaoPrincipal{
+
+    display: flex;
+
+
+  }
+
+  .botaoem-containerUM p, .botaoem-containerDOIS p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #007bff;
+  }
+
+  .botaoem-containerUM, .botaoem-containerDOIS {
+    flex: 2; /* Permite que cada div ocupe a mesma proporção do espaço disponível */
+    
+  }
+
+  .botaoem-containerUM button, .botaoem-containerDOIS button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-left: 3.5vh;
+  }
+  .botaoem-containerDOIS button{
+    margin-top: 3.5%;
+    margin-left: 10vh;
+    
+  }
+
+  .botaoem-containerUM button{
+    margin-top: 2%
+  }
+  
+
+
+
+  /* Aqui começa o mobile
+
+
+
+
+  /* Responsividade para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    .LogoHealthImg img {
+      width: 60vw; /* Ajuste a largura da logo para caber melhor na tela */
+      height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+      margin-top: 2vh;
+    }
+  
+    .form-container {
+      flex-direction: column; /* Alinha o conteúdo em coluna */
+      justify-content: center; /* Centraliza os itens */
+      margin-top: 5vh;
+    }
+  
+    .tuliImg {
+      width: 100%; /* A imagem vai ocupar toda a largura */
+      margin-bottom: 5vh;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .ipaImg {
+      width: 50%;
+      height: auto;
+      margin-left: 0; /* Remove o espaçamento */
+      margin-bottom: 2vh;
+    }
+  
+    .formDiv {
+      width: 100%; /* O formulário vai ocupar toda a largura */
+      margin-top: 3vh;
+    }
+  
+    .perfil-form {
+      width: 100%; /* O formulário ocupa 100% da largura da tela */
+      padding: 5%;
+    }
+  
+    .inputContainer input {
+      font-size: 14px; /* Reduz o tamanho da fonte dos inputs */
+    }
+  
+    .btn {
+      width: 60%; /* Reduz a largura dos botões */
+      height: 8vh; /* Ajusta a altura dos botões */
+      margin-bottom: 2vh; /* Diminui o espaçamento entre os botões */
+    }
+  
+    .containerButton button {
+      margin-left: 0; /* Remove o espaçamento */
+      margin-bottom: 2vh; /* Ajusta o espaçamento entre os botões */
+    }
+  
+    .botaoPrincipal {
+      flex-direction: column; /* Coloca os botões na vertical */
+      align-items: center; /* Centraliza os botões */
+    }
+  
+    .botaoem-containerUM, .botaoem-containerDOIS {
+      width: 100%; /* Os containers dos botões ocupam toda a largura */
+      margin-bottom: 3vh; /* Ajusta o espaçamento entre os containers */
+      margin-left: 2vh;
+    }
+  
+    .botaoem-text {
+      font-size: 4vw; /* Ajusta o tamanho do texto para telas menores */
+    }
+  
+    .button-group {
+      flex-direction: column; /* Coloca os botões na vertical */
+      gap: 15px; /* Ajusta o espaçamento entre os botões */
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .bntt {
+      font-size: 16px; /* Reduz o tamanho da fonte */
+      padding: 10px 15px; /* Ajusta o padding para telas menores */
+    }
+  }
+  
+  /* Responsividade para telas muito pequenas (celulares) */
+  @media (max-width: 480px) {
+    .LogoHealthImg img {
+        width: 60vh;
+        height: auto;
+        margin-top: -2vh;
+      }
+  
+    .form-container {
+      margin-top: 4vh; /* Ajusta o espaçamento superior */
+    }
+  
+    .tuliImg {
+      width: 100%;
+      margin-bottom: 3vh;
+    }
+  
+    .ipaImg {
+      width: 60%;
+      margin-left: 0;
+    }
+  
+    .formDiv {
+      width: 100%;
+      margin-top: 5vh;
+    }
+  
+    .perfil-form {
+      width: 100%;
+      padding: 5%;
+    }
+  
+    .inputContainer input {
+      font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+  
+    .btn {
+      width: 80%; /* Botões ocupando maior parte da tela */
+      height: 10vh; /* Ajuste de altura dos botões */
+    }
+  
+    .botaoem-containerUM, .botaoem-containerDOIS {
+      width: 100%; /* Os containers ocupam 100% da largura */
+      
+    }
+
+    .botaoem-containerUM button , .botaoem-containerDOIS button{
+
+        margin-left: 2%;
+
+    }
+
+    .containerButton{
+
+        width: 25%;
+        margin-left: 75%;
+        margin-top: -40%;
+
+    }
+
+    .ipaImg img{
+
+        width: 75%;
+        margin-left: 15%;
+        margin-top: 10%;
+      
+
+    }
+
+    .form-container{
+        margin-top: 10%;
+    }
+  
+    .botaoem-text {
+      font-size: 5vw; /* Aumenta o tamanho do texto */
+    }
+  
+    .button-group {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .bntt {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
+
+  
+
+
+
+
+

@@ -1,0 +1,106 @@
+.background-imageZ {
+    position: fixed; /* Fixa a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.LOGOR{
+    position: absolute;
+    right: 0px;
+    transform: scale(1); 
+}
+
+.background-imageZ img {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: 100%; /* Faz a imagem ocupar toda a altura */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção */
+}
+
+.Front {
+    position: relative; /* Para que o conteúdo fique acima do fundo */
+    padding: 20px; /* Adiciona algum espaço interno */
+    margin-left: 1%;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.text-boaV > h1 {
+    color: white; /* Mantém o texto branco */
+    font-size: 30px;
+    margin-right: 60%;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.text-boaV > p {
+    color: white; /* Mantém o texto branco */
+    font-size: 20px;
+    font-weight:lighter;
+    text-align: left;
+    margin-right: 70%;
+}
+
+.linha{
+    margin-top: 2%;
+    width: 33%;
+    border-bottom: 3px solid #ffffff;
+}
+
+.box-para-login{
+    background: rgb(117, 117, 117, 0.5);
+    width: 33%;
+    height: 163px;
+    border-radius: 50px;
+    padding-top: 1px;
+    margin-top:2%;
+    margin-bottom: 10%;
+}
+
+.title-box-login{
+    text-align:center;
+    color: white;
+    font-size: 19px;
+    padding-top: 1px;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.bottom-box-login{
+    background: #ffffff;
+    border-radius: 60px;
+    font-size: 20px;
+    padding: 20px 65px;
+    margin-left: 26.5%;
+    text-decoration: none;
+    color: black;
+}
+
+.text-box-login{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 13.8px;
+    color: white;
+}
+
+.text-box-login > a{
+    text-decoration: none;
+    color: #2F80ED;
+}
+
+.deseja-continuar > a{
+    text-decoration: none;
+    color: white;
+}
+
+.CNPJ{
+    margin-top: 10%;
+}
+
+.text-rodapé > p{
+    color: white;
+    margin-right: 10%;
+}
