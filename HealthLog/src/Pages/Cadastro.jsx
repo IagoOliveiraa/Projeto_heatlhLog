@@ -1,114 +1,140 @@
 import React, { useState } from "react";
-import "../assets/CSS/cadastro.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/Boas-vindas.jpg"; // Imagem de fundo
-import maletaCla from "../assets/img/maletaAzulCla.png"; // Primeira imagem a ser usada
-import pers from "../assets/img/persAzulEsc.png"; // segunda imagem a ser usada
+import "../assets/CSS/cadastro.css";
+import imgFundo from "../assets/img/Boas-vindas.jpg";
+import maletaCla from "../assets/img/maletaAzulCla.png";
+import pers from "../assets/img/persAzulEsc.png";
 import logo from "../assets/img/logo.png";
 
 function Cadastro() {
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email === "" || password === "") {
+
+    if (
+      !nome ||
+      !sobrenome ||
+      !email ||
+      !dataNascimento ||
+      !senha ||
+      !confirmarSenha
+    ) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
 
-    if (email === "exemplo@teste.com" && password === "123456") {
-      alert("Login realizado com sucesso!");
-    } else {
-      alert("E-mail ou senha incorretos.");
+    if (senha !== confirmarSenha) {
+      alert("As senhas não coincidem.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome,
+          sobrenome,
+          email,
+          senha,
+          data_nascimento: dataNascimento,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message); // Exibe "Usuário registrado com sucesso!"
+      } else {
+        alert(data.message); // Exibe mensagens de erro
+      }
+    } catch (error) {
+      console.error("Erro ao fazer cadastro:", error);
+      alert("Erro ao fazer cadastro. Tente novamente mais tarde.");
     }
   };
 
   return (
-
     <div className="login-containerI">
-      <img src={imgFundo} alt="" className="background-imageI" />{" "}
-      {/* Imagem de fundo diretamente aqui */}
+      <img src={imgFundo} alt="" className="background-imageI" />
       <div className="login-boxI">
-        {/* Aqui está o logo HL com as imagens lado a lado */}
         <div className="logo-with-imagesI">
-          <img src={logo} alt="Imagem 1" className="logoI" />
+          <img src={logo} alt="Logo" className="logoI" />
           <div className="images-containerI">
-            <img src={maletaCla} alt="Imagem 1" className="side-imageI" />
-            <img src={pers} alt="Imagem 2" className="side-image2I" />
-
+            <img src={maletaCla} alt="Maleta" className="side-imageI" />
+            <img src={pers} alt="Pessoa" className="side-image2I" />
           </div>
         </div>
 
         <h2>Cadastre-se!</h2>
 
         <form className="colunasSuculentasI" onSubmit={handleSubmit}>
-
           <input
             className="input1I"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Nome.."
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            placeholder="Nome"
             required
           />
           <input
-
             className="input2I"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Sobrenome.."
+            type="text"
+            value={sobrenome}
+            onChange={(e) => setSobrenome(e.target.value)}
+            placeholder="Sobrenome"
             required
           />
           <input
             className="input3I"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="E-mail.."
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="E-mail"
             required
           />
           <input
-
             className="input4I"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Senha.."
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            placeholder="Senha"
             required
           />
           <input
-
             className="input5I"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Data de nascimento.."
+            type="date"
+            value={dataNascimento}
+            onChange={(e) => setDataNascimento(e.target.value)}
+            placeholder="Data de nascimento"
             required
           />
           <input
-
             className="input6I"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Confirmar senha.."
+            value={confirmarSenha}
+            onChange={(e) => setConfirmarSenha(e.target.value)}
+            placeholder="Confirmar senha"
             required
           />
-
-        </form>
-
-        <div className="divButtonI">
           <button className="buttonI" type="submit">
             Concluir
           </button>
-        </div>
+        </form>
 
-        <a className="jaLogI"  href="/login">Já tem login? Entrar</a>
-
-
+        <a className="jaLogI" href="/login">
+          Já tem login? Entrar
+        </a>
       </div>
     </div>
   );
 }
+
 export default Cadastro;

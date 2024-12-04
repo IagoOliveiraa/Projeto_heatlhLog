@@ -99,11 +99,12 @@
 
 .divButtonI {
   display: flex;
-  justify-content: center;
   max-width: 100%;
+  
 }
 
 .buttonI {
+  margin-left: 120px;
   padding: 3% 6% 3% 6%;
   background-color: #acd0ff;
   border: none;
