@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/cadastro.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
+import imgFundo from "../assets/img/Boas-vindas.jpg"; // Imagem de fundo
 import maletaCla from "../assets/img/maletaAzulCla.png"; // Primeira imagem a ser usada
 import pers from "../assets/img/persAzulEsc.png"; // segunda imagem a ser usada
 import logo from "../assets/img/logo.png";
@@ -104,7 +104,7 @@ function Cadastro() {
           </button>
         </div>
 
-        <p className="jaLogI">Já tem login? Entrar</p>
+        <a className="jaLogI"  href="/login">Já tem login? Entrar</a>
 
 
       </div>

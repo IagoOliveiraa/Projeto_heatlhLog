@@ -168,19 +168,6 @@
   .login-boxC p {
     padding-bottom: 4vh;
   }
-  
-  .logoC {
-    font-family: "Times New Roman", Times, serif;
-    color: #355995;
-    width: 30%;
-  }
-  
-  .login-containerC {
-    font-family: Arial, sans-serif;
-    background-image: url("../assets/imgFundoMulherRuiva.png"); /* Imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
 
   .login-boxC h2 {
     justify-content: flex-start;
@@ -188,74 +175,6 @@
     padding-left: 12%;
     margin-bottom: 12%;
   }
-  
-  .login-boxC {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    width: 47vw;
-    padding: 1vw;
-    text-align: center;
-    position: relative; /* Necessário para aplicar z-index */
-    z-index: 10; /* A caixa de login deve estar na frente */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translate(0%, 13%);
-  }
-  
-  .logo-with-imagesC {
-    display: flex;
-    align-items: center;
-    max-width: 50%;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    margin-top: 2%;
-  }
-  
-  .images-containerC {
-    display: flex;
-    aspect-ratio: 140/69;
-    width: 70px;
-  }
-  
-  .login-boxC h2 {
-    color: #345995;
-   margin-bottom: 3%;
-    font-weight: 200;
-    
-  }
-  
-  .login-boxC p {
-    color: #71a7ff;
-    font-size: 14px;
-    font-weight: 100;
-    margin-top: 12px;
-    margin-left: -9%;
-  }
-
-  .input1C,.input2C, 
-  .input3C,.input4C,
-  .input5C,.input6C {
-    width: 70%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1.5px solid #ffd900;
-    border-radius: 4px;
-    background-color: #d3e4ff;
-  }
-
-  
-  .input1C, .input2C,
-  .input3C, .input4C,
-  .input5C, .input6C ::placeholder {
-    color: #355995; /* Estiliza o texto do placeholder */
-  }
-  
-  
-  .divButtonC{
-    display: flex;
-    justify-content: center;
 
   .images-containerC {
     display: flex;
@@ -266,37 +185,9 @@
     text-align: center;
     max-width: 100%;
     justify-content: center;
-
-    margin-top: 6%;
-    margin-bottom: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 13%;
   }
-  
-  .buttonC:hover {
-    background-color: #3867d6;
-  }
-  
-  .aC {
-    text-decoration: none;
-    color: #487eb0;
-  }
-  
-  .aC:hover {
-    text-decoration: underline;
-  }
-  
-  .pC {
-    margin-top: 30px;
-  }
-  
-  .colunasSuculentasC{
-    display: grid;
-    margin-left: 10%;
-    grid-template-columns: 1fr 1fr;
-  }
-
- 
-
-  
 
   .forgot-passwordC {
     padding-left: 9%;
@@ -309,6 +200,3 @@
   }
 }
 
-  }
-
-}

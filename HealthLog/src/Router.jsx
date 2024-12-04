@@ -21,11 +21,11 @@ import PerfilEm from "./Pages/perfilEm";
 
 
 
+
 const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-
             <Route path="/" element={<BemVindo/>}/>
             <Route path="/inicio" element={<Home/>}/>
             <Route path="/Login" element={<Login/>}/>
@@ -41,16 +41,13 @@ const Router = () => {
                 <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>   
                 <Route path="/perfil" element={<Perfil/>}/>
                 <Route path="/perfilEm" element={<PerfilEm/>}/>
-            
-                
-                
-              
-
-
-
             </Routes>
         </BrowserRouter>
+
     );
 };
 
 export default Router;
+
+        
+

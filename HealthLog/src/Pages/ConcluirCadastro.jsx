@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/CSS/concluirCadastro.css"; // Certifique-se de que o caminho está correto.
-import imgFundo from "../assets/img/cachFund.jpg"; // Imagem de fundo
+import imgFundo from "../assets/img/Boas-vindas.jpg"; // Imagem de fundo
 import maletaEsc from "../assets/img/maletaEsc.png";
 import persCla from "../assets/img/persCla.png";
 import logo from "../assets/img/logo.png";

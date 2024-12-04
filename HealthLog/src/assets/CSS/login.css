@@ -34,8 +34,6 @@
 .logo {
   font-family: "Times New Roman", Times, serif;
   color: #355995;
-  margin-left: 1vw;
-  width: 30%;
 
   margin-left: 1vw;
   width: 30%;
@@ -57,16 +55,7 @@
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
 
-
-  padding: 22px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  width: 500px;
-  text-align: center;
-  position: relative; /* Necessário para aplicar z-index */
-  z-index: 10; /* A caixa de login deve estar na frente */
-  margin-top: 4%;
-
- box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   width: 47vw;
   padding: 1vw;
   text-align: center;
@@ -82,7 +71,7 @@
 .logo-with-images {
   display: flex;
   align-items: center;
-  margin-left: -6%;
+
   max-width: 54%;
   justify-content: space-between;
   margin-bottom: 2%;
@@ -92,7 +81,6 @@
 .images-container {
   display: flex;
   aspect-ratio: 140/69;
-
 
   width: 18%;
   justify-content: center;
@@ -111,7 +99,6 @@
   font-weight: 100;
   margin-top: 12px;
 
-
   padding-bottom: 2vh;
 
 }
@@ -120,7 +107,9 @@
 .input2 {
   width: 70%;
   padding: 10px;
+
   margin: 12px 0;
+
   border: 1.5px solid #ffd900;
   border-radius: 4px;
   background-color: #d3e4ff;
@@ -144,6 +133,7 @@
   display: block;
   margin-bottom: 10%;
   margin-top: -10px;
+
   margin-left: 30vw;
 
   color: #487eb0;
@@ -163,11 +153,12 @@
   margin-top: 30px;
 }
 
-.side-image2{
+
+.side-image
+, .side-image2{
   height: 130%;
   width: 130%;
 }
-
 
 @media screen and (max-width: 480px) {
   .background-image{

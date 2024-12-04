@@ -2,38 +2,34 @@ import "../assets/CSS/cpdv.css";
 import logoh from "../assets/img/Logo1.png";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
-import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import posHeader from "../assets/img/posHeader.png";
-import { Link } from "react-router-dom"; // Importe o Link do React Router
 
 function Cpdv() {
   const [busca, setBusca] = useState("");
   const [menuAberto, setMenuAberto] = useState(false); // Estado para o menu desktop
   const [menuMobileAberto, setMenuMobileAberto] = useState(false); // Estado para o menu mobile
   const navegar = useNavigate();
-  const [user, setUser] = useState(null); // Adicione o estado para o usuário
+  const [user, setUser] = useState(null); // Estado para o usuário
 
   // Função para verificar se o usuário está logado
   const isLoggedIn = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      return true;
-    }
-    return false;
+    const token = localStorage.getItem("token");
+    return !!token;
   };
 
   useEffect(() => {
     // Verifica se o usuário está logado ao carregar a página
     if (!isLoggedIn()) {
       // Se não estiver logado, redireciona para a página de login
-      navigate('/login');
+      navegar("/login");
     } else {
       // Obter dados do usuário do backend
-      fetch('/user', {
+      fetch("http://localhost:3000/user", { // Substitua pela URL do seu backend
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
         .then((response) => response.json())
@@ -41,10 +37,10 @@ function Cpdv() {
           setUser(data); // Armazena as informações do usuário
         })
         .catch((error) => {
-          console.error('Erro ao obter dados do usuário:', error);
+          console.error("Erro ao obter dados do usuário:", error);
         });
     }
-  }, []); 
+  }, [navegar]);
 
   const irParaPerfil = () => {
     navegar("/perfil");
@@ -57,8 +53,6 @@ function Cpdv() {
   };
 
   const toggleMenu = () => {
-    console.log(menuAberto);
-    
     setMenuAberto(!menuAberto); // Alterna entre aberto e fechado no desktop
   };
 
@@ -79,12 +73,12 @@ function Cpdv() {
               className="input-pesquisaB"
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
-              onKeyPress={pesquisar}
+              onKeyDown={pesquisar} // Substituído onKeyPress por onKeyDown
             />
           </div>
 
           {/* Menu Serviços (Desktop) */}
-          <div className="containerservicosB" >
+          <div className="containerservicosB">
             <div className="divservicosB" onClick={toggleMenu}>
               Serviços
               <SlArrowDown className="icone-setaB" />
@@ -98,21 +92,25 @@ function Cpdv() {
             )}
           </div>
 
-          <div className='PerfilHome'>
-          {user ? (
-            <>
-              <p>Bem-vindo, {user.email}!</p>
-              <button onClick={() => {
-                localStorage.removeItem('token');
-                setUser(null);
-                navigate('/'); // Redireciona para a página inicial
-              }}>Sair</button>
-            </>
-          ) : (
-            <FaRegCircleUser className="icone-perfilB" onClick={irParaPerfil} />
-          )}
-        </div>
-
+          {/* Perfil do Usuário */}
+          <div className="PerfilHome">
+            {user ? (
+              <>
+                <p>Bem-vindo, {user.email}!</p>
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("token");
+                    setUser(null);
+                    navegar("/"); // Redireciona para a página inicial
+                  }}
+                >
+                  Sair
+                </button>
+              </>
+            ) : (
+              <FaRegCircleUser className="icone-perfilB" onClick={irParaPerfil} />
+            )}
+          </div>
 
           {/* Menu Hamburguer (Mobile) */}
           <div className="hamburger-menuB" onClick={toggleMenuMobile}>
@@ -120,13 +118,17 @@ function Cpdv() {
           </div>
           {menuMobileAberto && (
             <div className="menu-mobileB">
-              <a href="/EspecialidadesMedicas">Medicina</a>
-              <a href="/EspecialidadesOdontologicas">Odontologia</a>
-              <a href="/EspecialidadesEsteticas">Estética</a>
+              <a href="/EspecialidadesMedicas" onClick={toggleMenuMobile}>
+                Medicina
+              </a>
+              <a href="/EspecialidadesOdontologicas" onClick={toggleMenuMobile}>
+                Odontologia
+              </a>
+              <a href="/EspecialidadesEsteticas" onClick={toggleMenuMobile}>
+                Estética
+              </a>
             </div>
           )}
-
-          <FaRegCircleUser className="icone-perfilB" onClick={irParaPerfil} />
         </div>
 
         <div>
@@ -134,14 +136,13 @@ function Cpdv() {
         </div>
 
         <div className="abracoB">
-          <h1 className="titDescriB">Clinica A</h1>
+          <h1 className="titDescriB">Clínica A</h1>
           <h3 className="descricaoB">
-            Nossa clinica A é especializada nas áreas de X, Y e Z, trazendo boas
-            experiências de atendimento e resultado ao decorrer dos últimos 15
+            Nossa clínica A é especializada nas áreas de X, Y e Z, trazendo boas
+            experiências de atendimento e resultados ao longo dos últimos 15
             anos.
           </h3>
         </div>
-
 
         <div className="marqB">
           <h1>Marque já sua consulta</h1>
