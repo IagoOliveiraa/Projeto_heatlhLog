@@ -47,8 +47,19 @@ app.post('/register', async (req, res) => {
   const checkEmailQuery = 'SELECT * FROM usuarios WHERE email = ?';
   db.query(checkEmailQuery, [email], (err, result) => {
     if (err) {
-      console.error('Erro ao verificar email:', err);
-      return res.status(500).json({ message: 'Erro ao verificar e-mail.' });
+        console.error('Erro ao conectar com o banco de dados:', err);
+        process.exit(1);
+    }
+    console.log('Banco de dados conectado!');
+});
+
+// Rota para registrar o usuário
+app.post('/cadastro', (req, res) => {
+    const { nome, sobrenome, genero, data_nascimento, cep, email, senha } = req.body;
+    
+    // Verifica se todos os campos obrigatórios estão presentes
+    if (!nome || !sobrenome || !genero || !data_nascimento || !cep || !email || !senha) {
+        return res.status(400).send({ message: 'Todos os campos são obrigatórios.' });
     }
 
     if (result.length > 0) {

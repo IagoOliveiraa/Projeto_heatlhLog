@@ -1,43 +1,44 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
- */
-.container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerJ {
   text-align: center;
-  padding: 20px;
 }
 
 
-
-
- 
-.containerCpdvB{
+.containerCpdvJ{
     margin: 0;
     padding: 0;
     width: 100%;
+    margin-top: 800px;
 
 }
 
 /* Barra de navegação */
-.barra {
+.barraJ {
   background-color: #4C78BE;
   width: 100%;
-  height: 150px; /* Aumentar a altura para evitar sobreposição */
+  height: 100px; /* Aumentar a altura para evitar sobreposição */
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 /* Logo da clínica */
-.logo {
+.logoJ {
   height: 120px;
   width: auto;
   left: 20px;
 }
 
 /* Barra de pesquisa */
-.barra-pesquisa {
+.barra-pesquisaJ {
   display: flex;
   align-items: center;
   background-color: rgba(217, 217, 217, 0.1);
@@ -49,7 +50,7 @@
 }
 
 /* Campo de texto da pesquisa */
-.input-pesquisa {
+.input-pesquisaJ {
   border: none;
   outline: none;
   padding: 10px;
@@ -62,19 +63,19 @@
 }
 
 /* Ícone de pesquisa */
-.icone-pesquisa {
+.icone-pesquisaJ {
   color: white;
   font-size: 20px;
 }
 
 /* Placeholder da pesquisa */
-.input-pesquisa::placeholder {
+.input-pesquisaJ::placeholder {
   color: rgb(203, 203, 203);
   font-size: 20px;
 }
 
 /* Ícone de perfil */
-.icone-perfil {
+.icone-perfilJ {
   color: white;
   font-size: 40px;
   margin-left: auto;
@@ -83,7 +84,7 @@
 }
 
 /* Seção de serviços */
-.containerservicos {
+.containerservicosJ {
   margin-left: 130px;
   border: 2px solid rgba(56, 97, 162, 1);
   background-color: rgba(217, 217, 217, 0.1);
@@ -92,7 +93,7 @@
 }
 
 /* Texto "Serviços" */
-.divservicos {
+.divservicosJ {
   font-family: 'Raleway', sans-serif;
   color: white;
   display: flex;
@@ -102,14 +103,14 @@
 }
 
 /* Ícone de seta para baixo */
-.icone-seta {
+.icone-setaJ {
   color: white;
   font-size: 20px;
   margin-left: 10px;
 }
 
 /* Menu de serviços */
-.divmenu {
+.divmenuJ {
   background-color: #fff;
   color: #000;
   text-decoration: none;
@@ -118,30 +119,30 @@
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
-.containerservicos:hover .divmenu {
+.containerservicosJ:hover .divmenu {
   display: flex;
   flex-direction: column;
 }
 
 /* Separação do cabeçalho */
 
-.grafico {
+.graficoJ {
   display: flex;
-  flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se não houver espaço */
-  justify-content: center; /* Centraliza as imagens */
-  gap: 15px; /* Espaço entre as imagens */
-  margin-top: 200px; /* Aumentar a margem superior para evitar sobreposição */
-  margin-left: 7%; /* Espaço à esquerda do gráfico */
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 200px; 
+  margin-left: 7%;
 }
 
-.grafico img {
+.graficoJ img {
   margin: 1%;
   height: 200px;
-  margin-top: 15%;
-  align-items: center;
+  margin-right: 60px;
+ 
 }
 
-.titulo1 h1 {
+.titulo1J h1 {
   font-family: 'Arial', sans-serif;
   color: #3366ff;
   margin-bottom: 70px;
@@ -150,7 +151,7 @@
   margin-top: 5%;
 }
 
-.todas-caixas1 {
+.todas-caixas1J {
   display: flex;
   flex-direction: row;
   width: 93.5%;
@@ -159,11 +160,11 @@
   margin: 0 auto;
 }
 
-.todas-caixas1 a {
+.todas-caixas1J a {
   text-decoration: none;
 }
 
-.caixa1 {
+.caixa1J {
   border: 1px solid #ffa500;
   width: 28vw;
   border-radius: 20px;
@@ -174,201 +175,230 @@
   transition: transform 0.2s ease-in-out; /* Adicionado para efeito de hover */
 }
 
-.caixa1:hover {
+.caixa1J:hover {
   transform: scale(1.05); /* Efeito ao passar o mouse */
 }
 
-.caixa1 h2 {
+.caixa1J h2 {
   font-family: 'Arial', sans-serif;
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
 
-.caixa1 p {
+.caixa1J p {
   font-family: 'Arial', sans-serif;
   color: #555;
   margin: 0;
   padding: 0;
 }
 
-.caixa1 a:hover {
+.caixa1J a:hover {
   color: #3366ff; /* Exemplo de efeito hover nos links */
 }
 
-/* Estilos para dispositivos móveis */
+/* Responsividade */
 
-@media (max-width: 768px) {
-  /* Barra de navegação */
-  .barra {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-    align-items: center;
-  }
+.divmenuJ{
+  background-color: #5A82C1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1% -37% 0 0;
+}
 
-  .logo {
-    height: 60px;
-    margin-bottom: 10px;
-  }
+.divmenuJ a{
+  color: white;
+  text-decoration: none;
+}
 
-  .barra-pesquisa {
-    width: 90%;
-    margin: 10px 0;
-  }
+.hamburger-menuJ{
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
 
-  .input-pesquisa {
-    width: 100%;
-    font-size: 16px;
-  }
+.menu-mobileJ{
+  display: flex;
+  flex-direction: column;
+  background-color: #4C78BE;
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
 
-  .icone-perfil {
-    font-size: 30px;
-    margin-top: 10px;
-  }
+.menu-mobileJ a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+}
 
-  /* Seção de gráficos */
-  .grafico {
+@media screen and (max-width: 480px) {
+  .barraJ{
+    height: 16vw;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
   }
 
-  .grafico img {
-    width: 30%;
-    max-width: 150px;
-    height: auto;
+  .logoJ{
+    height: 80px;
+    width: auto;
   }
 
-  /* Título principal */
-  .titulo1 h1 {
-    font-size: 22px;
-    color: #3366ff;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
+  .containerservicosJ{
+    display: none;
   }
 
-  /* Grid das especialidades odontológicas */
-  .todas-caixas1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Grid 2x2 */
-    gap: 15px; /* Espaçamento entre as caixas */
-    width: 95%; /* Aumenta a largura total da grid */
-    margin: 0 auto;
-    justify-items: center;
+  .barra-pesquisaJ {
+    width: 100%;
+    padding: 10px;
+    margin-left: -5%;
+    margin-right: 4%;
   }
 
-  .caixa1 {
-    border: 1px solid #ffa500;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Aumenta a largura das caixas */
-  }
-
-  .caixa1:hover {
-    transform: scale(1.05);
-  }
-
-  .caixa1 h2 {
+  .icone-pesquisaJ {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 8px;
   }
 
-  .caixa1 p {
+  .titulo2J h1 {
+    font-size: 24px;
+  }
+
+  .caixa2J h2 {
+    font-size: 18px;
+  }
+
+  .caixa2J p {
     font-size: 14px;
-    color: #555;
+  }
+
+  .hamburger-menuJ {
+    display: block;
+    margin-left: -5px;
+    margin-top: 6px;
+    margin-right: 4%;
+  }
+
+  .input-pesquisaJ {
+    padding: 0px;
+  }
+
+ 
+
+  .icone-perfilJ {
+    display: none;
   }
 }
 
-/* MOBILE 768px */
 
-@media (max-width: 768px) {
-  .barra {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
+/* CSS Responsivo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+ 
+
+  .containerservicosJ {
+    display: none;
   }
 
-  .logoBB {
-      height: 60px;
+  .graficoJ {
+    margin-top: 100px;
+    gap: 10px;
   }
 
-  .barra-pesquisa {
-      width: 100%;
-      margin: 10px 0;
+  .graficoJ img {
+    height: 150px;
+    margin: 5px;
   }
 
-  .icone-perfil {
-      font-size: 30px;
-      margin: 0;
+  .titulo1J h1 {
+    font-size: 40px;
+    margin-top: 10%;
   }
 
-  .titulo2BB h1 {
-      font-size: 40px;
+  .todas-caixas1J {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
-  .graficoBB img {
-      height: 150px;
-      width: auto;
-      margin: 5%;
+  .caixa1J {
+    width: 90%;
+    padding: 15px;
   }
 
-  .todas-caixas2BB {
-      flex-direction: column;
-      align-items: center;
+  .hamburger-menuJ {
+    display: block;
   }
 
-  .caixa2BB {
-      width: 90%;
-      margin-bottom: 15px;
+  .icone-perfilJ {
+    display: none;
   }
 }
 
-/* MOBILE 480px */
+@media screen and (max-width: 480px) {
+ 
 
-@media (max-width: 480px) {
-  .barraBB {
-      padding: 5px;
+  .graficoJ {
+    margin-top: 50px;
   }
 
-  .logoBB {
-      height: 40px;
+  .graficoJ img {
+    height: 120px;
+    margin: 5px 0;
   }
 
-  .input-pesquisaBB {
-      font-size: 14px;
+  .titulo1J h1 {
+    font-size: 24px;
   }
 
-  .icone-perfilBB {
-      font-size: 24px;
+  .caixa1J h2 {
+    font-size: 18px;
   }
 
-  .graficoBB img {
-      width: 100%;
-      max-width: 120px;
+  .caixa1J p {
+    font-size: 14px;
   }
 
-  .titulo2BB h1 {
-      font-size: 28px;
+  .caixa1J {
+    padding: 10px;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .barra-pesquisaJ {
+    width: 60%;
   }
 
-  .caixa2BB {
-      padding: 15px;
+  .todas-caixas1J {
+    gap: 15px;
   }
 
-  .caixa2BB h2 {
-      font-size: 16px;
-  }
-
-  .caixa2BB p {
-      font-size: 14px;
+  .caixa1J {
+    width: 45%;
   }
 }

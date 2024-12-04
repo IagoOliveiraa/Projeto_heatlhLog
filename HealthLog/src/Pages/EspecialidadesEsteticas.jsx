@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; // Importa o Link do React Router
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaTimes, FaBars } from 'react-icons/fa';
 import "../assets/CSS/EspecialidadesEsteticas.css";
 import imagem200 from "../assets/img/grafico200.png";
 import imagem89 from "../assets/img/grafico89.png";
@@ -7,29 +7,28 @@ import imagemhealthlog from "../assets/img/helthloggrafico.png";
 import imagemmuitomais from "../assets/img/graficomuitomais.png";
 import logoh from'../assets/img/Logo1.png';
 import { FaRegCircleUser } from "react-icons/fa6";
-import { SlArrowDown, SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function EspecialidadesEsteticas() {
   const [busca, setBusca] = useState("");
   const navegar = useNavigate();
-  const [user, setUser] = useState(null); // Adicione o estado para o usuário
+  const [user, setUser] = useState(null); // Estado para o usuário
+  const [menuAberto, setMenuAberto] = useState(false);
+  const [menuMobileAberto, setMenuMobileAberto] = useState(false);
 
   // Função para verificar se o usuário está logado
   const isLoggedIn = () => {
     const token = localStorage.getItem('token');
-    if (token) {
-      return true;
-    }
-    return false;
+    return !!token;
   };
 
   useEffect(() => {
     // Verifica se o usuário está logado ao carregar a página
     if (!isLoggedIn()) {
       // Se não estiver logado, redireciona para a página de login
-      navigate('/login');
+      navegar('/login');
     } else {
       // Obter dados do usuário do backend
       fetch('/user', {
@@ -45,7 +44,7 @@ function EspecialidadesEsteticas() {
           console.error('Erro ao obter dados do usuário:', error);
         });
     }
-  }, []); 
+  }, [navegar]);
 
   const irParaPerfil = () => {
     navegar("/perfil");
@@ -55,6 +54,14 @@ function EspecialidadesEsteticas() {
     if (evento.key === "Enter") {
       navegar(`/pesquisa/${busca}`);
     }
+  };
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
+  const toggleMenuMobile = () => {
+    setMenuMobileAberto(!menuMobileAberto);
   };
 
   return (
@@ -74,19 +81,41 @@ function EspecialidadesEsteticas() {
           />
         </div>
         <div className="containerservicosAA">
-          <p className="divservicosAA">
+          <p className="divservicosAA" onClick={toggleMenu}>
             Serviços <SlArrowDown className="icone-setaAA" />
           </p>
+          {menuAberto && (
+            <div className="divmenuAA">
+              <a href="/EspecialidadesMedicas">Medicina</a>
+              <a href="/EspecialidadesOdontologicas">Odontologia</a>
+              <a href="/EspecialidadesEsteticas">Estética</a>
+            </div>
+          )}
         </div>
-        <div className='PerfilHome'>
+        <div className="hamburger-menuAA" onClick={toggleMenuMobile}>
+          {menuMobileAberto ? <FaTimes /> : <FaBars />}
+        </div>
+        {menuMobileAberto && (
+          <div className="menu-mobileAA">
+            <a href="/EspecialidadesMedicas">Medicina</a>
+            <a href="/EspecialidadesOdontologicas">Odontologia</a>
+            <a href="/EspecialidadesEsteticas">Estética</a>
+            <a href="/perfil">Perfil</a>
+          </div>
+        )}
+        <div className="PerfilHome">
           {user ? (
             <>
               <p>Bem-vindo, {user.email}!</p>
-              <button onClick={() => {
-                localStorage.removeItem('token');
-                setUser(null);
-                navigate('/'); // Redireciona para a página inicial
-              }}>Sair</button>
+              <button
+                onClick={() => {
+                  localStorage.removeItem('token');
+                  setUser(null);
+                  navegar('/'); // Redireciona para a página inicial
+                }}
+              >
+                Sair
+              </button>
             </>
           ) : (
             <FaRegCircleUser className="icone-perfilAA" onClick={irParaPerfil} />
