@@ -8,8 +8,12 @@ import persCla from "../assets/img/persCla.png";
 import logo from "../assets/img/logo.png";
 
 function CadastroClinic() {
+  const [NomeC, SetnomeC] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [senha, setPassword] = useState("");
+  const [CNPJ, setCNPJ] = useState("")
+  const [CEP, setCEP] = useState("")
+  const [ConfirmarSenha, setCsenha] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,48 +52,48 @@ function CadastroClinic() {
           <input
             className="input1C"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={NomeC}
+            onChange={(e) => SetnomeC(e.target.value)}
             placeholder="Nome da clínica.."
             required
           />
           <input
             className="input2C"
             type="password"
-            value={password}
+            value={senha}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Senha.."
             required
           />
           <input
             className="input3C"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            value={CNPJ}
+            onChange={(e) => setCNPJ(e.target.value)}
             placeholder="CNPJ.."
             required
           />
           <input
             className="input4C"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={ConfirmarSenha}
+            onChange={(e) => setCsenha(e.target.value)}
             placeholder="Confirme a senha.."
             required
           />
           <input
             className="input5C"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="E-mail da empresa.."
             required
           />
           <input
             className="input6C"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            value={CEP}
+            onChange={(e) => setCEP(e.target.value)}
             placeholder="CEP.."
             required
           />

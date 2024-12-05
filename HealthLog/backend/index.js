@@ -120,7 +120,7 @@ app.post('/login', (req, res) => {
 });
 
 // Middleware para verificar o token JWT
-/* const authenticateToken = (req, res, next) => {
+const authenticateToken = (req, res, next) => {
   console.log("Authorization Header:", req.headers['authorization']); // Adicione esta linha
 
   const token = req.headers['authorization']?.split(' ')[1];
@@ -136,7 +136,7 @@ app.post('/login', (req, res) => {
     req.user = user;
     next();
   });
-}; */
+}; 
 
 // Rota para obter os dados do usuário autenticado
 app.get("/usuario", (req, res) => {
@@ -162,6 +162,62 @@ app.get("/usuario", (req, res) => {
 app.get('/protected', (req, res) => {
   res.status(200).json({ message: "Bem-vindo, usuário!" });
 });
+
+
+
+
+//==========================
+app.get("/clinicas", (req,res)=>{
+  const query = "select * FROM  CriarClinicas"
+  db.query(query, (err, result)=>{
+    res.status(200).json(result)
+  
+  } )
+})
+
+
+app.post('/clinicas', (req,res)=>{
+  const {nomeC, senha,cnpj,email,cep}  = req.body
+  console.log(req.body)
+
+const insertQuery = 
+"insert into CriarClinicas(nomeC, senha,cnpj,email,cep) values (?,?,?,?,?)"
+db.query( insertQuery, [nomeC, senha,cnpj,email,cep], 
+  (err,result )=>{
+    console.log(err)
+    res.status(200).json({message: 'usuario cadastrado com sucesso!!'})
+  }
+) 
+})
+
+
+app.get("/clinicas/:id",(req,res)=>{
+  const clinicasID = req.params.id
+  console.log(clinicasID)
+const query = "select * from  CriarClinicas where idC = ?" 
+db.query(query,[clinicasID], (err, result)=>{
+  console.log(err)
+  res.status(200).json(result[0])
+  
+    })
+})
+
+
+//agendamento=======
+app.post("/agendamento", (req,res)=>{
+  const {dia, especialidade,idClinica,idCliente} = req.body
+  const insertQuery = 
+"insert into agendamento(dia, especialidade,idClinica,idCliente) values (?,?,?,?)"
+db.query( insertQuery, [dia, especialidade,idClinica,idCliente], 
+  (err,result )=>{
+    console.log(err)
+    res.status(200).json({message: 'agendamento feito com sucesso!!'})
+  }
+) 
+})
+
+
+
 
 // Inicia o servidor na porta configurada
 app.listen(PORT, () => {
