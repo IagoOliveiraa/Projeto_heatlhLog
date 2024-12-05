@@ -4,7 +4,7 @@ import tulipa from '../assets/img/fotopf.png';
 import LogoPerfil from "../assets/img/Logo1.png";
 
 
-export default function Perfil() {
+export default function PerfilEm() {
     return (
       <>
         {/* Cabeçalho */}

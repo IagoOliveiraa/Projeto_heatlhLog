@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap");
 
 /* Barra de navegação */
 .barra {
-  background-color: #4C78BE;
+  background-color: #4c78be;
   width: 100%;
   height: 100px;
   position: fixed;
@@ -38,7 +38,7 @@
   border: none;
   outline: none;
   padding: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   margin-left: 6px;
   width: 100%;
@@ -79,7 +79,7 @@
 
 /* Texto "Serviços" */
 .divservicos {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: white;
   display: flex;
   align-items: center;
@@ -115,8 +115,8 @@
 }
 
 .texto-clinicas h1 {
-  font-family: 'Rajdhani', sans-serif;
-  color: #005BD6;
+  font-family: "Rajdhani", sans-serif;
+  color: #005bd6;
   font-size: 46px;
 }
 
@@ -135,14 +135,14 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  max-width: 460px;
-  margin: 20px auto;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 15%;
   margin-bottom: 5%;
 }
 
-.botao-agendar{
+.botao-agendar {
   margin-left: 45%;
 }
 
@@ -160,7 +160,7 @@
 }
 
 button {
-  background-color: #007bff;
+  background-color: #4c78be;
   color: white;
   border: none;
   padding: 10px;
@@ -177,6 +177,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
+  height: 80%;
 }
 
 .dia {
@@ -195,7 +196,7 @@ button:hover {
   cursor: pointer;
 }
 
-.nome-dia { 
+.nome-dia {
   color: #333;
   pointer-events: none; /* Desativa a interação */
 }
@@ -209,7 +210,7 @@ button:hover {
 }
 
 .dia.clicado {
-  background-color: #007BFF; /* Cor de fundo quando clicado */
+  background-color: #4c78be; /* Cor de fundo quando clicado */
   color: white; /* Cor do texto quando clicado */
 }
 
@@ -305,16 +306,14 @@ button:hover {
   right: 0; /* Quando aberto, traga o menu para a tela */
 }
 
-.logo2{
-  display: none ;
+.logo2 {
+  display: none;
 }
-
 
 /* Aqui e onde mexe no hamburger */
 
 .bg-white {
   background-color: white;
-
 }
 
 .shadow-lg {
@@ -338,7 +337,7 @@ button:hover {
 .text-black {
   color: black;
   text-decoration: none;
-   display: block;
+  display: block;
 }
 
 li {
@@ -349,18 +348,18 @@ li {
   background-color: #e5e7eb;
 }
 
-.hamburger-menu { 
-  display: none; /* Esconde o menu por padrão */ 
+.hamburger-menu {
+  display: none; /* Esconde o menu por padrão */
   position: relative; /* Para que o menu se posicione em relação a este elemento */
 }
 
 @media screen and (max-width: 480px) {
-  .icone-perfil{
+  .icone-perfil {
     display: none;
   }
 
-  .hamburger-menu { 
-    display: block; /* Mostra o menu em telas pequenas */ 
+  .hamburger-menu {
+    display: block; /* Mostra o menu em telas pequenas */
     margin-left: 20vw;
     color: white;
   }
@@ -370,11 +369,11 @@ li {
     top: 3rem; /* Ajustei para um valor mais semântico (12 unidades seriam pequenas demais) */
     left: 0;
     width: 12rem; /* Corrigi para um valor mais coerente com w-48 do Tailwind, que é 12rem */
-    background-color:#4C78BE;
+    background-color: #4c78be;
     border-radius: 0.375rem; /* Correspondente a rounded-lg no Tailwind */
     margin-left: -325%;
   }
-  
+
   .letras-da-box {
     display: block; /* Correspondente a 'block' no Tailwind */
     padding-left: 1rem; /* 'px-4' no Tailwind é 1rem */
@@ -382,11 +381,11 @@ li {
     padding-top: 0.5rem; /* 'py-2' no Tailwind é 0.5rem */
     padding-bottom: 0.5rem; /* 'py-2' no Tailwind é 0.5rem */
     color: white; /* 'text-white' no Tailwind é cor branca */
-    transition:  0.2s; /* Adiciona uma transição suave para o hover */
+    transition: 0.2s; /* Adiciona uma transição suave para o hover */
   }
-  
+
   .containerservicos {
-    display: none;   
+    display: none;
   }
 
   .barra {
@@ -398,9 +397,7 @@ li {
     width: 45vh;
   }
   .calendario {
-    margin-top: 40%;
     width: 100%; /* Definindo a largura do calendário para 100% do contêiner pai */
-    max-width: 300px; /* Largura máxima */
     padding: 10px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui padding e borda na largura total */
     border: 1px solid #ccc; /* Borda do calendário */
@@ -423,18 +420,18 @@ li {
     box-sizing: border-box; /* Para incluir padding e borda no cálculo da largura */
     overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites do dia */
   }
-  .cabecalho h2{
-    font-size:small;
+  .cabecalho h2 {
+    font-size: small;
   }
-  .logo{
+  .logo {
     display: none;
   }
-  .logo2{
+  .logo2 {
     display: flex;
     max-width: 85%;
     max-height: 85%;
   }
-  .botao-agendar{
+  .botao-agendar {
     margin-left: 35%;
   }
 }

@@ -9,16 +9,17 @@ import CadastroClinic from "./Pages/CadastroClinic"
 import Home from "./Pages/Home";
 import ConcluirCadastro from "./Pages/ConcluirCadastro";
 import Cpdv from "./Pages/Cpdv"
-import Clinica from "./Pages/Clinicaspertodevocê";
 import EspecialidadesEsteticas from "./Pages/EspecialidadesEsteticas";
 import BemVindo from "./Pages/BoasVindas";
-import ClinicaCalendario from "./Pages/agendamento";
 import Perfil from "./Pages/perfil";
 import PerfilEm from "./Pages/perfilEm";
 
 
 
 import ClinicasOftamologia from "./Pages/clinicasOftamologia";
+import AgendamentoForm from "./Pages/agendamentoForm";
+import ClinicaProfile from "./Pages/clinicaProfile";
+import { UserAgedamentos } from "./Pages/meusAgendamentos";
 
 
 
@@ -30,7 +31,8 @@ const Router = () => {
             <Route path="/inicio" element={<Home/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/ConcluirCadastro" element={<ConcluirCadastro/>} />
-            <Route path="/Agendamento" element={<ClinicaCalendario/>}/>
+            <Route path="/Agendamento" element={<AgendamentoForm/>}/>
+            <Route path="/Agendamento/clinica/:id" element={<ClinicaProfile/>}/>
                 <Route path="/cadastro" element={<Cadastro/>}/>
                 <Route path="/loginClinic" element={<LoginClinic/>}/> 
                 <Route path="/cadastroClinic" element={<CadastroClinic/>}/>
@@ -39,7 +41,7 @@ const Router = () => {
                 <Route path="/EspecialidadesMedicas" element={<EspecialidadesMedicas/>}/>
                 <Route path="/EspecialidadesOdontologicas" element={<EspecialidadesOdontologicas/>}/>
                 {/* <Route path="/Clinicaspertodevoce" element={<Clinica/>}/>  */}  
-                <Route path="/perfil" element={<Perfil/>}/>
+                <Route path="/perfil" element={<UserAgedamentos/>}/>
                 <Route path="/perfilEm" element={<PerfilEm/>}/>
 
 

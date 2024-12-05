@@ -193,30 +193,72 @@ db.query( insertQuery, [nomeC, senha,cnpj,email,cep],
 
 app.get("/clinicas/:id",(req,res)=>{
   const clinicasID = req.params.id
-  console.log(clinicasID)
+
 const query = "select * from  CriarClinicas where idC = ?" 
 db.query(query,[clinicasID], (err, result)=>{
-  console.log(err)
   res.status(200).json(result[0])
   
     })
 })
 
 
-//agendamento=======
+//agendamento===========================================================
 app.post("/agendamento", (req,res)=>{
-  const {dia, especialidade,idClinica,idCliente} = req.body
+  const {dia, especialidade,idClinica,idClient} = req.body
+
   const insertQuery = 
 "insert into agendamento(dia, especialidade,idClinica,idCliente) values (?,?,?,?)"
-db.query( insertQuery, [dia, especialidade,idClinica,idCliente], 
+db.query( insertQuery, [dia, especialidade,idClinica,idClient], 
   (err,result )=>{
     console.log(err)
     res.status(200).json({message: 'agendamento feito com sucesso!!'})
   }
 ) 
 })
+//===================================================================
 
 
+
+//perfil clinicas
+app.get("/perfil/:id",(req,res)=>{
+  const query = `
+  select usuarios.nome, usuarios.email, agendamento.dia, agendamento.especialidade, CriarClinicas.nomeC from  usuarios  left join agendamento on usuarios.id = agendamento.idCliente left join CriarClinicas on agendamento.idClinica = CriarClinicas.idC where usuarios.id = ?;
+`;
+
+
+db.query(query, [req.params.id], (err, results) => {
+  // Tratamento de erro
+  if (err) {
+    return res.status(500).json({ 
+      erro: 'Erro no banco de dados', 
+      detalhes: err 
+    });
+  }
+
+  // Usuário não encontrado
+  if (results.length === 0) {
+    return res.status(404).json({ 
+      mensagem: 'Usuário não encontrado' 
+    });
+  }
+
+  // Estruturar dados
+  const usuario = {
+    id: results[0].id,
+    nome: results[0].nome,
+    email: results[0].email,
+    agendamentos: results[0].nomeC ? 
+      results.map(r => ({
+        data: r.dia,
+        descricao: r.especialidade,
+        clinicaNome: r.nomeC
+      })) : []
+  };
+
+  res.json(usuario);
+})
+
+    })
 
 
 // Inicia o servidor na porta configurada

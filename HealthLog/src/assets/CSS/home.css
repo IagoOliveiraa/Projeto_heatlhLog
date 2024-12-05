@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap");
 
 /* Reset de margem e padding */
 * {
@@ -8,29 +8,119 @@
   box-sizing: border-box;
 }
 
-.barra-home {
-
-  background-color: #4C78BE;
-  width: 100%;
-  height: 20%;
-  position: fixed;
-  top: 0;
-  left: 0;
+.wrapper {
+  padding: 0 30px;
   display: flex;
-  padding: 0 45px;
-  z-index: 5;
-
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-
-.bemVindo {
-  z-index: 3;
-
+.grettings {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.review-section {
-  position: relative;
+.booking-card {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
+}
+
+.booking-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.form-group label {
+  color: #4c78be;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  margin: unset !important;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 10px;
+}
+
+.date-picker,
+.time-picker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4c78be;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.form-content {
+  display: flex;
+  margin-bottom: 50px;
+  gap: 50px;
+}
+
+.calender-content {
+  overflow: hidden;
+}
+
+.form-content .calender-content {
+  flex: 1;
+}
+
+.form-content .booking-content {
+  flex: 1;
+}
+
+
+
+.barra-home {
+  background-color: #4c78be;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Logo da clínica */
@@ -40,17 +130,52 @@
   left: 20px;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  justify-content: space-between;
+}
+
 .feijoes {
-  background-color: #4C78BE;
-  height: 30vh;
-  margin-top: 19vh;
-  border-bottom: 0.5vw solid #F2B33D;
+  background-color: #4c78be;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  position: relative;
+  padding-left: 200px;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 0.5vw solid #f2b33d;
+}
+
+.feijoes a {
+  text-decoration: none;
+  width: fit-content;
+  font-size: 1.2rem;
+  background-color: white;
+  color: #4c78be;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in;
+}
+
+.feijoes a:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.feijoes p {
+  font-size: 1.2rem;
+  color: white;
+  width: 40%;
 }
 
 .feijoes h1 {
   color: #fff;
-  margin-left: 5vw;
-  font-size: 4vw;
+  font-size: 4.5rem;
+  line-height: 5rem;
   max-width: 60%;
 }
 
@@ -73,12 +198,24 @@
   border: none;
   outline: none;
   padding: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   margin-left: 6px;
   width: 100%;
   color: white;
   background-color: transparent;
+}
+
+.agendar-button {
+  background-color: #4c78be;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
 }
 
 /* Ícone de pesquisa */
@@ -103,10 +240,7 @@
   /* Cursor de "mão" ao passar o mouse */
 }
 
-
 /* Seção de serviços */
-
-
 
 .containerservicosHome {
   margin-top: 1.5vw;
@@ -118,26 +252,19 @@
   padding: 10px;
   width: 120px;
   text-underline-offset: -200px; /* Move o sublinhado para fora da área visível */
-  
 }
 
 /* Texto "Serviços" */
 
-.divmenuHome a{
-
-color: #000;
-
-
+.divmenuHome a {
+  color: #000;
 }
 
-
-
 .divservicosHome {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: white;
   display: flex;
   align-items: center;
-  
 }
 
 /* Ícone de seta para baixo */
@@ -149,11 +276,10 @@ color: #000;
 
 /* Menu de serviços */
 .divmenuHome {
-  background-color:#fff;
+  background-color: #fff;
   border-radius: 10px;
   text-align: center;
   display: none;
- 
 }
 
 /* Mostrar menu de serviços ao passar o mouse */
@@ -162,21 +288,15 @@ color: #000;
   flex-direction: column;
 }
 
-
 .divservicosHome a {
-
   margin-left: -3px;
   margin-top: 10px;
-
 }
 
 .PerfilHome {
-
   margin-top: 2.5vw;
   margin-left: 5.5vw;
-
 }
-
 
 /* Imagem de boas-vindas */
 .img-boasvindas {
@@ -190,7 +310,6 @@ color: #000;
   /* Ajusta a posição vertical */
   transform: translateX(-50%);
   /* Centraliza horizontalmente */
-
 }
 
 .img-boasvindas img {
@@ -199,7 +318,6 @@ color: #000;
   height: 500px;
   /* Ajusta a altura da imagem */
 }
-
 
 /* Seção de avaliações */
 .review-section {
@@ -230,7 +348,6 @@ color: #000;
   /* Centraliza horizontalmente */
 }
 
-
 .mySlides {
   display: none;
   /* Esconde os slides por padrão */
@@ -242,7 +359,7 @@ color: #000;
   /* Espaçamento interno */
   border-radius: 10px;
   /* Bordas arredondadas */
-  box-shadow: 0 0 25px #F2B33D;
+  box-shadow: 0 0 25px #f2b33d;
   /* Sombra ao redor do slide */
   margin-top: 10%;
 }
@@ -265,7 +382,7 @@ color: #000;
 /* "Dot" ativo e hover */
 .active,
 .dot:hover {
-  background-color: #4C78BE;
+  background-color: #4c78be;
   /* Cor ao passar o mouse ou estar ativo */
   margin-top: 20px;
 }
@@ -341,11 +458,9 @@ color: #000;
 }
 
 .especialidade-card button:hover {
-  background-color: #F2B33D;
+  background-color: #f2b33d;
   /* Cor ao passar o mouse */
 }
-
-
 
 /* Seção de serviços */
 
@@ -469,11 +584,8 @@ footer img {
 }
 
 .rodape {
-
-  background-color: #7CAFF4;
+  background-color: #7caff4;
   /* Cor de fundo */
-
-
 }
 
 .rodape p {
@@ -481,7 +593,6 @@ footer img {
   /* Tamanho da fonte */
   color: #fff;
   /* Cor do texto branca */
-
 }
 
 .localizacao img {
@@ -494,25 +605,7 @@ footer img {
   /* Espaçamento à esquerda */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-              /* Aqui começa o Mobile */
-
-
-
-
-
+/* Aqui começa o Mobile */
 
 /* Esconder a imagem de boas-vindas em telas menores que 900px */
 @media (max-width: 900px) {
@@ -521,58 +614,38 @@ footer img {
   }
 }
 
-
 /* Esconder a imagem de boas-vindas e a div feijoes em telas menores que 400px */
 @media (max-width: 900px) {
-  
   .containerservicosHome,
   .img-boasvindas,
   .feijoes {
     display: none;
   }
 
-
-.PerfilHome{
-  height: 5px;
-  width: 5px;
+  .PerfilHome {
+    height: 5px;
+    width: 5px;
+  }
 }
 
-
-
-
+@media (max-width: 700px) {
+  .logoHome {
+    height: 5vw;
+  }
 }
-
-
-@media (max-width:700px) {
-  
-.logoHome{
-
-  height: 5vw;
-
-
-}
-
-
-
-}
-
-
 
 /* Responsividade para dispositivos com largura de até 768px */
 @media (max-width: 900px) {
-
-  .barra-home{
-
+  .barra-home {
     max-height: 12%;
-
   }
 
   /* Logo */
   .logoHome {
     height: 29vw;
     width: 59vw;
-   margin-left: -50px;
-   margin-top: -20px;
+    margin-left: -50px;
+    margin-top: -20px;
   }
 
   /* Barra de pesquisa */
@@ -582,12 +655,8 @@ footer img {
     margin-top: 5px;
   }
 
-
-  .conteudo-principal h3{
-
+  .conteudo-principal h3 {
     margin-top: 10vh;
-
-
   }
 
   /* Rodapé */
@@ -606,5 +675,25 @@ footer img {
   }
 }
 
+.retangulo {
+  background-color: #fff; /* Cor de fundo branca */
+  border: 3px solid #f0f0f0; /* Borda sólida laranja */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: left; /* Alinhamento à esquerda */
+  padding: 20px;
+  overflow: hidden; /* Oculta conteúdo que ultrapassa os limites */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
 
-             /* Aqui termina o Mobile */
+.retangulo:hover {
+  transform: translateY(
+    -5px
+  ); /* Move o retângulo para cima ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Aqui termina o Mobile */

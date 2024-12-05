@@ -62,6 +62,7 @@ function ClinicaCalendario() {
   const [diaSelecionado, setDiaSelecionado] = useState(null); 
   const [user, setUser] = useState(null); 
 
+ 
   // Função para verificar se o usuário está logado
   const isLoggedIn = () => {
     const token = localStorage.getItem('token');
